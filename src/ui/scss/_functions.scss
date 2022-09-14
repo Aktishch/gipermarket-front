@@ -1,40 +1,194 @@
 @function rgbValuesFromHex($hex) {
-  @return red($hex),
-  green($hex),
-  blue($hex);
+    @return red($hex),
+    green($hex),
+    blue($hex);
 }
 
 @mixin getColors($color, $name) {
-  $rgb                   : rgbValuesFromHex($color);
-  $lighten               : lighten($color, 5%);
-  $darken                : darken($color, 5%);
-  --color-#{$name}       : #{$color};
-  --color-#{$name}-10    : rgba(#{$rgb}, 0.1);
-  --color-#{$name}-20    : rgba(#{$rgb}, 0.20);
-  --color-#{$name}-30    : rgba(#{$rgb}, 0.30);
-  --color-#{$name}-40    : rgba(#{$rgb}, 0.40);
-  --color-#{$name}-50    : rgba(#{$rgb}, 0.50);
-  --color-#{$name}-60    : rgba(#{$rgb}, 0.60);
-  --color-#{$name}-70    : rgba(#{$rgb}, 0.70);
-  --color-#{$name}-80    : rgba(#{$rgb}, 0.80);
-  --color-#{$name}-90    : rgba(#{$rgb}, 0.90);
-  --color-#{$name}--light: #{$lighten};
-  --color-#{$name}--dark : #{$darken};
+    @if ($name=='primary'or $name=='second'or $name=='black'or $name=='white'or $name=='grey'or $name=='red') {
+        $rgb                   : rgbValuesFromHex($color);
+        $lighten               : lighten($color, 5%);
+        $darken                : darken($color, 5%);
+        --color-#{$name}       : #{$color};
+        --color-#{$name}-10    : rgba(#{$rgb}, 0.1);
+        --color-#{$name}-20    : rgba(#{$rgb}, 0.20);
+        --color-#{$name}-30    : rgba(#{$rgb}, 0.30);
+        --color-#{$name}-40    : rgba(#{$rgb}, 0.40);
+        --color-#{$name}-50    : rgba(#{$rgb}, 0.50);
+        --color-#{$name}-60    : rgba(#{$rgb}, 0.60);
+        --color-#{$name}-70    : rgba(#{$rgb}, 0.70);
+        --color-#{$name}-80    : rgba(#{$rgb}, 0.80);
+        --color-#{$name}-90    : rgba(#{$rgb}, 0.90);
+        --color-#{$name}--light: #{$lighten};
+        --color-#{$name}--dark : #{$darken};
+    }
+
+    @else {
+        --color-#{$name}: #{$color};
+    }
 }
 
+@mixin getDistance($name, $value) {
+    @for $i from 0 through 10 {
+        .#{$name}-#{$i} {
+            #{$value}: var(--size-#{$i});
+        }
+    }
+
+    @media(max-width: $laptop) {
+        @for $i from 0 through 10 {
+            .#{$name}-lg-#{$i} {
+                #{$value}: var(--size-#{$i});
+            }
+        }
+    }
+
+    @media(max-width: $mobile) {
+        @for $i from 0 through 10 {
+            .#{$name}-md-#{$i} {
+                #{$value}: var(--size-#{$i});
+            }
+        }
+    }
+}
+
+@mixin getDistancetXY($name, $property, $value-first, $value-last) {
+    @for $i from 0 through 10 {
+        .#{$name}-#{$i} {
+            #{$property}-#{$value-first}: var(--size-#{$i});
+            #{$property}-#{$value-last} : var(--size-#{$i});
+        }
+    }
+
+    @media(max-width: $laptop) {
+        @for $i from 0 through 10 {
+            .#{$name}-lg-#{$i} {
+                #{$property}-#{$value-first}: var(--size-#{$i});
+                #{$property}-#{$value-last} : var(--size-#{$i});
+            }
+        }
+    }
+
+    @media(max-width: $mobile) {
+        @for $i from 0 through 10 {
+            .#{$name}-md-#{$i} {
+                #{$property}-#{$value-first}: var(--size-#{$i});
+                #{$property}-#{$value-last} : var(--size-#{$i});
+            }
+        }
+    }
+}
+
+@mixin getAlign($property) {
+    &-#{$property}-start {
+        align-#{$property}: flex-start;
+    }
+
+    &-#{$property}-center {
+        align-#{$property}: center;
+    }
+
+    &-#{$property}-end {
+        align-#{$property}: flex-end;
+    }
+
+    &-#{$property}-stretch {
+        align-#{$property}: stretch;
+    }
+}
+
+@mixin getContent($property) {
+    &-start {
+        #{$property}-content: flex-start;
+    }
+
+    &-center {
+        #{$property}-content: center;
+    }
+
+    &-end {
+        #{$property}-content: flex-end;
+    }
+
+    &-stretch {
+        #{$property}-content: stretch
+    }
+
+    &-between {
+        #{$property}-content: space-between;
+    }
+
+    &-around {
+        #{$property}-content: space-around;
+    }
+
+    @if ($property=='justify') {
+        &-evenly {
+            #{$property}-content: space-evenly;
+        }
+    }
+}
+
+@mixin getDisplay {
+    &-block {
+        display: block;
+    }
+
+    &-inline {
+        display: inline;
+    }
+
+    &-flex {
+        display: flex;
+    }
+
+    &-grid {
+        display: grid;
+    }
+
+    &-none {
+        display: none;
+    }
+}
+
+@mixin getWidthOrHeight($value) {
+    &-100 {
+        #{$value}: 100%;
+    }
+
+    &-50 {
+        #{$value}: 50%;
+    }
+
+    &-0 {
+        #{$value}: 0;
+    }
+
+    &-max {
+        #{$value}: max-content;
+    }
+
+    &-min {
+        #{$value}: min-content;
+    }
+
+    &-auto {
+        #{$value}: auto !important;
+    }
+}
 
 @mixin AddMedia() {
-  @content;
+    @content;
 
-  &-md {
-    @media (min-width:$md) {
-      @content;
+    &-md {
+        @media (min-width:$md) {
+            @content;
+        }
     }
-  }
 
-  &-lg {
-    @media (min-width:$lg) {
-      @content;
+    &-lg {
+        @media (min-width:$lg) {
+            @content;
+        }
     }
-  }
 }

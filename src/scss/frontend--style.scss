@@ -2,14 +2,19 @@
 @import '../ui/scss/_functions.scss';
 
 :root {
-	@include getColors(#D21C4B, "primary");
-	@include getColors(#CE9B44, "sec");
-	@include getColors(#0092E4, "blue");
-	@include getColors(#FF9820, "yellow");
-	@include getColors(#31A043, "green");
-	@include getColors(#EB5757, "red");
-	@include getColors(#828A99, "icon");
-	@include getColors(#333333, "text");
+
+	@each $key,
+	$value in $colors {
+		@include getColors($value, $key);
+	}
+
+	@for $i from 0 through 10 {
+		--size-#{$i}: #{calc(4 * $i) + px};
+	}
+
+	@for $i from 5 through 25 {
+		--font-#{calc(2 * $i)}: #{calc(2 * $i / 16) + rem};
+	}
 
 	--bg1: #E9EAEC;
 	--bg2: #F4F5F6;
@@ -17,15 +22,14 @@
 
 	--spacing: 4px;
 
-	--radius-small : 4px;
-	--radius-middle: 8px;
-	--radius-large : 12px;
-
 	--media-lg: #{$lg};
 	--media-md: #{$md};
 	--media-sm: #{$sm};
 
-	--font-base: 'Roboto', Arial, Helvetica, sans-serif;
+	--font-base: 'Inter',
+	Arial,
+	Helvetica,
+	sans-serif;
 
 	--zi-l1: 321;
 	--zi-l2: 322;
@@ -47,14 +51,8 @@
 }
 
 body {
-	color         : var(--color-text);
-	min-height    : 100vh;
-	display       : flex;
-	flex-direction: column;
-
-	* {
-		font-family: var(--font-base);
-	}
+	color      : var(--color-black);
+	font-family: var(--font-base);
 
 }
 
@@ -72,4 +70,183 @@ body {
 	.active-enabled {
 		display: flex !important;
 	}
+}
+
+
+.header {
+	&-top {
+		&__link {
+			transition: 0.3s;
+
+			&:hover {
+				color: var(--color-primary);
+			}
+		}
+	}
+
+	&-bottom {
+		&__search {
+			border   : 1.5px solid var(--color-primary);
+			min-width: 510px;
+
+			&:focus {
+				border-color: var(--color-primary);
+			}
+		}
+
+		&__loop {
+			width        : 48px;
+			height       : 48px;
+			position     : absolute;
+			top          : 0;
+			right        : 0;
+			border-radius: 0 var(--size-2) var(--size-2) 0;
+			z-index      : var(--zi-l1);
+		}
+	}
+
+	&-mobile {
+		position: sticky;
+		top     : 0;
+		left    : 0;
+		right   : 0;
+		z-index : var(--zi-l1);
+	}
+}
+
+.logo {
+	&__img {
+		min-width: 60px;
+	}
+}
+
+.menu {
+	&-btn {
+		position: relative;
+		width   : 48px;
+		height  : 48px;
+	}
+
+	&-count {
+		position  : absolute;
+		top       : -5px;
+		right     : -5px;
+		width     : var(--size-5);
+		height    : var(--size-5);
+		background: radial-gradient(75.89% 75.89% at 79.21% 24.11%, #F24756 23.23%, #B22945 100%);
+	}
+}
+
+.nav {
+	&__main {
+		max-width: 420px;
+		position : relative;
+
+		&::after {
+			content         : '';
+			position        : absolute;
+			top             : 0;
+			right           : 0;
+			bottom          : 0;
+			width           : 2px;
+			height          : 24px;
+			margin          : auto 0;
+			background-color: var(--color-grey);
+		}
+	}
+
+	&-top {
+		position  : fixed;
+		right     : 0;
+		left      : 0;
+		top       : -57px;
+		transition: 0.2s;
+		z-index   : var(--zi-l1);
+
+		&__links {
+			max-width: 980px;
+		}
+
+		&--scroll {
+			top: 0;
+		}
+	}
+}
+
+.like {
+	fill  : var(--color-none);
+	stroke: var(--color-dark);
+
+	&--active {
+		fill  : var(--color-red);
+		stroke: var(--color-red);
+	}
+}
+
+.mobile {
+	position  : fixed;
+	top       : 0;
+	left      : 0;
+	bottom    : 0;
+	right     : 0;
+	transition: 0.3s ease;
+	z-index   : var(--zi-l2);
+
+	&__head {
+		transition: 0.5s ease 0.3s;
+		position  : relative;
+		top       : -80px;
+	}
+
+	&__nav {
+		transition: 0.9s ease 0.5s;
+		position  : relative;
+		left      : -220px;
+	}
+
+	&__accordion:is([data-accordion="active"]) &__arrow {
+		transform: rotate(90deg);
+	}
+
+	&__footer {
+		transition: 0.5s ease 0.9s;
+		position  : relative;
+		bottom    : -30px;
+	}
+}
+
+.-mobile- {
+	&:is(&open-) {
+		width     : 100%;
+		visibility: visible;
+		opacity   : 1;
+	}
+
+	&:is(&open-) &head- {
+		top: 0;
+	}
+
+	&:is(&open-) &nav- {
+		left   : 0;
+		opacity: 1;
+	}
+
+	&:is(&open-) &footer- {
+		opacity: 1;
+		bottom : 0;
+	}
+}
+
+.footer {
+	@media(max-width: $mobile) {
+		&__block {
+			flex-direction : column;
+			align-items    : center;
+			justify-content: center;
+		}
+	}
+}
+
+.bs {
+	box-shadow: 0px 8px 14px rgba(35, 35, 35, 0.04);
 }

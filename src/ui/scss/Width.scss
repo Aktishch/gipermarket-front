@@ -1,21 +1,15 @@
-// out:false
-@mixin Width {
-  &-100 {
-    width: 100%;
-  }
+.width {
+    @include getWidthOrHeight('width');
 
-  &-50 {
-    width: 50%;
-  }
+    @media(max-width: $laptop) {
+        &-lg {
+            @include getWidthOrHeight('width');
+        }
+    }
 
-  &-auto {
-    width: auto !important;
-  }
-}
-
-.w {
-	@include AddMedia {
-		@include Width;
-	}
-
+    @media(max-width: $mobile) {
+        &-md {
+            @include getWidthOrHeight('width');
+        }
+    }
 }

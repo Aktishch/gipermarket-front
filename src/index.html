@@ -1,17 +1,117 @@
-<!DOCTYPE html>
-<html lang="en">
+  <% var data = {
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Worked</title>
-</head>
+    title: 'Главная',
+    status: true
 
-<body>
-  <header class="header"> </header>
- 
-  <footer class="footer"> </footer>
-</body>
+  } %>
 
-</html>
+  <%= _.template(require('./includes/header.html').default)({data}) %>
+
+  <section class="banners overflow-hidden">
+    <div class="slider banners-slider">
+      <div class="swiper grid-wrap">
+        <div class="swiper-wrapper">
+          <% for (var i = 0; i < 3; i++) { %>
+            <div class="swiper-slide grid-col-12">
+              <div class="banner container flex flex-direction-column justify-content-center bg-sec">
+                <div class="banner__bg pic width-100 h-100">
+                  <div class="loader">
+                    <svg class="icon">
+                        <use xlink:href="img/icons.svg#loader" />
+                    </svg>
+                  </div>
+                  <picture>
+                    <source srcset="img/banner-mob.jpg" media="(max-width: 568px)">
+                    <img class="pic__img" src="img/banner.jpg" alt="" loading="lazy">
+                  </picture>
+                </div>
+                <div class="banner__content flex flex-direction-column">
+                  <div class="banner__bullets flex align-items-center mb-8">
+                    <span class="banner__bullet flex align-items-center justify-content-center text text--16 color-white bg-red bold-8 radius-2 mr-2 px-5 px-md-2">-40%</span>
+                    <span class="banner__bullet banner__bullet--contur flex align-items-center justify-content-center text text--14 color-white bg-none bold-6 radius-2 mr-2 px-5 px-md-2">Скидки</span>
+                    <span class="banner__bullet banner__bullet--contur flex align-items-center justify-content-center text text--14 color-white bg-none bold-6 radius-2 px-5 px-md-2">Многолетние цветы</span>
+                  </div>
+                  <div class="banner__title text text--48 text-lg-38 text-md-28 bold-8 color-white mb-5">
+                    СУПЕР СКИДКИ! <br>
+                    -40% НА СЕМЕНА <br>
+                    ПОДСОЛНЕЧНИКА
+                  </div>
+                  <div class="banner__text text text--16 color-white mb-10">
+                    Семена подсолнуха дешевле на 30%! <br>
+                    Успейте купить до 24 августа!
+                  </div>
+                  <a class="banner__btn btn btn--white btn--fill width-max" href="#">Подробнее</a>
+                </div>
+              </div>
+            </div>
+          <% } %>
+        </div>
+      </div>
+  </section>
+
+  <script>
+    new Swiper('.banners .swiper', {
+      slidesPerView: 'auto',
+      slidesPerGroup: 1,
+      watchSlidesProgress: true,
+      loop: true,
+      speed: 1000,
+      autoplay: {
+        delay: 4000,
+        stopOnLastSlide: false,
+        disableOnInteraction: false
+      }
+    })
+  </script>
+
+  <section class="info-bullets container flex align-items-center justify-content-between flex-wrap bg-white bs py-5 gap-5 gap-md-8">
+    <div class="info-bullets__item flex flex-direction-column">
+      <div class="flex align-items-center mb-1">
+        <img class="icon text text--32 mr-3" src="img/Shield.svg" alt="">
+        <span class="text text--24 bold-7">Гарантия</span>
+      </div>
+      <div class="text text--16 text--center bold-4 fade-80">360 дней на все товары</div>
+    </div>
+    <div class="info-bullets__item flex flex-direction-column">
+      <div class="flex align-items-center mb-1">
+        <img class="icon text text--32 mr-3" src="img/Package.svg" alt="">
+        <span class="text text--24 bold-7">Упаковка</span>
+      </div>
+      <div class="text text--16 text--center bold-4 fade-80">с 3-мя фазами защиты</div>
+    </div>
+    <div class="info-bullets__item flex flex-direction-column">
+      <div class="flex align-items-center mb-1">
+        <img class="icon text text--32 mr-3" src="img/Wrapped.svg" alt="">
+        <span class="text text--24 bold-7">Подарки</span>
+      </div>
+      <div class="text text--16 text--center bold-4 fade-80">к бонусам к покупкам</div>
+    </div>
+    <div class="info-bullets__item info-bullets__item--main flex align-items-center radius-4 bg-white border p-2 p-md-0 width-100">
+      <div class="info-bullets__pic pic pic--rect-y radius-2 width-100 display-md-none mr-6">
+        <img class="pic__img" src="img/person.png" alt="">
+      </div>
+      <div class="flex flex-direction-column">
+        <span class="text text--16 bold-4 mb-1">
+          Наш менеджер ответит <br>
+          на любой ваш вопрос
+        </span>
+        <button class="text text--16 btn btn--primary width-max bold-6 color-primary px-1">Задать вопрос</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- <section class="categories container">
+    <div class="text text--38 bold-8 mb-10">Популярные категории</div>
+    <div class="slider categories-slider">
+      <div class="swiper grid-wrap">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Подвал -->
+  <%= _.template(require('./includes/footer.html').default)() %>

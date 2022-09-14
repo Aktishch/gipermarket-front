@@ -1,25 +1,9 @@
-// out:false
-
-
-.link-hover {
+.link {
   cursor: pointer;
 
   @media(hover) {
-    &:hover {
+    &--underline:hover {
       text-decoration: underline;
-    }
-  }
-}
-
-.link-hover-wrapper {
-  cursor: pointer;
-
-  @media(hover) {
-    &:hover {
-      .link-hover {
-        text-decoration: underline;
-      }
-
     }
   }
 }

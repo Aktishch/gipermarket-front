@@ -32,7 +32,7 @@
 	&-input {
 		outline  : none !important;
 		display  : flex;
-		height   : 40px;
+		height   : 48px;
 		position : relative;
 		padding  : calc(var(--spacing) * 2) calc(var(--spacing) * 4);
 		flex-grow: 1;
@@ -45,19 +45,19 @@
 
 		font-size  : 14px;
 		font-family: var(--font-base);
-		color      : var(--color-text);
+		color      : var(--color-black);
 
-		background-color: var(--bg3);
-		border          : 1px solid var(--color-text-10);
+		// background-color: var(--bg3);
+		border          : 1px solid var(--color-grey-50);
 
 		&:first-of-type {
-			border-start-start-radius: var(--radius-small);
-			border-end-start-radius  : var(--radius-small);
+			border-start-start-radius: var(--size-2);
+			border-end-start-radius  : var(--size-2);
 		}
 
 		&:last-of-type {
-			border-end-end-radius  : var(--radius-small);
-			border-start-end-radius: var(--radius-small);
+			border-end-end-radius  : var(--size-2);
+			border-start-end-radius: var(--size-2);
 		}
 
 		&:not(:first-of-type) {
@@ -66,7 +66,7 @@
 
 
 		&:focus {
-			border-color: var(--color-icon);
+			border-color: var(--color-grey);
 			z-index     : 2;
 		}
 

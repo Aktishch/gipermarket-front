@@ -1,43 +1,21 @@
-// out: false
-
-
-:root {
-  --section-width     : calc(100vw - 30px);
-  --section-gap-top   : 20px;
-  --section-gap-bottom: 20px;
-}
-
-
 .container {
-  width    : 100%;
-  max-width: var(--section-width);
-  margin   : 0 auto;
-}
+  padding: 30px 15px;
 
-
-
-dialog,
-section,
-header,
-footer {
-  padding: 0px calc(50% - var(--section-width) / 2);
-}
-
-section {
-  padding-top   : var(--section-gap-top);
-  padding-bottom: var(--section-gap-bottom);
-}
-
-
-@media (min-width: $md) {
-  :root {
-    --section-width: #{$container_md};
+  @media(min-width: $mobile) {
+    & {
+      padding: 50px calc(50% - 265px);
+    }
   }
-}
 
+  @media(min-width: $tablet) {
+    & {
+      padding: 60px calc(50% - 360px);
+    }
+  }
 
-@media (min-width: $lg) {
-  :root {
-    --section-width: #{$container_lg};
+  @media(min-width: $laptop) {
+    & {
+      padding: 70px calc(50% - 580px);
+    }
   }
 }

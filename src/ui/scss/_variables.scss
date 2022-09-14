@@ -1,8 +1,26 @@
-// out: false
-
 $container_md: 650px;
 $container_lg: 1024px;
 
-$sm   : 425.98px;
-$md   : $container_md + 29.98px;
-$lg   : $container_lg + 29.98px;
+$sm : 425.98px;
+$md : $container_md+29.98px;
+$lg : $container_lg+29.98px;
+
+$colors: ('none': rgba(0, 0, 0, 0),
+    'primary': #14AC75,
+    'sec': #E6EBF1,
+    'grey': #D9DEE4,
+    'black': #1E1E1E,
+    'dark': #5D6C7B,
+    'white': #ffffff,
+    'red': #FF1313,
+    'yellow': #F1F379,
+    'green': #27ae60);
+
+$text-align: 'left',
+'center',
+'right',
+'justify';
+
+$laptop: 1200px;
+$tablet: 768px;
+$mobile: 576px;

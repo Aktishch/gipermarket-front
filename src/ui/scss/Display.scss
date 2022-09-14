@@ -1,31 +1,49 @@
-// out:false
+.display {
+    @include getDisplay;
 
-@mixin Display {
-  &-flex {
-    display: flex !important;
-  }
+    @media(max-width: $laptop) {
+        &-lg {
+            @include getDisplay;
+        }
+    }
 
-  &-none {
-    display: none !important;
-  }
+    @media(max-width: $tablet) {
+        &-tb {
+            @include getDisplay;
+        }
+    }
 
-  &-block {
-    display: block !important;
-  }
-
-  &-inline {
-    display: inline !important;
-  }
-
-  &-inline-flex {
-    display: inline-flex !important;
-  }
+    @media(max-width: $mobile) {
+        &-md {
+            @include getDisplay;
+        }
+    }
 }
 
-.d {
-  @include AddMedia {
-    @include Display;
+.visibility {
+    &-visible {
+        visibility: visible;
+    }
 
-  }
+    &-hidden {
+        visibility: hidden;
+    }
+}
 
+.overflow {
+    &-auto {
+        overflow: auto;
+    }
+
+    &-visible {
+        overflow: visible;
+    }
+
+    &-hidden {
+        overflow: hidden;
+    }
+
+    &-scroll {
+        overflow: scroll;
+    }
 }

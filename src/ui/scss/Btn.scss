@@ -30,14 +30,14 @@
 	align-items    : center;
 	justify-content: center;
 
-	--size       : 40px;
+	--size       : 48px;
 	height       : var(--size);
-	padding      : 0 calc(var(--size) / 2);
-	border-radius: var(--radius-small);
+	padding      : 0 calc(var(--size) / 2.5);
+	border-radius: var(--size-2);
 
-	font-size  : 14px;
+	font-size  : 16px;
 	font-family: var(--font-base);
-	font-weight: bold;
+	font-weight: 600;
 
 	transition: .2s ease;
 
@@ -86,22 +86,19 @@
 	// color
 	@include btnColor(#{"primary"});
 	@include btnColor(#{"sec"});
+	@include btnColor(#{"white"});
 	@include btnColor(#{"red"});
-	@include btnColor(#{"blue"});
-	@include btnColor(#{"green"});
-	@include btnColor(#{"yellow"});
-	@include btnColor(#{"icon"});
 
 
 	&--white {
 		--btn-color      : #fff;
-		--btn-color-light: rgba(255, 255, 255, 0.6);
+		--btn-color-light: rgba(255, 255, 255, 0.3);
 		--btn-text       : var(--color-text);
 
 		@media (hover) {
 			&:hover {
 				--btn-color      : #fff;
-				--btn-color-light: rgba(255, 255, 255, 0.7);
+				--btn-color-light: rgba(255, 255, 255, 0.5);
 			}
 		}
 	}

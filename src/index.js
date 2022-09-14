@@ -7,10 +7,12 @@ import scrollTo from "./js/scrollTo";
 import tab from 'npm-kit-tab';
 import toggle from 'npm-kit-toggle';
 import ripple from 'npm-kit-ripple';
+import scrollNav from './js/scroll-nav'
+import mobileMenu from './js/mobile-menu'
 import Swiper, { Navigation, Pagination, Scrollbar, Autoplay, Grid, Thumbs, EffectFade, Lazy } from 'swiper';
 
 
-import './index.scss';
+import './scss/index.scss';
 
 Swiper.use([Navigation, Pagination, Scrollbar, Autoplay, Grid, Thumbs, EffectFade, Lazy]);
 Swiper.defaults.touchStartPreventDefault = false
@@ -32,5 +34,7 @@ function loadHandler() {
 	ripple.attach('.btn')
 	ripple.attach('.waved')
 	ripple.deAttach('.btn--link')
+	scrollNav.init()
+	mobileMenu.init()
 
 }
