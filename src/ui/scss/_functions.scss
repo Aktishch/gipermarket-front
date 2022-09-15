@@ -5,7 +5,7 @@
 }
 
 @mixin getColors($color, $name) {
-    @if ($name=='primary'or $name=='second'or $name=='black'or $name=='white'or $name=='grey'or $name=='red') {
+    @if ($name=='primary'or $name=='sec'or $name=='black'or $name=='white'or $name=='grey'or $name=='red') {
         $rgb                   : rgbValuesFromHex($color);
         $lighten               : lighten($color, 5%);
         $darken                : darken($color, 5%);
@@ -181,13 +181,13 @@
     @content;
 
     &-md {
-        @media (min-width:$md) {
+        @media (min-width:$mobile) {
             @content;
         }
     }
 
     &-lg {
-        @media (min-width:$lg) {
+        @media (min-width:$laptop) {
             @content;
         }
     }

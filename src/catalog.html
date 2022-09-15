@@ -1,0 +1,39 @@
+  <% var data = {
+
+    title: 'Каталог',
+
+  } %>
+
+  <%= _.template(require('./includes/header.html').default)({data}) %>
+
+  <%= _.template(require('./includes/navigation.html').default)({data}) %>
+
+  <main class="page-content container pt-10 pt-md-5">
+    <section class="catalog">
+      <div class="text text--38 text-md-28 bold-8 mb-10 mb-md-5"><%= data.title %></div>
+      <div class="grid grid-spacing-lg-7">
+        <% for (var i = 0; i < 12; i++) { %>
+          <div class="grid-col-6 grid-col-md-4 grid-col-lg-3">
+            <a class="card overflow-hidden" href="javascript:;">
+              <div class="pic pic--square width-100">
+                <div class="loader">
+                  <svg class="icon">
+                      <use xlink:href="img/icons.svg#loader" />
+                  </svg>
+                </div>
+                <picture>
+                  <source srcset="img/banner-mob.jpg" media="(max-width: 568px)">
+                  <img class="pic__img pic__img--rise" src="img/banner.jpg" alt="" loading="lazy">
+                </picture>
+              </div>
+              <div class="catalog__name flex align-items-center justify-content-center color-white text text--24 text-lg-18 text-md-14 text--center bold-6 interva-5 radius-4 p-2">Георгины</div>
+            </a>
+          </div>
+        <% } %>
+      </div>
+    </section>
+  </main>
+
+
+  <!-- Подвал -->
+  <%= _.template(require('./includes/footer.html').default)() %>

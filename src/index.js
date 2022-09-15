@@ -1,5 +1,6 @@
 import showPass from "./js/show-pass";
 import fancybox from "./js/fancybox";
+import yandexMap from './js/yandex-map';
 import rangeSlider from './js/range-slider';
 import theme from './js/theme';
 import inputmask from "./js/inputmask";
@@ -22,6 +23,7 @@ window.addEventListener('DOMContentLoaded', () => loadHandler())
 
 function loadHandler() {
 	fancybox.init()
+	yandexMap.init()
 	showPass.init()
 	scrollTo.init()
 	rangeSlider.init()

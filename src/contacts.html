@@ -1,0 +1,103 @@
+  <% var data = {
+
+    title: 'Контакты',
+
+  } %>
+
+  <%= _.template(require('./includes/header.html').default)({data}) %>
+
+  <%= _.template(require('./includes/navigation.html').default)({data}) %>
+
+  <main class="page-content container pt-10 pt-md-5">
+    <section class="contacts">
+      <div class="text text--38 text-md-28 bold-8 mb-10 mb-md-5"><%= data.title %></div>
+      <div class="grid grid-spacing-6">
+        <div class="grid-col-12 grid-col-lg-4">
+          <div class="bg-white radius-4 bs height-100 py-9 px-10 py-md-5 px-md-5">
+            <div class="text text--24 bold-8 mb-5">Наши контакты</div>
+            <div class="flex flex-direction-column mb-5">
+              <span class="text text--16 bold-4 fade-40 mb-2">Адрес</span>
+              <span class="text text--16 bold-7">
+                Смоленская область г. Смоленск <br>
+                ул Рыленкова д 50
+              </span>
+            </div>
+            <div class="flex flex-direction-column mb-5">
+              <span class="text text--16 bold-4 fade-40 mb-2">Телефон</span>
+              <a class="link link--underline text text--16 bold-7 width-max" href="tel: +7 (800) 775-79-76">+7 (800) 775-79-76</a>
+            </div>
+            <div class="flex flex-direction-column mb-5">
+              <span class="text text--16 bold-4 fade-40 mb-2">Почта</span>
+              <a class="link link--underline text text--16 bold-7 width-max" href="mailto: info@gipersad.ru">info@gipersad.ru</a>
+            </div>
+            <div class="flex flex-direction-column mb-5">
+              <span class="text text--16 bold-4 fade-40 mb-2">Реквизиты</span>
+              <span class="text text--16 bold-7">
+                ИНН 233803715292 <br>
+                КПП 770000000
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="grid-col-12 grid-col-lg-4">
+          <div class="bg-white radius-4 bs height-100 py-9 px-10 py-md-5 px-md-5">
+            <div class="text text--24 bold-8 mb-5">Магазин</div>
+            <div class="flex flex-direction-column mb-5">
+              <span class="text text--16 bold-4 fade-40 mb-2">Для связи с менеджером по продажам</span>
+              <a class="link link--underline text text--16 bold-7 width-max" href="mailto: sale@gipersad.ru">sale@gipersad.ru</a>
+            </div>
+            <div class="flex flex-direction-column mb-5">
+              <span class="text text--16 bold-4 fade-40 mb-2">Для связи с отделом консультаций</span>
+              <a class="link link--underline text text--16 bold-7 width-max" href="mailto: comsultant@gipersad.ru">comsultant@gipersad.ru</a>
+            </div>
+            <div class="flex flex-direction-column mb-5">
+              <span class="text text--16 bold-4 fade-40 mb-2">Для связи с отделом консультаций</span>
+              <a class="link link--underline text text--16 bold-7 width-max" href="mailto: guarantee@gipersad.ru">guarantee@gipersad.ru</a>
+            </div>
+            <div class="flex flex-direction-column mb-5">
+              <span class="text text--16 bold-4 fade-40 mb-2">Для связи по вопросам партнерства</span>
+              <a class="link link--underline text text--16 bold-7 width-max" href="mailto: partner@gipersad.ru">partner@gipersad.ru</a>
+            </div>
+          </div>
+        </div>
+        <div class="grid-col-12 grid-col-lg-4">
+          <div class="bg-white radius-4 bs height-100 py-9 px-10 py-md-5 px-md-5">
+            <div class="text text--24 bold-8 mb-5">Наши мессенджеры</div>
+            <div class="flex align-items-center mb-5">
+              <a class="link text text--36 mr-3" href="" target="_blank">
+                <img class="icon" src="img/tg.svg" alt="">
+              </a>
+              <div class="flex flex-direction-column">
+                <span class="text text--16 bold-4 fade-40 mb-1">Telegram</span>
+                <a class="link link--underline text text--16 bold-7 width-max" href="" target="_blank">@gipersad</a>
+              </div>
+            </div>
+            <div class="flex align-items-center mb-5">
+              <a class="link text text--36 mr-3" href="" target="_blank">
+                <img class="icon" src="img/wa.svg" alt="">
+              </a>
+              <div class="flex flex-direction-column">
+                <span class="text text--16 bold-4 fade-40 mb-1">WhatsApp</span>
+                <a class="link link--underline text text--16 bold-7 width-max" href="" target="_blank">@gipersad</a>
+              </div>
+            </div>
+            <div class="flex align-items-center mb-5">
+              <a class="link text text--36 mr-3" href="" target="_blank">
+                <img class="icon" src="img/wb.svg" alt="">
+              </a>
+              <div class="flex flex-direction-column">
+                <span class="text text--16 bold-4 fade-40 mb-1">Viber</span>
+                <a class="link link--underline text text--16 bold-7 width-max" href="" target="_blank">@gipersad</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="map width-100 overflow-hidden" id="map"></div>
+
+
+  <!-- Подвал -->
+  <%= _.template(require('./includes/footer.html').default)() %>
