@@ -39,4 +39,19 @@ function loadHandler() {
 	scrollNav.init()
 	mobileMenu.init()
 
+	window.addEventListener('toggleopen', toggleopenHaandler)
+	window.addEventListener('toggleclose', togglecloseHaandler)
+
+}
+
+function toggleopenHaandler(event) {
+	if (event.detail.target.classList.contains('-filter-')) {
+		document.body.classList.add('overflow-hidden')
+	}
+}
+
+function togglecloseHaandler(event) {
+	if (event.detail.target.classList.contains('-filter-')) {
+		document.body.classList.remove('overflow-hidden')
+	}
 }

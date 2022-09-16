@@ -1,0 +1,262 @@
+  <% var data = {
+
+    title: 'Оплата и доставка',
+
+  } %>
+
+  <%= _.template(require('./includes/header.html').default)({data}) %>
+
+  <%= _.template(require('./includes/navigation.html').default)({data}) %>
+
+  <main class="page-content container pt-10 pt-md-5">
+    <section class="payment">
+      <div class="text text--38 text-md-28 bold-8 mb-10 mb-md-5"><%= data.title %></div>
+      <div class="flex align-items-center mb-5">
+        <img class="icon text text--42 mr-3" src="img/Package.svg" alt="">
+        <span class="text text--24 bold-6">Упаковка</span>
+      </div>
+      <div class="text text--16 bold-4 interval-4 mb-5">
+        Мы уделяем большое внимание к упаковке наших растений, потому что наша главная задача – доставить их Вам живыми и невредимыми, словно Вы сами только что выкопали их в поле! Ведь саженцы требуют особого внимания к упаковке при транспортировке!
+      </div>
+      <div class="text text--16 bold-4 interval-4 mb-5">
+        Компания Гипермаркет сада использует трехступенчатую систему упаковки, которая гарантирует жизнеспособность растений в течение двух месяцев.
+      </div>
+      <ol class="pl-5 mb-10 mb-md-5">
+        <li class="text text--16 bold-4 interval-4 mb-5">
+          В конце осени, когда сокодвижение в растении останавливается, и саженец переходит в состояние анабиоза, мы выкапываем готовую продукцию и закладываем на хранение в специальное помещение, предварительно пересыпав корни аморфным грунтом.
+        </li>
+        <li class="text text--16 bold-4 interval-4 mb-5">
+          После, саженцы ждут своего хозяина, чтобы найти свой дом и радовать Вас большим и вкусным урожаем! А мы в это время усердно ищем им владельцев
+        </li>
+        <li class="text text--16 bold-4 interval-4 mb-5">
+          С 1 марта начинается отправка посылок в первую очередь по забронированным заявкам, а далее по вновь поступившим заказам.
+        </li>
+        <li class="text text--16 bold-4 interval-4 mb-5">
+          Перед отправкой владельцу корни саженца мы замачиваем в гидрогель. Это даёт растению достаточно влаги, чтобы подпитываться на протяжении всего пути, даже если саженец вдруг проснётся
+        </li>
+        <li class="text text--16 bold-4 interval-4 mb-5">
+          Затем корни помещаются в торфосмесь и надёжно обматываются стретч-плёнкой так, чтобы плёнка прилегала к стволу идеально плотно. Это помешает влаге выйти, таким образом получается замкнутая система. Важно: каждое растение упаковывается индивидуально!
+        </li>
+        <li class="text text--16 bold-4 interval-4">
+          На финальном этапе саженцы фасуют в коробку и обкладывают крафтовой бумагой для фиксации неподвижного состояния. Это необходимо чтобы растение не повредилось после нескольких циклов переворотов и возможных ударов при транспортировке.
+        </li>
+      </ol>
+      <div class="text text--24 text-md-18 bold-6 mb-8 mb-md-5">Отправка декоративных растений осуществляется в горшках Р9, С1, С2 и С3</div>
+      <div class="flex align-items-center justify-content-between flex-wrap gap-8 gap-md-5 mb-10 mb-md-5">
+        <div class="bg-white radius-4 py-5 px-8 px-lg-4 width-lg-100">
+          <div class="flex align-items-center mb-2">
+            <img class="icon text text--22 mr-2" src="img/squere.svg" alt="">
+            <span class="text text--16 bold-7">Р9</span>
+          </div>
+          <div class="text text--16 bold-4 fade-60">
+            пластиковый квадратный <br>
+            горшок размером 9*9*9 см
+          </div>
+        </div>
+        <div class="bg-white radius-4 py-5 px-8 px-lg-4 width-lg-100">
+          <div class="flex align-items-center mb-2">
+            <img class="icon text text--22 mr-2" src="img/circle.svg" alt="">
+            <span class="text text--16 bold-7">С1</span>
+          </div>
+          <div class="text text--16 bold-4 fade-60">
+            пластиковый круглый <br>
+            горшок объёмом 1 литр
+          </div>
+        </div>
+        <div class="bg-white radius-4 py-5 px-8 px-lg-4 width-lg-100">
+          <div class="flex align-items-center mb-2">
+            <img class="icon text text--22 mr-2" src="img/circle.svg" alt="">
+            <span class="text text--16 bold-7">С2</span>
+          </div>
+          <div class="text text--16 bold-4 fade-60">
+            пластиковый круглый <br>
+            горшок объёмом 2 литра
+          </div>
+        </div>
+        <div class="bg-white radius-4 py-5 px-8 px-lg-4 width-lg-100">
+          <div class="flex align-items-center mb-2">
+            <img class="icon text text--22 mr-2" src="img/circle.svg" alt="">
+            <span class="text text--16 bold-7">С3</span>
+          </div>
+          <div class="text text--16 bold-4 fade-60">
+            пластиковый круглый <br>
+            горшок объёмом 3 литра
+          </div>
+        </div>
+      </div>
+      <div class="text text--18 color-red bold-6 mb-10 mb-md-5">Будьте внимательны: вес горшка отразится на стоимости доставки!</div>
+      <div class="flex align-items-center mb-10 mb-md-5">
+        <img class="icon text text--42 mr-3" src="img/car.svg" alt="">
+        <span class="text text--24 bold-6">Доставка</span>
+      </div>
+      <div class="text text--16 bold-4 mb-5">После оплаты заказа, специалисты компании КСП готовят его к отправке.</div>
+      <div class="text text--16 bold-4 border-bottom interval-4 mb-5 pb-5">
+        Луковицы и Корни цветов <b>мы заказываем у надёжных поставщиков</b> из Нидерландов. В связи с повышением пошлины на ввоз на границе, посадочный материал завозится сразу большими партиями: четыре раза весной (25 февраля, 25 марта, 10/25 апреля и 5 мая) и два раза осенью (25 сентября и 25 октября). Если луковиц в наличие нет, а до прибытия есть время – мы собираем предзаказы.
+      </div>
+      <div class="text text--16 bold-4 border-bottom interval-4 mb-5 pb-5">
+        Растения мы отправляем с 1 марта по 15 июня и с 1 сентября по 1 декабря. Саженцы плодово – ягодных, винограда и роз, мы производим на собственном питомнике, за исключением небольшого процента новинок в нашем каталоге.
+      </div>
+      <div class="text text--16 bold-4 border-bottom interval-4 mb-5 pb-5">
+        Зимой саженцы находятся в состоянии анабиоза, но транспортировка в это время не желательна, так как мороз может загубить растение. Летом же саженец находится в фазе активного роста и развития, транспортировка в это время даёт сильный стресс растениям и снижает процент приживаемости.
+      </div>
+      <div class="text text--16 bold-4 border-bottom interval-4 mb-5 pb-5">
+        Для комфортной адаптации и для сохранности растения живыми, пересадка возможна только в осенний и в весенний период.
+      </div>
+      <div class="text text--16 bold-4 interval-4 mb-10 mb-md-5">
+        Семена овощей и цветов, мицелий грибов, удобрения, газонная трава и садовый инвентарь отправляются в любое время года.
+      </div>
+      <div class="grid grid-spacing-lg-8 mb-10 mb-md-5">
+        <div class="grid-col-lg-6">
+          <div class="bg-white radius-4 bs height-100 p-2">
+            <div class="flex align-items-center bg-gray radius-4 py-5 px-6 py-lg-3 px-lg-3">
+              <img class="icon text text--50 text-md-36 mr-6 mr-md-3" src="img/cdek.svg" alt="">
+              <span class="text text--22 text-md-18 bold-6">Курьерская служба СДЭК</span>
+            </div>
+            <ul class="listing p-6 pl-10 p-md-4 pl-md-7">
+              <li class="color-primary mb-3">
+                <span class="text text--16 color-black bold-4 interval-4">
+                  Стоимость доставки компанией СДЭК - <b>от 400 рублей</b>
+                </span>
+              </li>
+              <li class="color-primary mb-3">
+                <span class="text text--16 color-black bold-4 interval-4">
+                  Сроки доставки – <b>от 2 до 5 дней</b> после отправки
+                </span>
+              </li>
+              <li class="color-primary mb-3">
+                <span class="text text--16 color-black bold-4 interval-4">
+                  В стоимость товара <b>НЕ ВКЛЮЧЕНЫ</b> почтовые сборы, стоимость доставки рассчитывается отдельно
+                </span>
+              </li>
+              <li class="color-primary">
+                <span class="text text--16 color-black bold-4 interval-4">Выбор: самовывоз или доставка до двери</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="grid-col-lg-6">
+          <div class="bg-white radius-4 bs height-100 p-2">
+            <div class="flex align-items-center bg-gray radius-4 py-5 px-6 py-lg-3 px-lg-3">
+              <img class="icon text text--50 text-md-36 mr-6 mr-md-3" src="img/rus.svg" alt="">
+              <span class="text text--22 text-md-18 bold-6">Почта России</span>
+            </div>
+            <ul class="listing p-6 pl-10 p-md-4 pl-md-7">
+              <li class="color-primary mb-3">
+                <span class="text text--16 color-black bold-4 interval-4">
+                  Стоимость доставки – <b>от 350 рублей</b>
+                </span>
+              </li>
+              <li class="color-primary mb-3">
+                <span class="text text--16 color-black bold-4 interval-4">
+                  Сроки доставки – <b>от 3 до 14 дней</b> с момента отправки 
+                </span>
+              </li>
+              <li class="color-primary">
+                <span class="text text--16 color-black bold-4 interval-4">
+                  В стоимость товара <b>НЕ ВКЛЮЧЕНЫ</b> почтовые сборы, стоимость доставки рассчитывается отдельно
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="flex align-items-center mb-10 mb-md-5">
+        <img class="icon text text--42 mr-3" src="img/card.svg" alt="">
+        <span class="text text--24 bold-6">Способы оплаты</span>
+      </div>
+      <div class="text text--16 bold-4 border-bottom interval-4 mb-5 pb-5">
+        Картой банка через внутренний защищённый шлюз системы Сбербанк Эквайринг. Важно: платёжный шлюз предоставил Сбербанк, все транзакции надёжно защищены
+      </div>
+      <div class="text text--16 bold-4 interval-4 mb-10 mb-md-5">
+        Владельцы дебетовой банковской карты ПАО Сбербанк, подключившиеся к услуге «Мобильный банк» и к системе «Сбербанк Онлайн», могут совершать покупки в кредит, не выходя из дома! Кредит по программе "Покупай со Сбером"
+      </div>
+      <div class="flex align-items-center mb-10 mb-md-5">
+        <img class="icon text text--42 mr-3" src="img/doc.svg" alt="">
+        <span class="text text--24 bold-6">Основные требования</span>
+      </div>
+      <ul class="listing pl-5 mb-10 mb-md-5">
+        <li class="color-primary mb-3">
+          <span class="text text--16 color-black bold-4 interval-4">
+            Гражданство РФ
+          </span>
+        </li>
+        <li class="color-primary mb-3">
+          <span class="text text--16 color-black bold-4 interval-4">
+            Возраст покупателя - от 21 до 70 лет на момент возврата кредита по договору
+          </span>
+        </li>
+        <li class="color-primary mb-3">
+          <span class="text text--16 color-black bold-4 interval-4">
+            Наличие постоянной (временной) регистрации по месту жительства/пребывания на территории Российской Федерации
+          </span>
+        </li>
+      </ul>
+      <div class="flex align-items-center mb-10 mb-md-5">
+        <img class="icon text text--42 mr-3" src="img/Thumbs up.svg" alt="">
+        <span class="text text--24 bold-6">Преимущества Сервиса</span>
+      </div>
+      <div class="grid grid-spacing-lg-8 mb-10 mb-md-5">
+        <div class="grid-col-lg-4">
+          <div class="flex align-items-center bg-white radius-4 bs py-6 px-10 py-md-4 px-md-4">
+            <img class="icon text text--42 mr-3" src="img/check.svg" alt="">
+            <span class="text text--16 bold-5 interval-3">
+              Без первоначального <br>
+              взноса по кредиту
+            </span>
+          </div>
+        </div>
+        <div class="grid-col-lg-4">
+          <div class="flex align-items-center bg-white radius-4 bs py-6 px-10 py-md-4 px-md-4">
+            <img class="icon text text--42 mr-3" src="img/check.svg" alt="">
+            <span class="text text--16 bold-5 interval-3">
+              Срок действия кредита <br>
+              от 3 до 36 месяцев
+            </span>
+          </div>
+        </div>
+        <div class="grid-col-lg-4">
+          <div class="flex align-items-center bg-white radius-4 bs py-6 px-10 py-md-4 px-md-4">
+            <img class="icon text text--42 mr-3" src="img/check.svg" alt="">
+            <span class="text text--16 bold-5 interval-3">
+              Сумма кредита <br>
+              от 3 000 до 300 000 рублей
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="flex align-items-center mb-10 mb-md-5">
+        <img class="icon text text--42 mr-3" src="img/Up-right arrow.svg" alt="">
+        <span class="text text--24 bold-6">Клиентский сценарий:</span>
+      </div>
+      <ul class="listing pl-5 mb-10 mb-md-5">
+        <li class="color-primary mb-3">
+          <span class="text text--16 color-black bold-4 interval-4">
+            Выберите товар, оформите заказ, при оформлении заказа нажмите «Купить в кредит», с вами свяжется менеджер для уточнения информации по заказу и пришлёт вам ссылку для оформления.
+          </span>
+        </li>
+        <li class="color-primary mb-3">
+          <span class="text text--16 color-black bold-4 interval-4">
+            Когда откроется СберБанк Онлайн, авторизуйтесь и заполните заявку.
+          </span>
+        </li>
+        <li class="color-primary mb-3">
+          <span class="text text--16 color-black bold-4 interval-4">
+            Рассмотрение заявки займет несколько минут.
+          </span>
+        </li>
+        <li class="color-primary mb-3">
+          <span class="text text--16 color-black bold-4 interval-4">
+            Если кредит одобрен, деньги за покупку автоматически будут перечислены на счёт магазина.
+          </span>
+        </li>
+        <li class="color-primary">
+          <span class="text text--16 color-black bold-4 interval-4">
+            Подробнее с условиями кредитования можно ознакомиться на странице <a class="link link--underline color-red width-100">https://www.pokupay.ru/credit_terms</a>
+          </span>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Подвал -->
+  <%= _.template(require('./includes/footer.html').default)() %>

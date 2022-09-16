@@ -90,5 +90,12 @@
 			max-width: 100%;
 			position : relative;
 		}
+
+		&-bottom {
+			flex-direction : column;
+			align-items    : flex-start !important;
+			justify-content: flex-start !important;
+			grid-gap       : 15px;
+		}
 	}
 }

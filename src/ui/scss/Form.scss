@@ -16,7 +16,7 @@
 		width      : max-content;
 		margin-left: auto;
 		margin-top : 2px;
-		color      : var(--color-text-60);
+		color      : var(--color-black-60);
 	}
 
 	&-input-cover {
@@ -48,7 +48,7 @@
 		color      : var(--color-black);
 
 		// background-color: var(--bg3);
-		border          : 1px solid var(--color-grey-50);
+		border: 1px solid var(--color-grey-50);
 
 		&:first-of-type {
 			border-start-start-radius: var(--size-2);
@@ -71,13 +71,13 @@
 		}
 
 		&:disabled {
-			color           : var(--color-text-60);
-			border          : 1px solid var(--color-text-10);
+			color           : var(--color-black-60);
+			border          : 1px solid var(--color-black-10);
 			background-color: var(--bg2);
 			opacity         : .8;
 
 			&:placeholder {
-				color: var(--color-text-60);
+				color: var(--color-black-60);
 			}
 		}
 
@@ -169,7 +169,7 @@
 		width         : var(--cover-width);
 		min-width     : var(--cover-width);
 		height        : var(--cover-height);
-		background    : var(--color-text-40);
+		background    : var(--color-black-40);
 		border-radius : 20px;
 		position      : relative;
 		overflow      : hidden;
@@ -195,7 +195,8 @@
 	}
 
 	&-input-checkbox:checked~&-toggle-target {
-		background: var(--color-primary);
+		background  : var(--color-primary);
+		border-color: var(--color-primary);
 
 		&::before {
 			transform: translateX(calc(var(--cover-width) - var(--size) - var(--padding) - var(--padding)));
@@ -205,7 +206,7 @@
 	&-checkbox-target {
 		// background         : linear-gradient(180deg, #FFFFFF 0%, rgba(176, 176, 176, 0.51) 100%), #FFFFFF;
 		background         : var(--bg3);
-		border             : 1px solid var(--color-text-40);
+		border             : 1px solid var(--color-black-40);
 		border-radius      : 4px;
 		background-position: center;
 		display            : block;
@@ -234,7 +235,7 @@
 		animation: check .3s forwards;
 
 		.icon {
-			color    : var(--color-primary);
+			color    : var(--color-white);
 			transform: scale(1);
 		}
 	}
@@ -242,7 +243,7 @@
 	&-radio-target {
 		// background         : linear-gradient(180deg, #FFFFFF 0%, rgba(176, 176, 176, 0.51) 100%), #FFFFFF;
 		background         : var(--bg3);
-		border             : 1px solid var(--color-text-40);
+		border             : 1px solid var(--color-black-40);
 		background-position: center;
 		min-width          : 18px;
 		width              : 18px;
@@ -351,7 +352,7 @@
 	&-btn {
 		display      : flex;
 		background   : var(--color-primary);
-		border       : 3px solid var(--bg3);
+		border       : 5px solid var(--bg3);
 		box-shadow   : 0px 1px 1px rgba(0, 0, 0, 0.24);
 		position     : absolute;
 		width        : 22px;

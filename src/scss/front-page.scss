@@ -92,35 +92,6 @@
     }
 }
 
-.like {
-    position: absolute;
-    top     : var(--size-4);
-    right   : var(--size-4);
-
-    &__heart {
-        width           : 48px;
-        height          : 48px;
-        fill            : var(--color-none);
-        stroke          : var(--color-dark);
-        background-color: var(--color-white-40);
-        transition      : 0.2s linear;
-    }
-
-    &__checkbox:checked+:is(&__heart) {
-        fill      : var(--color-red);
-        stroke    : var(--color-red);
-        visibility: visible;
-        opacity   : 1;
-    }
-
-    @media(max-width: $tablet) {
-        &__heart {
-            visibility: visible;
-            opacity   : 1;
-        }
-    }
-}
-
 .information {
     position      : relative;
     background    : radial-gradient(74.38% 244.23% at 75.04% 76.25%, #2BD899 0%, #14AC75 82.99%);
