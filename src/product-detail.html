@@ -13,7 +13,7 @@
     <%= _.template(require('./includes/banner.html').default)({}) %>
 
     <section class="product-detail">
-      <div class="product-detail__content flex justify-content-between gap-10 gap-lg-5">
+      <div class="product-detail__content flex justify-content-between gap-10 gap-lg-5 mb-10">
         <div class="product-detail__pictures width-100">
           <div class="product-detail-slider slider bg-gray radius-4 overflow-hidden mb-3">
             <div class="swiper grid-wrap">
@@ -41,7 +41,7 @@
             <div class="swiper grid-wrap grid-spacing-2">
               <div class="swiper-wrapper">
                 <% for(let i=0; i < 5; i++){ %>
-                  <div class="swiper-slide grid-col-3 link">
+                  <div class="swiper-slide grid-col-4 grid-col-md-3 link">
                     <div class="pic pic--rect-x radius-4 overflow-hidden waved">
                       <img class="pic__img" src="img/banner.jpg" alt="">
                     </div>
@@ -52,10 +52,10 @@
           </div>
         </div>
         <div class="width-100">
-          <div class="text text--24 bold-7 mb-3"><%= data.title %></div>
-          <div class="flex align-items-center flex-wrap gap-9 gap-lg-3 mb-7 mb-lg-4">
-            <div class="text text--16 bold-4 fade-60">Vinogradus Belus Muskatus</div>
-            <div class="text text--16 bold-4 fade-60">Артикул: 4678</div>
+          <div class="text text--24 text-lg-20 bold-7 mb-3"><%= data.title %></div>
+          <div class="flex align-items-center flex-wrap gap-9 gap-lg-3 mb-7 mb-lg-3">
+            <div class="text text--16 text-md-14 bold-4 fade-60">Vinogradus Belus Muskatus</div>
+            <div class="text text--16 text-md-14 bold-4 fade-60">Артикул: 4678</div>
             <div class="flex align-items-center">
               <img class="icon text text--12 mr-2" src="img/circle.svg" alt="">
               <div class="text text--16 bold-4 fade-60">В наличии</div>
@@ -63,8 +63,8 @@
           </div>
           <div class="flex align-items-center flex-wrap gap-10 gap-lg-3 mb-9 mb-lg-5">
             <div class="flex align-items-end">
-              <span class="text text--38 bold-8 mr-3">164 ₽</span>
-              <span class="card-price text text--24 bold-4 fade-40">194 ₽</span>
+              <span class="text text--38 text-md-26 bold-8 mr-3">164 ₽</span>
+              <span class="card-price text text--24 text-md-18 bold-4 fade-40">194 ₽</span>
             </div>
             <div class="quantity flex align-items-center justify-content-between bg-white border radius-2">
               <button class="btn btn--gray color-black ">-</button>
@@ -73,7 +73,7 @@
             </div>
           </div>
           <div class="product-detail-timer flex align-items-center radius-2 mb-10 mb-lg-5">
-            <div class="product-detail-timer__pic flex align-items-center justify-content-center display-lg-none radius-2">
+            <div class="product-detail-timer__pic flex align-items-center justify-content-center display-md-none radius-2">
               <div class="product-detail-timer__img flex align-items-center justify-content-center radius-2">
                 <img class="icon text text--42" src="img/oclock.svg" alt="">
               </div>
@@ -120,7 +120,7 @@
               </div>
             </div>
           </div>
-          <a class="product-detail__link display-block link text text--14 bold-4 color-primary width-max mb-4" href="">Все характеристики и описание</a>
+          <a class="product-detail__link display-block link text text--14 bold-4 color-primary width-max mb-4" href="#product-info">Все характеристики и описание</a>
           <div class="flex align-items-start flex-wrap gap-10 gap-lg-5">
             <div class="flex align-items-center">
               <button class="btn btn--primary btn--fill mr-4">В корзину</button>
@@ -163,6 +163,393 @@
                     swiper: cardDetailBullets,
                 }
             })
+      </script>
+
+      <div class="grid mb-10 mb-md-5">
+        <div class="text text--38 text-md-28 bold-8 mb-9 mb-md-5">Характеристики</div>
+        <div class="grid grid-spacing-lg-10">
+          <div class="grid-col-12 grid-col-lg-6">
+            <div class="grid border-bottom pb-2 mb-2">
+              <div class="grid-col-12 grid-col-lg-4">
+                <span class="text text--16 bold-4 fade-60">Особенности</span>
+              </div>
+              <div class="grid-col-12 grid-col-lg-8">
+                <span class="text text--16 bold-5">Два в одном - урожайный и декоративный</span>
+              </div>
+            </div>
+            <div class="grid border-bottom pb-2 mb-2">
+              <div class="grid-col-12 grid-col-lg-4">
+                <span class="text text--16 bold-4 fade-60">Высота растения</span>
+              </div>
+              <div class="grid-col-12 grid-col-lg-8">
+                <span class="text text--16 bold-5">50.0000 - см</span>
+              </div>
+            </div>
+            <div class="grid border-bottom pb-2 mb-2">
+              <div class="grid-col-12 grid-col-lg-4">
+                <span class="text text--16 bold-4 fade-60">Время посадки</span>
+              </div>
+              <div class="grid-col-12 grid-col-lg-8">
+                <div class="flex align-items-center flex-wrap">
+                  <div class="flex align-items-center mr-4">
+                    <img class="icon text text--10 mr-1" src="img/Shape-green.svg" alt="">
+                    <span class="text text--16 bold-5">Авг</span>
+                  </div>
+                  <div class="flex align-items-center mr-4">
+                    <img class="icon text text--10 mr-1" src="img/Shape-green.svg" alt="">
+                    <span class="text text--16 bold-5">Апр</span>
+                  </div>
+                  <div class="flex align-items-center mr-4">
+                    <img class="icon text text--10 mr-1" src="img/Shape-green.svg" alt="">
+                    <span class="text text--16 bold-5">Май</span>
+                  </div>
+                  <div class="flex align-items-center mr-4">
+                    <img class="icon text text--10 mr-1" src="img/Shape-green.svg" alt="">
+                    <span class="text text--16 bold-5">Мар</span>
+                  </div>
+                  <div class="flex align-items-center mr-4">
+                    <img class="icon text text--10 mr-1" src="img/Shape-green.svg" alt="">
+                    <span class="text text--16 bold-5">Окт</span>
+                  </div>
+                  <div class="flex align-items-center">
+                    <img class="icon text text--10 mr-1" src="img/Shape-green.svg" alt="">
+                    <span class="text text--16 bold-5">Сен</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid border-bottom pb-2 mb-2">
+              <div class="grid-col-12 grid-col-lg-4">
+                <span class="text text--16 bold-4 fade-60">Время созревания</span>
+              </div>
+              <div class="grid-col-12 grid-col-lg-8">
+                <div class="flex align-items-center flex-wrap">
+                  <div class="flex align-items-center mr-4">
+                    <img class="icon text text--10 mr-1" src="img/Shape-red.svg" alt="">
+                    <span class="text text--16 bold-5">Авг</span>
+                  </div>
+                  <div class="flex align-items-center mr-4">
+                    <img class="icon text text--10 mr-1" src="img/Shape-red.svg" alt="">
+                    <span class="text text--16 bold-5">Сен</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid border-bottom pb-2 mb-2">
+              <div class="grid-col-12 grid-col-lg-4">
+                <span class="text text--16 bold-4 fade-60">Зоны морозостойкости</span>
+              </div>
+              <div class="grid-col-12 grid-col-lg-8">
+                <div class="flex align-items-center flex-wrap">
+                  <span class="text text--16 bold-5 mr-4">Подмосковье</span>
+                  <span class="text text--16 bold-5">Южные регионы</span>
+                </div>
+              </div>
+            </div>
+            <div class="grid border-bottom pb-2 mb-2">
+              <div class="grid-col-12 grid-col-lg-4">
+                <span class="text text--16 bold-4 fade-60">Окраска</span>
+              </div>
+              <div class="grid-col-12 grid-col-lg-8">
+                <div class="flex align-items-center flex-wrap">
+                  <div class="border radius-1 p-2 mr-2" style="background-color: #fff;"></div>
+                  <div class="border radius-1 p-2 mr-2" style="background-color: #861313;"></div>
+                  <div class="border radius-1 p-2" style="background-color: #134e86;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-col-12 grid-col-lg-6">
+            <div class="grid border-bottom pb-2 mb-2">
+              <div class="grid-col-12 grid-col-lg-4">
+                <span class="text text--16 bold-4 fade-60">Расстояние при посадке</span>
+              </div>
+              <div class="grid-col-12 grid-col-lg-8">
+                <span class="text text--16 bold-5">100 - 150 см</span>
+              </div>
+            </div>
+            <div class="grid border-bottom pb-2 mb-2">
+              <div class="grid-col-12 grid-col-lg-4">
+                <span class="text text--16 bold-4 fade-60">Вес плода (г)</span>
+              </div>
+              <div class="grid-col-12 grid-col-lg-8">
+                <span class="text text--16 bold-5">230 - 280 г</span>
+              </div>
+            </div>
+            <div class="grid border-bottom pb-2 mb-2">
+              <div class="grid-col-12 grid-col-lg-4">
+                <span class="text text--16 bold-4 fade-60">Местоположение</span>
+              </div>
+              <div class="grid-col-12 grid-col-lg-8">
+                <div class="flex align-items-center">
+                  <img class="icon text text--24 mr-2" src="img/sun.svg" alt="">
+                  <span class="text text--16 bold-5">Солнечное место</span>
+                </div>
+              </div>
+            </div>
+            <div class="grid border-bottom pb-2 mb-2">
+              <div class="grid-col-12 grid-col-lg-4">
+                <span class="text text--16 bold-4 fade-60">Вес плода (г)</span>
+              </div>
+              <div class="grid-col-12 grid-col-lg-8">
+                <span class="text text--16 bold-5">230 - 280 г</span>
+              </div>
+            </div>
+            <div class="grid border-bottom pb-2 mb-2">
+              <div class="grid-col-12 grid-col-lg-4">
+                <span class="text text--16 bold-4 fade-60">Срок созревания</span>
+              </div>
+              <div class="grid-col-12 grid-col-lg-8">
+                <span class="text text--16 bold-5">Раннеспелый (115 - 120 дней)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex align-items-center justify-content-between flex-wrap gap-4 mb-10  mb-md-5">
+        <div class="flex align-items-center bg-white radius-4 bs width-lg-100 py-5 px-6">
+          <img class="icon text text--42 mr-5" src="img/warranty.svg" alt="">
+          <div class="flex flex-direction-column">
+            <span class="text text--16 bold-7 mb-1">Гарантия 360 дней</span>
+            <span class="text text--14 bold-4 fade-60">
+              С момента получения <br>
+              посылки
+            </span>
+          </div>
+        </div>
+        <div class="flex align-items-center bg-white radius-4 bs width-lg-100 py-5 px-6">
+          <img class="icon text text--42 mr-5" src="img/car.svg" alt="">
+          <div class="flex flex-direction-column">
+            <span class="text text--16 bold-7 mb-1">Доставка</span>
+            <span class="text text--14 bold-4 fade-60">
+              Сотрудничаем со СДЭК <br>
+              и Почтой России
+            </span>
+          </div>
+        </div>
+        <div class="flex align-items-center bg-white radius-4 bs width-lg-100 py-5 px-6">
+          <img class="icon text text--42 mr-5" src="img/box.svg" alt="">
+          <div class="flex flex-direction-column">
+            <span class="text text--16 bold-7 mb-1">Уникальная упаковка</span>
+            <span class="text text--14 bold-4 fade-60">
+              Трехфазная упаковка <br>
+              для защиты саженцев
+            </span>
+          </div>
+        </div>
+        <div class="flex align-items-center bg-white radius-4 bs width-lg-100 py-5 px-6">
+          <img class="icon text text--42 mr-5" src="img/Necktie.svg" alt="">
+          <div class="flex flex-direction-column">
+            <span class="text text--16 bold-7 mb-1">Консультант для вас</span>
+            <span class="text text--14 bold-4 fade-60">
+              Решит любые вопросы, <br>
+              связанные с заказами
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-info mb-10 mb-md-5" id="product-info">
+        <div class="text text--38 text-md-28 bold-8 mb-9 mb-md-5">Описание</div>
+        <div class="text text--24 text-md-18 bold-6 mb-5">Внешний вид</div>
+        <div class="tex text--14 bold-4 interval-5 mb-8 mb-md-5">
+          Мускатный сорт винограда привлекает садоводов своим неповторимым вкусом и ароматом. Куст среднерослый, с крепкой лозой, раскидистыми побегами. Лист гладкий, глубоко рассеченный, пятилопастной, с зазубренным краем. Гроздь небольшая, цилиндрическая, с плотно прилегающими круглыми ягодами. Вес одной грозди около 100 г. Виноградины диаметром 14-15 мм, желто-зеленого цвета с черными крапинками. Кожица тонкая, непрозрачная, с мускатным вкусом и запахом. Мякоть ягод плотная, сочная, сладкая, с еле заметной кислинкой. 
+        </div>
+        <div class="text text--24 text-md-18 bold-6 mb-5">Посадочный материал</div>
+        <div class="tex text--14 bold-4 mb-8 mb-md-5">Саженец</div>
+        <div class="flex align-items-center mb-5">
+          <img class="icon text text--24 mr-2" src="img/Seedling.svg" alt="">
+          <span class="text text--24 text-md-18 bold-6">Посадочный материал</span> 
+        </div>
+        <div class="tex text--14 bold-4 interval-5 mb-8 mb-md-5">
+          Родина происхождения винограда Мускат Оттонель – на западе Франции, город Анже. Вывел гибрид местный селекционер Жан Моро в 1852 году путем скрещивания сортов Шасла Гутедель и Мускат де Сомюр. Место районирования – винодельческая область Нойзидлерзее в Бургенланде (Австрия). Так же распространен в Румынии и Эльзасе (Франция). В России Мускат Оттонель прижился на Тамани и в Крыму.
+        </div>
+        <div class="text text--24 text-md-18 bold-6 mb-5">Уход и посадка</div>
+        <div class="tex text--14 bold-4 interval-5 mb-8 mb-md-5">
+          Мускат Оттонель хорошо развивается и обильно плодоносит на южной и юго-западной стороне участка. Почва подходит песчаная, супесчаная или суглинистая. Высаживают весной, на хорошо прогретую почву. Направление рядов – с севера на юг. Расстояние между высаживаемыми саженцами – 3,5-4 метра. Формируют мускат двумя способами: четырехрукавный бесштамбовый и на высоких штамбах. Нагрузка на плодоносный побег не должна превышать 7-8 глазков. На куст, соответственно, 35-40.<br>
+          <br>
+          В уходе виноград неприхотлив. Правила агротехники – стандартные. Подкормку проводят в начале июля комплексными минеральными удобрениями (азот, фосфор, калий). При использовании органических удобрений, обязательно в их составе должны быть фосфорно-калийные компоненты. Обрезка, пасынкование, подвязка – проводятся по мере необходимости. Поливают дренажным способом.
+        </div>
+        <div class="product-info__toggle" data-toggle-cover>
+          <div class="flex align-items-center link color-primary width-max" data-toggle-link>
+            <span class="text text--16 bold-6 mr-2">Читать всё описание</span>
+            <span class="product-info__arrow text text--10">
+              <svg class="icon">
+                <use xlink:href="img/icons.svg#arrow-right" />
+            </svg>
+            </span>
+          </div>
+          <div data-toggle-content data-toggle-height="true" data-toggle-static="true">
+            <div class="tex text--14 bold-4 interval-5 mt-8 mt-md-5">
+              Мускат Оттонель хорошо развивается и обильно плодоносит на южной и юго-западной стороне участка. Почва подходит песчаная, супесчаная или суглинистая. Высаживают весной, на хорошо прогретую почву. Направление рядов – с севера на юг. Расстояние между высаживаемыми саженцами – 3,5-4 метра. Формируют мускат двумя способами: четырехрукавный бесштамбовый и на высоких штамбах. Нагрузка на плодоносный побег не должна превышать 7-8 глазков. На куст, соответственно, 35-40.<br>
+              <br>
+              В уходе виноград неприхотлив. Правила агротехники – стандартные. Подкормку проводят в начале июля комплексными минеральными удобрениями (азот, фосфор, калий). При использовании органических удобрений, обязательно в их составе должны быть фосфорно-калийные компоненты. Обрезка, пасынкование, подвязка – проводятся по мере необходимости. Поливают дренажным способом.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="feedback radius-4 overflow-hidden py-6 px-10 px-md-6 mb-10 mb-md-5">
+        <img class="feedback__bg height-100 display-lg-none" src="img/feedback.png" alt="">
+        <div class="feedback__content">
+          <div class="text text--24 color-white bold-8 mb-4">Бесплатная консультация</div>
+          <form class="flex align-items-end flex-wrap gap-6 mb-4">
+            <label class="form-field">
+              <div class="text text--16 bold-6 color-white mb-2">Ваше имя</div>
+              <div class="feedback__input form-input-cover">
+                <input type="text" class="form-input" placeholder="Напишите имя...">
+              </div>
+            </label>
+            <label class="form-field">
+              <div class="text text--16 bold-6 color-white mb-2">Ваш телефон</div>
+              <div class="feedback__input form-input-cover">
+                <input type="tel" class="form-input" placeholder="+7 ">
+              </div>
+            </label>
+            <button class="btn btn--primary btn--fill" type="submit">Отправить заявку</button>
+          </form>
+          <div class="text text--12 color-white fade-60">Отправляя форму Вы даете согласие на обработку Ваших персональных данных</div>
+        </div>
+      </div>
+
+      <div class="payment mb-10 mb-md-5">
+        <div class="text text--38 text-md-28 bold-8 mb-10 mb-md-5">Оплата и доставка</div>
+        <div class="flex align-items-center mb-5">
+          <img class="icon text text--42 mr-3" src="img/Package.svg" alt="">
+          <span class="text text--24 bold-6">Упаковка</span>
+        </div>
+        <div class="text text--14 bold-4 interval-4 mb-5">
+          Мы уделяем большое внимание к упаковке наших растений, потому что наша главная задача – доставить их Вам живыми и невредимыми, словно Вы сами только что выкопали их в поле! Ведь саженцы требуют особого внимания к упаковке при транспортировке!
+        </div>
+        <div class="text text--14 bold-4 interval-4 mb-5">
+          Компания Гипермаркет сада использует трехступенчатую систему упаковки, которая гарантирует жизнеспособность растений в течение двух месяцев.
+        </div>
+        <ol class="pl-5 mb-10 mb-md-5">
+          <li class="text text--14 bold-4 interval-4 mb-5">
+            В конце осени, когда сокодвижение в растении останавливается, и саженец переходит в состояние анабиоза, мы выкапываем готовую продукцию и закладываем на хранение в специальное помещение, предварительно пересыпав корни аморфным грунтом.
+          </li>
+          <li class="text text--14 bold-4 interval-4 mb-5">
+            После, саженцы ждут своего хозяина, чтобы найти свой дом и радовать Вас большим и вкусным урожаем! А мы в это время усердно ищем им владельцев
+          </li>
+          <li class="text text--14 bold-4 interval-4 mb-5">
+            С 1 марта начинается отправка посылок в первую очередь по забронированным заявкам, а далее по вновь поступившим заказам.
+          </li>
+          <li class="text text--14 bold-4 interval-4 mb-5">
+            Перед отправкой владельцу корни саженца мы замачиваем в гидрогель. Это даёт растению достаточно влаги, чтобы подпитываться на протяжении всего пути, даже если саженец вдруг проснётся
+          </li>
+          <li class="text text--14 bold-4 interval-4 mb-5">
+            Затем корни помещаются в торфосмесь и надёжно обматываются стретч-плёнкой так, чтобы плёнка прилегала к стволу идеально плотно. Это помешает влаге выйти, таким образом получается замкнутая система. Важно: каждое растение упаковывается индивидуально!
+          </li>
+          <li class="text text--14 bold-4 interval-4">
+            На финальном этапе саженцы фасуют в коробку и обкладывают крафтовой бумагой для фиксации неподвижного состояния. Это необходимо чтобы растение не повредилось после нескольких циклов переворотов и возможных ударов при транспортировке.
+          </li>
+        </ol>
+        <div class="text text--24 text-md-18 bold-6 mb-8 mb-md-5">Отправка декоративных растений осуществляется в горшках Р9, С1, С2 и С3</div>
+        <div class="flex align-items-center justify-content-between flex-wrap gap-8 gap-md-5 mb-10 mb-md-5">
+          <div class="bg-white radius-4 py-5 px-8 px-lg-4 width-lg-100">
+            <div class="flex align-items-center mb-2">
+              <img class="icon text text--22 mr-2" src="img/squere.svg" alt="">
+              <span class="text text--16 bold-7">Р9</span>
+            </div>
+            <div class="text text--16 bold-4 fade-60">
+              пластиковый квадратный <br>
+              горшок размером 9*9*9 см
+            </div>
+          </div>
+          <div class="bg-white radius-4 py-5 px-8 px-lg-4 width-lg-100">
+            <div class="flex align-items-center mb-2">
+              <img class="icon text text--22 mr-2" src="img/circle.svg" alt="">
+              <span class="text text--16 bold-7">С1</span>
+            </div>
+            <div class="text text--16 bold-4 fade-60">
+              пластиковый круглый <br>
+              горшок объёмом 1 литр
+            </div>
+          </div>
+          <div class="bg-white radius-4 py-5 px-8 px-lg-4 width-lg-100">
+            <div class="flex align-items-center mb-2">
+              <img class="icon text text--22 mr-2" src="img/circle.svg" alt="">
+              <span class="text text--16 bold-7">С2</span>
+            </div>
+            <div class="text text--16 bold-4 fade-60">
+              пластиковый круглый <br>
+              горшок объёмом 2 литра
+            </div>
+          </div>
+          <div class="bg-white radius-4 py-5 px-8 px-lg-4 width-lg-100">
+            <div class="flex align-items-center mb-2">
+              <img class="icon text text--22 mr-2" src="img/circle.svg" alt="">
+              <span class="text text--16 bold-7">С3</span>
+            </div>
+            <div class="text text--16 bold-4 fade-60">
+              пластиковый круглый <br>
+              горшок объёмом 3 литра
+            </div>
+          </div>
+        </div>
+        <a class="product-detail__link link text text--16 bold-6 color-primary" href="">Читать подробнее</a>
+      </div>
+
+      <!-- <div class="product-items">
+        <div class="grid"></div>
+      </div> -->
+      <div class="product-items">
+        <div class="text text--38 text-md-28 bold-8 mb-10 mb-md-5">С этим товаром смотрят</div>
+        <div class="slider product-slider">
+          <div class="swiper grid-wrap grid-spacing-8">
+            <div class="swiper-wrapper">
+              <% for (var i = 0; i < 5; i++) { %>
+                <div class="swiper-slide grid-col-10 grid-col-md-7 grid-col-lg-3">
+                  <a class="card card-action overflow-hidden height-100 waved" href="javascript:;">
+                    <div class="card-pic width-100">
+                      <div class="pic pic--rect-x">
+                        <div class="loader">
+                          <svg class="icon">
+                              <use xlink:href="img/icons.svg#loader" />
+                          </svg>
+                        </div>
+                        <picture>
+                          <img class="pic__img" src="img/banner.jpg" alt="" loading="lazy">
+                        </picture>
+                        <div class="card-nameplate flex align-items-center justify-content-center radius-2 py-1 px-3" style="background-color: #25B9E8;">
+                          <img class="icon text text--24 mr-2" src="img/nameplate-1.svg" alt="">
+                          <span class="text text--16 color-white bold-7">Новинка</span>
+                        </div>
+                        <label class="like">
+                          <input class="like__checkbox display-none" type="checkbox">
+                          <span class="like__heart flex align-items-center justify-content-center text text--18 link radius-2 visibility-hidden fade-0">
+                              <svg class="icon">
+                                  <use xlink:href="img/icons.svg#like" />
+                              </svg>
+                          </span>
+                      </label>
+                      </div>
+                    </div>
+                    <div class="card-content p-4">
+                      <div class="text text--16 bold-7 mb-3">Тюльпан бахромчатый Блэк Джевел 5 шт.</div>
+                      <div class="text text--16 bold-4 fade-60 mb-5">Кустарник сильнорослый, в высоту достигает 2 ме...</div>
+                      <div class="flex align-items-center justify-content-between mt-auto">
+                        <div class="flex flex-direction-column mr-2">
+                          <span class="text text--24 bold-8">187 ₽</span>
+                        </div>
+                        <button class="btn btn--primary btn--fill mt-auto">В корзину</button>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              <% } %>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <script>
+        new Swiper('.product-slider .swiper', {
+          slidesPerView: 'auto',
+          slidesPerGroup: 1,
+          watchSlidesProgress: true,
+        })
       </script>
     </section>
   </main>

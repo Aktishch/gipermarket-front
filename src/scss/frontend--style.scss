@@ -356,3 +356,33 @@ body {
 		}
 	}
 }
+
+.feedback {
+	background: radial-gradient(74.38% 244.23% at 75.04% 76.25%, #FEFC4A 0%, #E2AD45 55.35%);
+	position  : relative;
+
+	&__bg {
+		position: absolute;
+		right   : 0;
+		bottom  : 0;
+		top     : 0;
+	}
+
+	&__content {
+		position: relative;
+	}
+
+	&__input {
+		width: 260px;
+	}
+
+	@media(max-width: $mobile) {
+		& {
+			background: radial-gradient(74.38% 244.23% at 130.04% 76.25%, #FEFC4A 0%, #E2AD45 55.35%);
+		}
+
+		&__input {
+			width: 240px;
+		}
+	}
+}
