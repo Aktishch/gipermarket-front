@@ -1,6 +1,6 @@
   <% var data = {
 
-    title: '404',
+    title: 'Узнать статус заказа',
 
   } %>
 
@@ -9,7 +9,7 @@
   <main class="sending container pic">
     <img class="sending__bg pic__img" src="img/boxes.png" alt="">
     <div class="sending__content bg-white radius-4 overflow-hidden mx-auto">
-      <div class="flex align-items-center justify-content-center text text--24 text-md-18 text--center bold-8 bg-sec py-5 px-8 px-md-4">Узнать статус заказа</div>
+      <div class="flex align-items-center justify-content-center text text--24 text-md-18 text--center bold-8 bg-sec py-5 px-8 px-md-4"><%= data.title %></div>
       <form class="flex flex-direction-column py-7 px-8 px-md-4">
         <label class="form-field mb-4">
           <div class="text text--16 bold-4 mb-3">
@@ -27,7 +27,7 @@
               <div class="error__text text text--14 color-red bold-6">Ошибка! Неверный номер заказа</div>
           </div>
         </label>
-        <button class="btn btn--primary btn--fill">Показать</button>
+        <button class="btn btn--primary btn--fill" type="submit">Показать</button>
       </form>
     </div>
   </main>

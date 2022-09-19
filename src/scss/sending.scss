@@ -8,4 +8,15 @@
         position : relative;
         max-width: 410px;
     }
+
+    &__link {
+        border-bottom: 1px dashed var(--color-black);
+    }
+
+    @media(max-width: $mobile) {
+        & {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+    }
 }
