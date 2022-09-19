@@ -1,28 +1,14 @@
 // out:false
 .dialog {
   &-large {
-    width    : var(--section-width);
-    max-width: 100%;
-
-    @media (max-width:$sm) {
-      width: 100%;
-    }
-
-    @media(max-width:$md) {}
+    max-width: 1120px;
   }
 
   &-small {
-    width    : 340px;
-    max-width: 100%;
+    max-width: 340px;
   }
 
   &-middle {
-    width    : 620px;
-    max-width: 100%;
-
-    @media (max-width:$sm) {
-      width: 100%;
-    }
-
+    max-width: 620px;
   }
 }
