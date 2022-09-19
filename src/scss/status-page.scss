@@ -1,0 +1,14 @@
+.status {
+    padding-bottom: 90px;
+
+    &__link {
+        border-bottom : 1px dashed var(--color-red);
+        padding-bottom: 2px;
+    }
+
+    @media(max-width: $mobile) {
+        & {
+            padding-bottom: 50px;
+        }
+    }
+}

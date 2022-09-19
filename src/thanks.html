@@ -1,0 +1,24 @@
+  <% var data = {
+
+    title: 'Спасибо за заказ',
+
+  } %>
+
+  <%= _.template(require('./includes/header.html').default)({data}) %>
+
+  <%= _.template(require('./includes/navigation.html').default)({data}) %>
+
+  <main class="status container pt-10 pt-md-5">
+    <div class="flex align-items-center mb-10 mb-md-5">
+      <img class="icon text text--32 mr-4" src="img/thanks.svg" alt="">
+      <div class="text text--38 text-md-28 bold-8"><%= data.title %></div>
+    </div>
+    <div class="text text--16 bold-4 mb-10 mb-md-5">
+      Чтобы посмотреть статус заказа, нажмите кнопку или войдите в свою <a class="status__link link color-red" href="">учетную запись</a>
+    </div>
+    <a class="btn btn--primary btn--fill width-max" href="">Перейти в мои заказы</a>
+  </main>
+
+
+  <!-- Подвал -->
+  <%= _.template(require('./includes/footer.html').default)() %>
