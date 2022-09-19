@@ -8,128 +8,128 @@
 
   <%= _.template(require('./includes/navigation.html').default)({data}) %>
 
-  <main class="page-content container pt-10 pt-md-5">
-    <section class="about-us mb-10 mb-md-5">
-      <div class="text text--38 text-md-28 bold-8 mb-10 mb-md-5"><%= data.title %></div>
-      <div class="about-us__block pic radius-4 mb-10 mb-md-5">
-        <img class="pic__img" src="img/about-us.png" alt="">
-        <div class="about-us__content">
-          <div class="about-us__info">
-            <div class="about-us__name flex align-items-center justify-content-center text text--14 text--center color-white bold-4 radius-2 width-max py-2 px-5 mb-6">Всё для сада</div>
-            <div class="text text--26 text-md-18 color-white bold-7 interval-4 mb-10 mb-md-6">
-              Гипермаркет сада - лучшее место <br class="display-md-none">
-              для садовода. <span class="color-yellow">Здесь есть всё,</span> <br class="display-md-none">
-              что вам нужно и даже больше
+  <main class="about-us container overflow-hidden pt-10 pt-md-5">
+    <div class="text text--38 text-md-28 bold-8 mb-10 mb-md-5"><%= data.title %></div>
+    <div class="about-us__block pic radius-4 mb-10 mb-md-5">
+      <img class="pic__img" src="img/about-us.png" alt="">
+      <div class="about-us__content">
+        <div class="about-us__info">
+          <div class="about-us__name flex align-items-center justify-content-center text text--14 text--center color-white bold-4 radius-2 width-max py-2 px-5 mb-6">Всё для сада</div>
+          <div class="text text--26 text-md-18 color-white bold-7 interval-4 mb-10 mb-md-6">
+            Гипермаркет сада - лучшее место <br class="display-md-none">
+            для садовода. <span class="color-yellow">Здесь есть всё,</span> <br class="display-md-none">
+            что вам нужно и даже больше
+          </div>
+          <div class="grid grid-spacing-5">
+            <div class="grid-col-lg-6">
+              <div class="flex align-items-center">
+                <img class="text text--32 mr-4" src="img/Shield.svg" alt="">
+                <div class="flex flex-direction-column color-white">
+                  <span class="text text--16 bold-7 mb-1">Гарантия</span>
+                  <span class="text text--16 bold-4 fade-80">360 дней на все товары</span>
+                </div>
+              </div>
             </div>
-            <div class="grid grid-spacing-5">
-              <div class="grid-col-lg-6">
-                <div class="flex align-items-center">
-                  <img class="text text--32 mr-4" src="img/Shield.svg" alt="">
-                  <div class="flex flex-direction-column color-white">
-                    <span class="text text--16 bold-7 mb-1">Гарантия</span>
-                    <span class="text text--16 bold-4 fade-80">360 дней на все товары</span>
-                  </div>
+            <div class="grid-col-lg-6">
+              <div class="flex align-items-center">
+                <img class="text text--32 mr-4" src="img/box.svg" alt="">
+                <div class="flex flex-direction-column color-white">
+                  <span class="text text--16 bold-7 mb-1">Упаковка</span>
+                  <span class="text text--16 bold-4 fade-80">с 3-мя фазами защиты</span>
                 </div>
               </div>
-              <div class="grid-col-lg-6">
-                <div class="flex align-items-center">
-                  <img class="text text--32 mr-4" src="img/box.svg" alt="">
-                  <div class="flex flex-direction-column color-white">
-                    <span class="text text--16 bold-7 mb-1">Упаковка</span>
-                    <span class="text text--16 bold-4 fade-80">с 3-мя фазами защиты</span>
-                  </div>
+            </div>
+            <div class="grid-col-lg-6">
+              <div class="flex align-items-center">
+                <img class="text text--32 mr-4" src="img/Wrap.svg" alt="">
+                <div class="flex flex-direction-column color-white">
+                  <span class="text text--16 bold-7 mb-1">Подарки</span>
+                  <span class="text text--16 bold-4 fade-80">к бонусам к покупкам </span>
                 </div>
               </div>
-              <div class="grid-col-lg-6">
-                <div class="flex align-items-center">
-                  <img class="text text--32 mr-4" src="img/Wrap.svg" alt="">
-                  <div class="flex flex-direction-column color-white">
-                    <span class="text text--16 bold-7 mb-1">Подарки</span>
-                    <span class="text text--16 bold-4 fade-80">к бонусам к покупкам </span>
-                  </div>
-                </div>
-              </div>
-              <div class="grid-col-lg-6">
-                <div class="flex align-items-center">
-                  <img class="text text--32 mr-4" src="img/Necktie.svg" alt="">
-                  <div class="flex flex-direction-column color-white">
-                    <span class="text text--16 bold-7 mb-1">Консультант для вас</span>
-                    <span class="text text--16 bold-4 fade-80">Ответит на любой вопрос</span>
-                  </div>
+            </div>
+            <div class="grid-col-lg-6">
+              <div class="flex align-items-center">
+                <img class="text text--32 mr-4" src="img/Necktie.svg" alt="">
+                <div class="flex flex-direction-column color-white">
+                  <span class="text text--16 bold-7 mb-1">Консультант для вас</span>
+                  <span class="text text--16 bold-4 fade-80">Ответит на любой вопрос</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="about-us-info mb-10 mb-md-5">
-        <div class="text text--24 text-md-18 bold-6 mb-5">Мы любим свое дело</div>
-        <div class="tex text--16 bold-4 interval-5 mb-10 mb-md-5">
-          Это создать полезное и комфортное пространство для тех, кто также, как и мы, искренне интересуется темой растениеводства. <br>
-          <br>
-          На сайте подготовлен обширный каталог, в котором Вы сможете найти товар на любой вкус и ценовую категорию. А если у Вас возникнут вопросы, наши специалисты подробно ответят на них и дадут все необходимые рекомендации.На нашем портале постоянно проводятся различные конкурсы и марафоны, благодаря которым можно получить приятные призы и увеличить свою персональную скидку.
-        </div>
-        <div class="grid grid-spacing-5 mb-10 mb-md-5">
-          <div class="grid-col-md-6 grid-col-lg-3">
-            <div class="flex align-items-center bg-white radius-4 bs height-100 py-5 px-3">
-              <img class="icon text text--42 mr-5" src="img/bag.svg" alt="">
-              <div class="flex flex-direction-column">
-                <span class="text text--16 bold-7 mb-1">8 лет</span>
-                <span class="text text--14 bold-4 fade-60">
-                  Делаем счастливыми <br>
-                  садоводов по всей стране
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="grid-col-md-6 grid-col-lg-3">
-            <div class="flex align-items-center bg-white radius-4 bs height-100 py-5 px-3">
-              <img class="icon text text--42 mr-5" src="img/flow.svg" alt="">
-              <div class="flex flex-direction-column">
-                <span class="text text--16 bold-7 mb-1">9410 товаров</span>
-                <span class="text text--14 bold-4 fade-60">
-                  Вы можете найти <br>
-                  в нашем каталоге
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="grid-col-md-6 grid-col-lg-3">
-            <div class="flex align-items-center bg-white radius-4 bs height-100 py-5 px-3">
-              <img class="icon text text--42 mr-5" src="img/cal.svg" alt="">
-              <div class="flex flex-direction-column">
-                <span class="text text--16 bold-7 mb-1">360 гарантии</span>
-                <span class="text text--14 bold-4 fade-60">
-                  На любой товар <br>
-                  из нашего каталога
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="grid-col-md-6 grid-col-lg-3">
-            <div class="flex align-items-center bg-white radius-4 bs height-100 py-5 px-3">
-              <img class="icon text text--42 mr-5" src="img/clock.svg" alt="">
-              <div class="flex flex-direction-column">
-                <span class="text text--16 bold-7 mb-1">24 / 7</span>
-                <span class="text text--14 bold-4 fade-60">
-                  Работаем и отвечаем <br>
-                  на ваши звонки
-                </span>
-              </div>
+    <div class="about-us-info mb-10 mb-md-5">
+      <div class="text text--24 text-md-18 bold-6 mb-5">Мы любим свое дело</div>
+      <div class="tex text--16 bold-4 interval-5 mb-10 mb-md-5">
+        Это создать полезное и комфортное пространство для тех, кто также, как и мы, искренне интересуется темой растениеводства. <br>
+        <br>
+        На сайте подготовлен обширный каталог, в котором Вы сможете найти товар на любой вкус и ценовую категорию. А если у Вас возникнут вопросы, наши специалисты подробно ответят на них и дадут все необходимые рекомендации.На нашем портале постоянно проводятся различные конкурсы и марафоны, благодаря которым можно получить приятные призы и увеличить свою персональную скидку.
+      </div>
+      <div class="grid grid-spacing-5 mb-10 mb-md-5">
+        <div class="grid-col-md-6 grid-col-lg-3">
+          <div class="flex align-items-center bg-white radius-4 bs height-100 py-5 px-3">
+            <img class="icon text text--42 mr-5" src="img/bag.svg" alt="">
+            <div class="flex flex-direction-column">
+              <span class="text text--16 bold-7 mb-1">8 лет</span>
+              <span class="text text--14 bold-4 fade-60">
+                Делаем счастливыми <br>
+                садоводов по всей стране
+              </span>
             </div>
           </div>
         </div>
-        <div class="tex text--16 bold-4 interval-5">
-          Нас выбирают самые опытные садоводы. Всё дело в том, что у нас множество преимуществ, таких как большой ассортимент, четкие гарантии, быстрая доставка и приветливые менеджеры. Мы считаем, что выбирать семена и растения для дачи нужно неспешно, сравнивая цены и сорта и выбирая для себя лучшее. Желательно, чтобы весь посадочный материал можно было купить в одном месте, где позаботятся о бережной и своевременной отправке и пришлют то, что Вы купили
+        <div class="grid-col-md-6 grid-col-lg-3">
+          <div class="flex align-items-center bg-white radius-4 bs height-100 py-5 px-3">
+            <img class="icon text text--42 mr-5" src="img/flow.svg" alt="">
+            <div class="flex flex-direction-column">
+              <span class="text text--16 bold-7 mb-1">9410 товаров</span>
+              <span class="text text--14 bold-4 fade-60">
+                Вы можете найти <br>
+                в нашем каталоге
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="grid-col-md-6 grid-col-lg-3">
+          <div class="flex align-items-center bg-white radius-4 bs height-100 py-5 px-3">
+            <img class="icon text text--42 mr-5" src="img/cal.svg" alt="">
+            <div class="flex flex-direction-column">
+              <span class="text text--16 bold-7 mb-1">360 гарантии</span>
+              <span class="text text--14 bold-4 fade-60">
+                На любой товар <br>
+                из нашего каталога
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="grid-col-md-6 grid-col-lg-3">
+          <div class="flex align-items-center bg-white radius-4 bs height-100 py-5 px-3">
+            <img class="icon text text--42 mr-5" src="img/clock.svg" alt="">
+            <div class="flex flex-direction-column">
+              <span class="text text--16 bold-7 mb-1">24 / 7</span>
+              <span class="text text--14 bold-4 fade-60">
+                Работаем и отвечаем <br>
+                на ваши звонки
+              </span>
+            </div>
+          </div>
         </div>
       </div>
+      <div class="tex text--16 bold-4 interval-5">
+        Нас выбирают самые опытные садоводы. Всё дело в том, что у нас множество преимуществ, таких как большой ассортимент, четкие гарантии, быстрая доставка и приветливые менеджеры. Мы считаем, что выбирать семена и растения для дачи нужно неспешно, сравнивая цены и сорта и выбирая для себя лучшее. Желательно, чтобы весь посадочный материал можно было купить в одном месте, где позаботятся о бережной и своевременной отправке и пришлют то, что Вы купили
+      </div>
+    </div>
 
-      <%= _.template(require('./includes/feedback.html').default)() %>
+    <%= _.template(require('./includes/feedback.html').default)() %>
 
-      <div class="questions mb-10 mb-md-5">
-        <div class="text text--38 text-md-28 bold-8 mb-10 mb-md-5">Популярные вопросы</div>
-        <div class="flex flex-direction-column">
+    <div class="questions mb-10 mb-md-5">
+      <div class="text text--38 text-md-28 bold-8 mb-10 mb-md-5">Популярные вопросы</div>
+      <div class="flex flex-direction-column">
+        <% for (var i = 0; i < 5; i++) { %>
           <div class="questions__item border-top pt-5 mb-5" data-toggle-cover>
             <div class="flex align-items-center justify-content-between link" data-toggle-link>
               <div class="flex align-items-center">
@@ -147,233 +147,165 @@
               </div>
             </div>
           </div>
-          <div class="questions__item border-top pt-5 mb-5" data-toggle-cover>
-            <div class="flex align-items-center justify-content-between link" data-toggle-link>
-              <div class="flex align-items-center">
-                <img class="icon text text--22 mr-4" src="img/question.svg" alt="">
-                <span class="text text--18 bold-6">С какими службами доставки мы сотрудничаем?</span>
-              </div>
-              <div class="questions__lines">
-                <div class="questions__line questions__line--1 bg-primary radius-1"></div>
-                <div class="questions__line questions__line--2 bg-primary radius-1"></div>
-              </div>
-            </div>
-            <div data-toggle-content data-toggle-height="true" data-toggle-static="true">
-              <div class="text text--16 fade-80 mt-5">
-                Вы должны иметь гражданство РФ. Возраст покупателя - от 21 до 70 лет на момент возврата кредита по договору Наличие постоянной (временной) регистрации по месту жительства/пребывания на территории Российской Федерации
-              </div>
-            </div>
-          </div>
-          <div class="questions__item border-top pt-5 mb-5" data-toggle-cover>
-            <div class="flex align-items-center justify-content-between link" data-toggle-link>
-              <div class="flex align-items-center">
-                <img class="icon text text--22 mr-4" src="img/question.svg" alt="">
-                <span class="text text--18 bold-6">Какие гарантии мы даем при отправке товара?</span>
-              </div>
-              <div class="questions__lines">
-                <div class="questions__line questions__line--1 bg-primary radius-1"></div>
-                <div class="questions__line questions__line--2 bg-primary radius-1"></div>
-              </div>
-            </div>
-            <div data-toggle-content data-toggle-height="true" data-toggle-static="true">
-              <div class="text text--16 fade-80 mt-5">
-                Вы должны иметь гражданство РФ. Возраст покупателя - от 21 до 70 лет на момент возврата кредита по договору Наличие постоянной (временной) регистрации по месту жительства/пребывания на территории Российской Федерации
-              </div>
-            </div>
-          </div>
-          <div class="questions__item border-top pt-5 mb-5" data-toggle-cover>
-            <div class="flex align-items-center justify-content-between link" data-toggle-link>
-              <div class="flex align-items-center">
-                <img class="icon text text--22 mr-4" src="img/question.svg" alt="">
-                <span class="text text--18 bold-6">Какие основные требования для заказа товара в нашем гипермаркете?</span>
-              </div>
-              <div class="questions__lines">
-                <div class="questions__line questions__line--1 bg-primary radius-1"></div>
-                <div class="questions__line questions__line--2 bg-primary radius-1"></div>
-              </div>
-            </div>
-            <div data-toggle-content data-toggle-height="true" data-toggle-static="true">
-              <div class="text text--16 fade-80 mt-5">
-                Вы должны иметь гражданство РФ. Возраст покупателя - от 21 до 70 лет на момент возврата кредита по договору Наличие постоянной (временной) регистрации по месту жительства/пребывания на территории Российской Федерации
-              </div>
-            </div>
-          </div>
-          <div class="questions__item border-top pt-5 mb-5" data-toggle-cover>
-            <div class="flex align-items-center justify-content-between link" data-toggle-link>
-              <div class="flex align-items-center">
-                <img class="icon text text--22 mr-4" src="img/question.svg" alt="">
-                <span class="text text--18 bold-6">Какие у нас преимущества перед аналогичнми сервисами?</span>
-              </div>
-              <div class="questions__lines">
-                <div class="questions__line questions__line--1 bg-primary radius-1"></div>
-                <div class="questions__line questions__line--2 bg-primary radius-1"></div>
-              </div>
-            </div>
-            <div data-toggle-content data-toggle-height="true" data-toggle-static="true">
-              <div class="text text--16 fade-80 mt-5">
-                Вы должны иметь гражданство РФ. Возраст покупателя - от 21 до 70 лет на момент возврата кредита по договору Наличие постоянной (временной) регистрации по месту жительства/пребывания на территории Российской Федерации
-              </div>
-            </div>
-          </div>
-        </div>
+        <% } %>
       </div>
+    </div>
 
-      <%var reviews = [
-        {
-          color: '#F285AA',
-          name: 'Сергей',
-          text: 'Очень понравились. Много завязей в кисти, дружно созревают. На кусту много помидоров'
-        },
-        {
-          color: '#5798D9',
-          name: 'Татьяна',
-          text: 'Получила заказ, в том числе и этот сорт. Саженцы в хорошем состоянии - листья конечно засохшие, но корни, обернутые толстым слоем торфа, хорошо влажные, живые. Через неделю после посадки, показались зеленые почки. Надеюсь перезимуют. Ложкой дегтя в этом заказе оказалась высокая стоимость упаковки'
-        },
-        {
-          color: '#55CF8D',
-          name: 'Наталья',
-          text: 'Заказала набор пальчиковых сортов. Саженцы пришли хорошо упакованные с шикарной корневой системой. Надеюсь что все приживутся'
-        },
-      ]%>
+    <%var reviews = [
+      {
+        color: '#F285AA',
+        name: 'Сергей',
+        text: 'Очень понравились. Много завязей в кисти, дружно созревают. На кусту много помидоров'
+      },
+      {
+        color: '#5798D9',
+        name: 'Татьяна',
+        text: 'Получила заказ, в том числе и этот сорт. Саженцы в хорошем состоянии - листья конечно засохшие, но корни, обернутые толстым слоем торфа, хорошо влажные, живые. Через неделю после посадки, показались зеленые почки. Надеюсь перезимуют. Ложкой дегтя в этом заказе оказалась высокая стоимость упаковки'
+      },
+      {
+        color: '#55CF8D',
+        name: 'Наталья',
+        text: 'Заказала набор пальчиковых сортов. Саженцы пришли хорошо упакованные с шикарной корневой системой. Надеюсь что все приживутся'
+      },
+    ]%>
 
-      <div class="reviews mb-10 mb-md-5">
-        <div class="text text--38 text-md-28 bold-8 mb-10 mb-md-5">Отзывы от наших клиентов</div>
-        <div class="slider reviews-slider">
-          <div class="swiper grid-wrap grid-spacing-6">
-            <div class="swiper-wrapper">
-              <% for (var i = 0; i < reviews.length; i++) { %>
-                <div class="swiper-slide grid-col-11 grid-col-md-6 grid-col-lg-4">
-                  <div class="card card-action overflow-hidden height-100 waved radius-4 p-4 p-md-2">
-                    <div class="flex align-items-center justify-content-between bg-gray radius-4 width-100 p-3 mb-6 mb-md-3">
-                      <div class="flex align-items-center">
-                        <div class="reviews__ava flex align-items-center justify-content-center text text--26 bold-7 color-white radius-max mr-5" style="background-color: <%= reviews[i].color %>;">C</div>
-                        <div class="flex flex-direction-column">
-                          <div class="text text--16 bold-6 mb-1"><%= reviews[i].name %></div>
-                          <div class="flex align-items-center">
-                            <img class="icon text text--12 mr-1" src="img/start.svg" alt="">
-                            <img class="icon text text--12 mr-1" src="img/start.svg" alt="">
-                            <img class="icon text text--12 mr-1" src="img/start.svg" alt="">
-                            <img class="icon text text--12 mr-1" src="img/start.svg" alt="">
-                            <img class="icon text text--12" src="img/start.svg" alt="">
-                          </div>
+    <div class="reviews mb-10 mb-md-5">
+      <div class="text text--38 text-md-28 bold-8 mb-10 mb-md-5">Отзывы от наших клиентов</div>
+      <div class="slider reviews-slider">
+        <div class="swiper grid-wrap grid-spacing-6">
+          <div class="swiper-wrapper">
+            <% for (var i = 0; i < reviews.length; i++) { %>
+              <div class="swiper-slide grid-col-11 grid-col-md-6 grid-col-lg-4">
+                <div class="card card-action overflow-hidden height-100 waved radius-4 p-4 p-md-2">
+                  <div class="flex align-items-center justify-content-between bg-gray radius-4 width-100 p-3 mb-6 mb-md-3">
+                    <div class="flex align-items-center">
+                      <div class="reviews__ava flex align-items-center justify-content-center text text--26 bold-7 color-white radius-max mr-5" style="background-color: <%= reviews[i].color %>;">C</div>
+                      <div class="flex flex-direction-column">
+                        <div class="text text--16 bold-6 mb-1"><%= reviews[i].name %></div>
+                        <div class="flex align-items-center">
+                          <img class="icon text text--12 mr-1" src="img/start.svg" alt="">
+                          <img class="icon text text--12 mr-1" src="img/start.svg" alt="">
+                          <img class="icon text text--12 mr-1" src="img/start.svg" alt="">
+                          <img class="icon text text--12 mr-1" src="img/start.svg" alt="">
+                          <img class="icon text text--12" src="img/start.svg" alt="">
                         </div>
                       </div>
-                      <div class="text text--16 bold-4 fade-60">17.12.21</div>
                     </div>
-                    <div class="text text--16 text-md-4 bold-4 fade-80 px-4 pb-10 px-md-2 pb-md-5">
-                      <%= reviews[i].text %>
-                    </div>
+                    <div class="text text--16 bold-4 fade-60">17.12.21</div>
+                  </div>
+                  <div class="text text--16 text-md-4 bold-4 fade-80 px-4 pb-10 px-md-2 pb-md-5">
+                    <%= reviews[i].text %>
                   </div>
                 </div>
-              <% } %>
+              </div>
+            <% } %>
+          </div>
+        </div>
+        <button class="btn btn-large btn-fab btn--white-bg slider-nav slider-prev display-md-none">
+          <svg class="icon">
+            <use xlink:href="img/icons.svg#arrow-left" />
+          </svg>
+        </button>
+        <button class="btn btn-large btn-fab btn--white-bg slider-nav slider-next display-md-none">
+          <svg class="icon">
+            <use xlink:href="img/icons.svg#arrow-right" />
+          </svg>
+        </button>
+      </div>
+      <button class="btn btn--primary btn--fill mt-10 mt-md-5">Оставить отзыв</button>
+    </div>
+
+    <script>
+      new Swiper('.reviews-slider .swiper', {
+        slidesPerView: 'auto',
+        slidesPerGroup: 1,
+        watchSlidesProgress: true,
+        loop: true,
+        navigation: {
+          nextEl: '.reviews-slider .slider-next',
+          prevEl: '.reviews-slider .slider-prev'
+        }
+      })
+    </script>
+
+    <div class="gallery">
+      <div class="text text--38 text-md-28 bold-8 mb-10 mb-md-5">От наших подписчиков</div>
+      <div class="grid grid-spacing-md-5">
+        <div class="grid-col-6 grid-col-lg-3">
+          <a class="gallery__item display-block pic pic--square radius-4" href="img/banner.jpg" data-fancybox="gallery">
+            <div class="loader">
+              <svg class="icon">
+                  <use xlink:href="img/icons.svg#loader" />
+              </svg>
             </div>
-          </div>
-          <button class="btn btn-large btn-fab btn--white-bg slider-nav slider-prev display-md-none">
-            <svg class="icon">
-              <use xlink:href="img/icons.svg#arrow-left" />
-            </svg>
-          </button>
-          <button class="btn btn-large btn-fab btn--white-bg slider-nav slider-next display-md-none">
-            <svg class="icon">
-              <use xlink:href="img/icons.svg#arrow-right" />
-            </svg>
-          </button>
+            <picture>
+              <img class="pic__img pic__img--rise" src="img/banner.jpg" alt="" loading="lazy">
+            </picture>
+          </a>
         </div>
-        <button class="btn btn--primary btn--fill mt-10 mt-md-5">Оставить отзыв</button>
-      </div>
-
-      <script>
-        new Swiper('.reviews-slider .swiper', {
-          slidesPerView: 'auto',
-          slidesPerGroup: 1,
-          watchSlidesProgress: true,
-          loop: true,
-          navigation: {
-            nextEl: '.reviews-slider .slider-next',
-            prevEl: '.reviews-slider .slider-prev'
-          }
-        })
-      </script>
-
-      <div class="gallery">
-        <div class="text text--38 text-md-28 bold-8 mb-10 mb-md-5">От наших подписчиков</div>
-        <div class="grid grid-spacing-md-5">
-          <div class="grid-col-6 grid-col-lg-3">
-            <a class="gallery__item display-block pic pic--square radius-4" href="img/banner.jpg" data-fancybox="gallery">
-              <div class="loader">
-                <svg class="icon">
-                    <use xlink:href="img/icons.svg#loader" />
-                </svg>
-              </div>
-              <picture>
-                <img class="pic__img pic__img--rise" src="img/banner.jpg" alt="" loading="lazy">
-              </picture>
-            </a>
-          </div>
-          <div class="grid-col-6 grid-col-lg-6">
-            <a class="gallery__item display-block pic pic--square radius-4" href="img/banner.jpg" data-fancybox="gallery">
-              <div class="loader">
-                <svg class="icon">
-                    <use xlink:href="img/icons.svg#loader" />
-                </svg>
-              </div>
-              <picture>
-                <img class="pic__img pic__img--rise" src="img/banner.jpg" alt="" loading="lazy">
-              </picture>
-            </a>
-          </div>
-          <div class="grid-col-6 grid-col-lg-3">
-            <a class="gallery__item display-block pic pic--square radius-4" href="img/banner.jpg" data-fancybox="gallery">
-              <div class="loader">
-                <svg class="icon">
-                    <use xlink:href="img/icons.svg#loader" />
-                </svg>
-              </div>
-              <picture>
-                <img class="pic__img pic__img--rise" src="img/banner.jpg" alt="" loading="lazy">
-              </picture>
-            </a>
-          </div>
-          <div class="grid-col-6 grid-col-lg-6">
-            <a class="gallery__item display-block pic pic--square radius-4" href="img/banner.jpg" data-fancybox="gallery">
-              <div class="loader">
-                <svg class="icon">
-                    <use xlink:href="img/icons.svg#loader" />
-                </svg>
-              </div>
-              <picture>
-                <img class="pic__img pic__img--rise" src="img/banner.jpg" alt="" loading="lazy">
-              </picture>
-            </a>
-          </div>
-          <div class="grid-col-6 grid-col-lg-3">
-            <a class="gallery__item display-block pic pic--square radius-4" href="img/banner.jpg" data-fancybox="gallery">
-              <div class="loader">
-                <svg class="icon">
-                    <use xlink:href="img/icons.svg#loader" />
-                </svg>
-              </div>
-              <picture>
-                <img class="pic__img pic__img--rise" src="img/banner.jpg" alt="" loading="lazy">
-              </picture>
-            </a>
-          </div>
-          <div class="grid-col-6 grid-col-lg-3">
-            <a class="gallery__item display-block pic pic--square radius-4" href="img/banner.jpg" data-fancybox="gallery">
-              <div class="loader">
-                <svg class="icon">
-                    <use xlink:href="img/icons.svg#loader" />
-                </svg>
-              </div>
-              <picture>
-                <img class="pic__img pic__img--rise" src="img/banner.jpg" alt="" loading="lazy">
-              </picture>
-            </a>
-          </div>
+        <div class="grid-col-6 grid-col-lg-6">
+          <a class="gallery__item display-block pic pic--square radius-4" href="img/banner.jpg" data-fancybox="gallery">
+            <div class="loader">
+              <svg class="icon">
+                  <use xlink:href="img/icons.svg#loader" />
+              </svg>
+            </div>
+            <picture>
+              <img class="pic__img pic__img--rise" src="img/banner.jpg" alt="" loading="lazy">
+            </picture>
+          </a>
+        </div>
+        <div class="grid-col-6 grid-col-lg-3">
+          <a class="gallery__item display-block pic pic--square radius-4" href="img/banner.jpg" data-fancybox="gallery">
+            <div class="loader">
+              <svg class="icon">
+                  <use xlink:href="img/icons.svg#loader" />
+              </svg>
+            </div>
+            <picture>
+              <img class="pic__img pic__img--rise" src="img/banner.jpg" alt="" loading="lazy">
+            </picture>
+          </a>
+        </div>
+        <div class="grid-col-6 grid-col-lg-6">
+          <a class="gallery__item display-block pic pic--square radius-4" href="img/banner.jpg" data-fancybox="gallery">
+            <div class="loader">
+              <svg class="icon">
+                  <use xlink:href="img/icons.svg#loader" />
+              </svg>
+            </div>
+            <picture>
+              <img class="pic__img pic__img--rise" src="img/banner.jpg" alt="" loading="lazy">
+            </picture>
+          </a>
+        </div>
+        <div class="grid-col-6 grid-col-lg-3">
+          <a class="gallery__item display-block pic pic--square radius-4" href="img/banner.jpg" data-fancybox="gallery">
+            <div class="loader">
+              <svg class="icon">
+                  <use xlink:href="img/icons.svg#loader" />
+              </svg>
+            </div>
+            <picture>
+              <img class="pic__img pic__img--rise" src="img/banner.jpg" alt="" loading="lazy">
+            </picture>
+          </a>
+        </div>
+        <div class="grid-col-6 grid-col-lg-3">
+          <a class="gallery__item display-block pic pic--square radius-4" href="img/banner.jpg" data-fancybox="gallery">
+            <div class="loader">
+              <svg class="icon">
+                  <use xlink:href="img/icons.svg#loader" />
+              </svg>
+            </div>
+            <picture>
+              <img class="pic__img pic__img--rise" src="img/banner.jpg" alt="" loading="lazy">
+            </picture>
+          </a>
         </div>
       </div>
+    </div>
 
-    </section>
   </main>
 
   <!-- Подвал -->

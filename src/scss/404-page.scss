@@ -1,5 +1,7 @@
 .error-page {
-    max-width: 720px;
+    &__block {
+        max-width: 720px;
+    }
 
     &__img {
         max-width: 560px;

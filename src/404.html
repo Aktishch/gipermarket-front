@@ -6,8 +6,8 @@
 
   <%= _.template(require('./includes/header.html').default)({data}) %>
 
-  <main class="page-content container pt-10 pt-md-5">
-    <section class="error-page flex flex-direction-column align-items-center justify-content-center mx-auto">
+  <main class="error-page container pt-10 pt-md-5">
+    <div class="error-page__block flex flex-direction-column align-items-center justify-content-center mx-auto ">
       <img class="error-page__img display-block width-100" src="img/404.png" alt="">
       <div class="text text--center text--16 text-md-14 bold-4 interval-5 fade-60 mb-10 mb-md-5">
         Запрашиваемая вами страница перенесена или удалена. <br class="display-md-none">
@@ -17,11 +17,8 @@
         <a class="error-page__btn btn btn--primary btn--fill" href="">На главную</a>
         <a class="error-page__btn btn btn--primary btn--light" href="">В каталог</a>
       </div>
-    </section>
+    </div>
   </main>
-
-  <div class="map width-100 overflow-hidden" id="map"></div>
-
 
   <!-- Подвал -->
   <%= _.template(require('./includes/footer.html').default)() %>

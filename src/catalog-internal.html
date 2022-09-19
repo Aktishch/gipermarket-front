@@ -8,245 +8,242 @@
 
   <%= _.template(require('./includes/navigation.html').default)({data}) %>
 
-  <main class="page-content container pt-10 pt-md-5">
-    <section class="catalog">
-      <div class="text text--38 text-md-28 bold-8 mb-10 mb-md-5"><%= data.title %></div>
+  <main class="catalog container pt-10 pt-md-5">
+    <div class="text text--38 text-md-28 bold-8 mb-10 mb-md-5"><%= data.title %></div>
 
-      <%= _.template(require('./includes/banner.html').default)({}) %>
+    <%= _.template(require('./includes/banner.html').default)({}) %>
 
-      <div class="flex justify-content-between mb-10 mb-lg-5">
+    <div class="flex justify-content-between mb-10 mb-lg-5">
 
-        <div class="catalog-sidebar width-100 mr-8 -filter-" id="filter">
-          <div class="flex align-items-center justify-content-between display-none display-lg-flex pt-5 mb-5">
-            <span class="text text--30 bold-7">Фильтр</span>
-            <button class="btn btn--primary btn-small btn--icon text text--22" data-toggle-link="filter">
-              <svg class="icon">
-                <use xlink:href="img/icons.svg#cross" />
-              </svg>
-            </button>
-          </div>
-          <div class="bg-white bs overflow-hidden radius-4 mb-7 mb-md-3">
-            <div class="catalog__block pb-7 px-7 pb-lg-5 px-lg-5" data-toggle-cover>
-              <div class="catalog__toggler flex align-items-center justify-content-between width-100 pt-6 pt-lg-5" data-toggle-link>
-                <span class="text text--16 bold-6 mr-2">Раздел</span>
-                <span class="catalog__arrow text text--10 color-primary">
-                  <svg class="icon">
-                    <use xlink:href="img/icons.svg#triangle-right" />
-                  </svg>
-                </span>
-              </div>
-              <div class="toggle-active" data-toggle-content data-toggle-static="true" data-toggle-height="true">
-                <div class="flex flex-direction-column gap-4 mt-5">
-                  <% for(let i=0; i < 15; i++){ %>
-                    <label class="catalog__item form-field form-checkbox">
-                      <input type="checkbox" class="form-input-checkbox">
-                      <div class="form-checkbox-target form-toggle-target">
-                        <svg class="icon">
-                          <use xlink:href="img/icons.svg#gal-ochka" />
-                        </svg>
-                      </div>
-                      <div class="catalog__text text-body-1 fade-70 ml-2">Саженцы</div>
-                    </label>
-                  <% } %>
-                </div>
+      <div class="catalog-sidebar width-100 mr-8 -filter-" id="filter">
+        <div class="flex align-items-center justify-content-between display-none display-lg-flex pt-5 mb-5">
+          <span class="text text--30 bold-7">Фильтр</span>
+          <button class="btn btn--primary btn-small btn--icon text text--22" data-toggle-link="filter">
+            <svg class="icon">
+              <use xlink:href="img/icons.svg#cross" />
+            </svg>
+          </button>
+        </div>
+        <div class="bg-white bs overflow-hidden radius-4 mb-7 mb-md-3">
+          <div class="catalog__block pb-7 px-7 pb-lg-5 px-lg-5" data-toggle-cover>
+            <div class="catalog__toggler flex align-items-center justify-content-between width-100 pt-6 pt-lg-5" data-toggle-link>
+              <span class="text text--16 bold-6 mr-2">Раздел</span>
+              <span class="catalog__arrow text text--10 color-primary">
+                <svg class="icon">
+                  <use xlink:href="img/icons.svg#triangle-right" />
+                </svg>
+              </span>
+            </div>
+            <div class="toggle-active" data-toggle-content data-toggle-static="true" data-toggle-height="true">
+              <div class="flex flex-direction-column gap-4 mt-5">
+                <% for(let i=0; i < 15; i++){ %>
+                  <label class="catalog__item form-field form-checkbox">
+                    <input type="checkbox" class="form-input-checkbox">
+                    <div class="form-checkbox-target form-toggle-target">
+                      <svg class="icon">
+                        <use xlink:href="img/icons.svg#gal-ochka" />
+                      </svg>
+                    </div>
+                    <div class="catalog__text text-body-1 fade-70 ml-2">Саженцы</div>
+                  </label>
+                <% } %>
               </div>
             </div>
-          </div>
-          <div class="bg-white bs overflow-hidden radius-4 mb-7 mb-md-3">
-            <div class="catalog__block pb-7 px-7 pb-lg-5 px-lg-5" data-toggle-cover>
-              <div class="catalog__toggler flex align-items-center justify-content-between width-100 pt-6 pt-lg-5" data-toggle-link>
-                <span class="text text--16 bold-6 mr-2">Расстояние при посадке</span>
-                <span class="catalog__arrow text text--10 color-primary">
-                  <svg class="icon">
-                    <use xlink:href="img/icons.svg#triangle-right" />
-                  </svg>
-                </span>
-              </div>
-              <div class="toggle-active" data-toggle-content data-toggle-static="true" data-toggle-height="true">
-                <div class="flex flex-direction-column gap-4 mt-5">
-                  <% for(let i=0; i < 2; i++){ %>
-                    <label class="catalog__item form-field form-checkbox">
-                      <input type="checkbox" class="form-input-checkbox">
-                      <div class="form-checkbox-target form-toggle-target">
-                        <svg class="icon">
-                          <use xlink:href="img/icons.svg#gal-ochka" />
-                        </svg>
-                      </div>
-                      <div class="catalog__text text-body-1 fade-70 ml-2">Саженцы</div>
-                    </label>
-                  <% } %>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="bg-white bs overflow-hidden radius-4 mb-7 mb-md-3">
-            <div class="catalog__block pb-7 px-7 pb-lg-5 px-lg-5" data-toggle-cover>
-              <div class="catalog__toggler flex align-items-center justify-content-between width-100 pt-6 pt-lg-5" data-toggle-link>
-                <span class="text text--16 bold-6 mr-2">Ширина</span>
-                <span class="catalog__arrow text text--10 color-primary">
-                  <svg class="icon">
-                    <use xlink:href="img/icons.svg#triangle-right" />
-                  </svg>
-                </span>
-              </div>
-              <div data-toggle-content data-toggle-static="true" data-toggle-height="true">
-                <div class="flex flex-direction-column gap-4 mt-5">
-                  <% for(let i=0; i < 2; i++){ %>
-                    <label class="catalog__item form-field form-checkbox">
-                      <input type="checkbox" class="form-input-checkbox">
-                      <div class="form-checkbox-target form-toggle-target">
-                        <svg class="icon">
-                          <use xlink:href="img/icons.svg#gal-ochka" />
-                        </svg>
-                      </div>
-                      <div class="catalog__text text-body-1 fade-70 ml-2">Саженцы</div>
-                    </label>
-                  <% } %>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="bg-white bs overflow-hidden radius-4 mb-7 mb-md-3">
-            <div class="catalog__block pb-7 px-7 pb-lg-5 px-lg-5" data-toggle-cover>
-              <div class="catalog__toggler flex align-items-center justify-content-between width-100 pt-6 pt-lg-5" data-toggle-link>
-                <span class="text text--16 bold-6 mr-2">Ширина</span>
-                <span class="catalog__arrow text text--10 color-primary">
-                  <svg class="icon">
-                    <use xlink:href="img/icons.svg#triangle-right" />
-                  </svg>
-                </span>
-              </div>
-              <div data-toggle-content data-toggle-static="true" data-toggle-height="true">
-                <div class="flex flex-direction-column gap-4 mt-5">
-                  <% for(let i=0; i < 2; i++){ %>
-                    <label class="catalog__item form-field form-checkbox">
-                      <input type="checkbox" class="form-input-checkbox">
-                      <div class="form-checkbox-target form-toggle-target">
-                        <svg class="icon">
-                          <use xlink:href="img/icons.svg#gal-ochka" />
-                        </svg>
-                      </div>
-                      <div class="catalog__text text-body-1 fade-70 ml-2">Саженцы</div>
-                    </label>
-                  <% } %>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="text text--24 bold-6 mb-7 mb-md-3">Цена</div>
-          <div class="bg-white bs overflow-hidden radius-4 mb-7 mb-md-3 p-7 p-lg-5">
-            <label class="form-field">
-              <div class="form-input-cover">
-                <div class="flex align-items-center justify-content-between width-100 pb-8">
-                  <div class="flex flex-direction-column flex-grow mr-3">
-                    <span class="text text--14 bold-5 fade-70 mb-1">От</span>
-                    <span class="form-range-from border radius-4 brs-4 bd-all py-3 px-4"></span>
-                  </div>
-                  <div class="flex flex-direction-column flex-grow">
-                    <span class="text text--14 bold-5 fade-70 mb-1">До</span>
-                    <span class="form-range-to border radius-4 py-3 px-4"></span>
-                  </div>
-                </div>
-                <div class="form-range range" data-type="double" data-max="100" data-min="0" data-to="76">
-                  <input type="text" class="range-input-from" hidden>
-                  <input type="text" class="range-input-to" hidden>
-                  <div class="range-inner"> </div>
-                </div>
-              </div>
-            </label>
-          </div>
-          <div class="flex flex-direction-column">
-            <button class="btn btn--primary btn--fill mb-5">Показать</button>
-            <button class="btn btn--primary btn--contur">Сбросить</button>
           </div>
         </div>
-        <div class="width-100">
-          <button class="btn btn--primary btn--fill width-100 mb-4 display-none display-lg-flex" data-toggle-link="filter">
-            Открыть фильтр
-          </button>
-
-          <div class="filter width-max mb-10 mb-md-5" data-toggle-cover>
-            <button class="flex align-items-center" data-toggle-link>
-              <div class="text text--18 bold-6">Сортировка: <span class="bold-400 fade-60">по популярности</span></div>
-              <div class="filter__arrow text text--15 ml-2">
+        <div class="bg-white bs overflow-hidden radius-4 mb-7 mb-md-3">
+          <div class="catalog__block pb-7 px-7 pb-lg-5 px-lg-5" data-toggle-cover>
+            <div class="catalog__toggler flex align-items-center justify-content-between width-100 pt-6 pt-lg-5" data-toggle-link>
+              <span class="text text--16 bold-6 mr-2">Расстояние при посадке</span>
+              <span class="catalog__arrow text text--10 color-primary">
                 <svg class="icon">
-                  <use xlink:href="img/icons.svg#arrow-right" />
+                  <use xlink:href="img/icons.svg#triangle-right" />
                 </svg>
+              </span>
+            </div>
+            <div class="toggle-active" data-toggle-content data-toggle-static="true" data-toggle-height="true">
+              <div class="flex flex-direction-column gap-4 mt-5">
+                <% for(let i=0; i < 2; i++){ %>
+                  <label class="catalog__item form-field form-checkbox">
+                    <input type="checkbox" class="form-input-checkbox">
+                    <div class="form-checkbox-target form-toggle-target">
+                      <svg class="icon">
+                        <use xlink:href="img/icons.svg#gal-ochka" />
+                      </svg>
+                    </div>
+                    <div class="catalog__text text-body-1 fade-70 ml-2">Саженцы</div>
+                  </label>
+                <% } %>
               </div>
-            </button>
-            <div class="filter-menu bg-white bs radius-4 p-2" data-toggle-content>
-              <div class="filter-link link display-block radius-2 py-3 px-4">Цена по убывыанию</div>
-              <div class="filter-link link display-block radius-2 py-3 px-4">Цена по возрастанию</div>
-              <div class="filter-link active link display-block radius-2 py-2 px-4">По популярности</div>
-              <div class="filter-link link display-block radius-2 py-3 px-4">По новизне</div>
             </div>
           </div>
-
-          <div class="grid mb-10">
-            <% for (var i = 0; i < 9; i++) { %>
-              <div class="grid-col-6 grid-col-lg-4">
-                <a class="card card-action overflow-hidden height-100 waved" href="javascript:;">
-                  <div class="card-pic width-100">
-                    <div class="pic pic--rect-x">
-                      <div class="loader">
-                        <svg class="icon">
-                            <use xlink:href="img/icons.svg#loader" />
-                        </svg>
-                      </div>
-                      <picture>
-                        <img class="pic__img" src="img/banner.jpg" alt="" loading="lazy">
-                      </picture>
-                      <label class="like">
-                        <input class="like__checkbox display-none" type="checkbox">
-                        <span class="like__heart flex align-items-center justify-content-center text text--18 link radius-2 visibility-hidden fade-0">
-                            <svg class="icon">
-                                <use xlink:href="img/icons.svg#like" />
-                            </svg>
-                        </span>
-                    </label>
+        </div>
+        <div class="bg-white bs overflow-hidden radius-4 mb-7 mb-md-3">
+          <div class="catalog__block pb-7 px-7 pb-lg-5 px-lg-5" data-toggle-cover>
+            <div class="catalog__toggler flex align-items-center justify-content-between width-100 pt-6 pt-lg-5" data-toggle-link>
+              <span class="text text--16 bold-6 mr-2">Ширина</span>
+              <span class="catalog__arrow text text--10 color-primary">
+                <svg class="icon">
+                  <use xlink:href="img/icons.svg#triangle-right" />
+                </svg>
+              </span>
+            </div>
+            <div data-toggle-content data-toggle-static="true" data-toggle-height="true">
+              <div class="flex flex-direction-column gap-4 mt-5">
+                <% for(let i=0; i < 2; i++){ %>
+                  <label class="catalog__item form-field form-checkbox">
+                    <input type="checkbox" class="form-input-checkbox">
+                    <div class="form-checkbox-target form-toggle-target">
+                      <svg class="icon">
+                        <use xlink:href="img/icons.svg#gal-ochka" />
+                      </svg>
                     </div>
-                  </div>
-                  <div class="card-content p-4 p-md-2">
-                    <div class="text text--16 text-md-14 bold-7 mb-3">Лилия ЛА-гибрид Роял Кисс</div>
-                    <div class="text text--16 bold-4 text-md-12 fade-60 mb-5">Цветок, характеризующийся стойкостью и неприхотлив...</div>
-                    <div class="card-bottom flex align-items-center justify-content-between mt-auto">
-                      <div class="flex flex-direction-column mr-2">
-                        <span class="text text--24 text-md-18 bold-8">187 ₽</span>
-                      </div>
-                      <button class="btn btn--primary btn--fill width-md-100 mt-auto">В корзину</button>
-                    </div>
-                  </div>
-                </a>
+                    <div class="catalog__text text-body-1 fade-70 ml-2">Саженцы</div>
+                  </label>
+                <% } %>
               </div>
-            <% } %>
+            </div>
           </div>
+        </div>
+        <div class="bg-white bs overflow-hidden radius-4 mb-7 mb-md-3">
+          <div class="catalog__block pb-7 px-7 pb-lg-5 px-lg-5" data-toggle-cover>
+            <div class="catalog__toggler flex align-items-center justify-content-between width-100 pt-6 pt-lg-5" data-toggle-link>
+              <span class="text text--16 bold-6 mr-2">Ширина</span>
+              <span class="catalog__arrow text text--10 color-primary">
+                <svg class="icon">
+                  <use xlink:href="img/icons.svg#triangle-right" />
+                </svg>
+              </span>
+            </div>
+            <div data-toggle-content data-toggle-static="true" data-toggle-height="true">
+              <div class="flex flex-direction-column gap-4 mt-5">
+                <% for(let i=0; i < 2; i++){ %>
+                  <label class="catalog__item form-field form-checkbox">
+                    <input type="checkbox" class="form-input-checkbox">
+                    <div class="form-checkbox-target form-toggle-target">
+                      <svg class="icon">
+                        <use xlink:href="img/icons.svg#gal-ochka" />
+                      </svg>
+                    </div>
+                    <div class="catalog__text text-body-1 fade-70 ml-2">Саженцы</div>
+                  </label>
+                <% } %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text text--24 bold-6 mb-7 mb-md-3">Цена</div>
+        <div class="bg-white bs overflow-hidden radius-4 mb-7 mb-md-3 p-7 p-lg-5">
+          <label class="form-field">
+            <div class="form-input-cover">
+              <div class="flex align-items-center justify-content-between width-100 pb-8">
+                <div class="flex flex-direction-column flex-grow mr-3">
+                  <span class="text text--14 bold-5 fade-70 mb-1">От</span>
+                  <span class="form-range-from border radius-4 brs-4 bd-all py-3 px-4"></span>
+                </div>
+                <div class="flex flex-direction-column flex-grow">
+                  <span class="text text--14 bold-5 fade-70 mb-1">До</span>
+                  <span class="form-range-to border radius-4 py-3 px-4"></span>
+                </div>
+              </div>
+              <div class="form-range range" data-type="double" data-max="100" data-min="0" data-to="76">
+                <input type="text" class="range-input-from" hidden>
+                <input type="text" class="range-input-to" hidden>
+                <div class="range-inner"> </div>
+              </div>
+            </div>
+          </label>
+        </div>
+        <div class="flex flex-direction-column">
+          <button class="btn btn--primary btn--fill mb-5">Показать</button>
+          <button class="btn btn--primary btn--contur">Сбросить</button>
+        </div>
+      </div>
+      <div class="width-100">
+        <button class="btn btn--primary btn--fill width-100 mb-4 display-none display-lg-flex" data-toggle-link="filter">
+          Открыть фильтр
+        </button>
 
-          <div class="pagination flex align-items-center gap-4">
-            <a class="btn btn--white btn--fill display-none display-md-flex" href="">
-              <svg class="icon">
-                <use xlink:href="img/icons.svg#arrow-left" />
-              </svg>
-            </a>
-            <a class="btn btn--primary btn--fill display-md-none" href="">1</a>
-            <a class="btn btn--gray btn--contur display-md-none fade-60" href="">2</a>
-            <a class="btn btn--gray btn--contur display-md-none fade-60" href="">3</a>
-            <a class="btn btn--gray btn--contur display-md-none fade-60" href="">4</a>
-            <a class="btn btn--gray btn--contur display-md-none fade-60" href="">5</a>
-            <span class="btn btn--gray fade-60" href="">...</span>
-            <a class="btn btn--gray btn--contur display-md-none fade-60" href="">26</a>
-            <a class="btn btn--white btn--fill fade-60" href="">
+        <div class="filter width-max mb-10 mb-md-5" data-toggle-cover>
+          <button class="flex align-items-center" data-toggle-link>
+            <div class="text text--18 bold-6">Сортировка: <span class="bold-400 fade-60">по популярности</span></div>
+            <div class="filter__arrow text text--15 ml-2">
               <svg class="icon">
                 <use xlink:href="img/icons.svg#arrow-right" />
               </svg>
-            </a>
-          </div>
-
+            </div>
+          </button>
+          <div class="filter-menu bg-white bs radius-4 p-2" data-toggle-content>
+            <div class="filter-link link display-block radius-2 py-3 px-4">Цена по убывыанию</div>
+            <div class="filter-link link display-block radius-2 py-3 px-4">Цена по возрастанию</div>
+            <div class="filter-link active link display-block radius-2 py-2 px-4">По популярности</div>
+            <div class="filter-link link display-block radius-2 py-3 px-4">По новизне</div>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
 
+        <div class="grid mb-10">
+          <% for (var i = 0; i < 9; i++) { %>
+            <div class="grid-col-6 grid-col-lg-4">
+              <a class="card card-action overflow-hidden height-100 waved" href="javascript:;">
+                <div class="card-pic width-100">
+                  <div class="pic pic--rect-x">
+                    <div class="loader">
+                      <svg class="icon">
+                          <use xlink:href="img/icons.svg#loader" />
+                      </svg>
+                    </div>
+                    <picture>
+                      <img class="pic__img" src="img/banner.jpg" alt="" loading="lazy">
+                    </picture>
+                    <label class="like">
+                      <input class="like__checkbox display-none" type="checkbox">
+                      <span class="like__heart flex align-items-center justify-content-center text text--18 link radius-2 visibility-hidden fade-0">
+                          <svg class="icon">
+                              <use xlink:href="img/icons.svg#like" />
+                          </svg>
+                      </span>
+                  </label>
+                  </div>
+                </div>
+                <div class="card-content p-4 p-md-2">
+                  <div class="text text--16 text-md-14 bold-7 mb-3">Лилия ЛА-гибрид Роял Кисс</div>
+                  <div class="text text--16 bold-4 text-md-12 fade-60 mb-5">Цветок, характеризующийся стойкостью и неприхотлив...</div>
+                  <div class="card-bottom flex align-items-center justify-content-between mt-auto">
+                    <div class="flex flex-direction-column mr-2">
+                      <span class="text text--24 text-md-18 bold-8">187 ₽</span>
+                    </div>
+                    <button class="btn btn--primary btn--fill width-md-100 mt-auto">В корзину</button>
+                  </div>
+                </div>
+              </a>
+            </div>
+          <% } %>
+        </div>
+
+        <div class="pagination flex align-items-center gap-4">
+          <a class="btn btn--white btn--fill display-none display-md-flex" href="">
+            <svg class="icon">
+              <use xlink:href="img/icons.svg#arrow-left" />
+            </svg>
+          </a>
+          <a class="btn btn--primary btn--fill display-md-none" href="">1</a>
+          <a class="btn btn--gray btn--contur display-md-none fade-60" href="">2</a>
+          <a class="btn btn--gray btn--contur display-md-none fade-60" href="">3</a>
+          <a class="btn btn--gray btn--contur display-md-none fade-60" href="">4</a>
+          <a class="btn btn--gray btn--contur display-md-none fade-60" href="">5</a>
+          <span class="btn btn--gray fade-60" href="">...</span>
+          <a class="btn btn--gray btn--contur display-md-none fade-60" href="">26</a>
+          <a class="btn btn--white btn--fill fade-60" href="">
+            <svg class="icon">
+              <use xlink:href="img/icons.svg#arrow-right" />
+            </svg>
+          </a>
+        </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
 
   <!-- Подвал -->
   <%= _.template(require('./includes/footer.html').default)() %>

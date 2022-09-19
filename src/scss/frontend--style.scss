@@ -386,3 +386,15 @@ body {
 		}
 	}
 }
+
+.error {
+	&__input {
+		border-color: var(--color-red);
+	}
+
+	&__text {
+		position: absolute;
+		right   : 0;
+		bottom  : -18px;
+	}
+}

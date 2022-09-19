@@ -1,0 +1,11 @@
+.sending {
+    padding-top   : 70px;
+    padding-bottom: 100px;
+    background    : radial-gradient(74.38% 244.23% at 75.04% 76.25%, #3BEEAD 0%, #14AC75 82.99%);
+    position      : relative;
+
+    &__content {
+        position : relative;
+        max-width: 410px;
+    }
+}

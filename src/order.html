@@ -1,0 +1,36 @@
+  <% var data = {
+
+    title: '404',
+
+  } %>
+
+  <%= _.template(require('./includes/header.html').default)({data}) %>
+
+  <main class="sending container pic">
+    <img class="sending__bg pic__img" src="img/boxes.png" alt="">
+    <div class="sending__content bg-white radius-4 overflow-hidden mx-auto">
+      <div class="flex align-items-center justify-content-center text text--24 text-md-18 text--center bold-8 bg-sec py-5 px-8 px-md-4">Узнать статус заказа</div>
+      <form class="flex flex-direction-column py-7 px-8 px-md-4">
+        <label class="form-field mb-4">
+          <div class="text text--16 bold-4 mb-3">
+            <span class="bold-6">Номер телефона</span><br>
+            который вы указали при заказе
+          </div>
+          <div class="form-input-cover">
+              <input type="tel" class="form-input" placeholder="+7 " required>
+          </div>
+        </label>
+        <label class="form-field mb-8">
+          <div class="text text--16 bold-6 mb-3">Номер заказа</div>
+          <div class="form-input-cover error">
+              <input type="text" class="error__input form-input" placeholder="Например, 159753" required>
+              <div class="error__text text text--14 color-red bold-6">Ошибка! Неверный номер заказа</div>
+          </div>
+        </label>
+        <button class="btn btn--primary btn--fill">Показать</button>
+      </form>
+    </div>
+  </main>
+
+  <!-- Подвал -->
+  <%= _.template(require('./includes/footer.html').default)() %>
