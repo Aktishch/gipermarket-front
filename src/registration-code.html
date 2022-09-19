@@ -1,6 +1,6 @@
   <% var data = {
 
-    title: 'Войти',
+    title: 'Подтвердите регистрацию',
 
   } %>
 
@@ -11,22 +11,17 @@
     <div class="sending__content bg-white radius-4 overflow-hidden mx-auto">
       <div class="flex align-items-center justify-content-center text text--24 text-md-18 text--center bold-8 bg-sec py-5 px-8 px-md-4"><%= data.title %></div>
       <form class="flex flex-direction-column py-7 px-8 px-md-4">
-        <label class="form-field mb-4">
-          <div class="text text--16 bold-6 mb-2">Логин</div>
+        <label class="form-field mb-8">
+          <div class="text text--16 bold-6 mb-2">Код</div>
           <div class="form-input-cover">
               <input type="text" class="form-input" required>
           </div>
         </label>
-        <label class="form-field mb-6">
-          <div class="text text--16 bold-6 mb-2">Телефон</div>
-          <div class="form-input-cover">
-              <input type="tel" class="form-input" placeholder="+7 " required>
-          </div>
-        </label>
-        <button class="btn btn--primary btn--fill mb-6" type="submit">Войти</button>
+        <button class="btn btn--primary btn--fill mb-5" type="submit">Войти</button>
         <div class="flex flex-direction-column align-items-center justify-content-center text text--16 bolt-4 text--center">
-          <span class="fade-80">Я ещё не зарегистрировался</span>
-          <span class="sending__link link bold-6 width-max">Зарегистрироваться</span>
+          <span class="text text--12 fade-80">
+            Вы сможете повторно отправить код через 30 сек
+          </span>
         </div>
       </form>
     </div>

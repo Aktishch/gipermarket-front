@@ -1,0 +1,55 @@
+  <% var data = {
+
+    title: 'Регистрация',
+
+  } %>
+
+  <%= _.template(require('./includes/header.html').default)({data}) %>
+
+  <main class="sending container pic">
+    <img class="sending__bg pic__img" src="img/flowers.png" alt="">
+    <div class="sending__content bg-white radius-4 overflow-hidden mx-auto">
+      <div class="flex align-items-center justify-content-center text text--24 text-md-18 text--center bold-8 bg-sec py-5 px-8 px-md-4"><%= data.title %></div>
+      <form class="flex flex-direction-column py-7 px-8 px-md-4">
+        <label class="form-field mb-4">
+          <div class="text text--16 bold-6 mb-2">Имя</div>
+          <div class="form-input-cover">
+              <input type="text" class="form-input" required>
+          </div>
+        </label>
+        <label class="form-field mb-4">
+          <div class="text text--16 bold-6 mb-2">Телефон</div>
+          <div class="form-input-cover">
+              <input type="tel" class="form-input" placeholder="+7 " required>
+          </div>
+        </label>
+        <label class="form-field mb-5">
+          <div class="text text--16 bold-6 mb-2">Пароль</div>
+          <div class="form-input-cover">
+              <input type="password" class="form-input -password-" required>
+              <span class="sending__eye flex align-items-center justify-content-center text text--24 link color-black fade-40 -eye-">
+                <svg class="icon">
+                    <use xlink:href="img/icons.svg#eye-visible" />
+                </svg>
+            </span>
+          </div>
+        </label>
+        <div class="sending__info radius-2 text text--14 bold-4 interva-4 fade-90 py-3 px-6 mb-5">
+          Минимум 8 символов с прописными <br class="display-md-none">
+          или строчными буквами и цифрами
+        </div>
+        <button class="btn btn--primary btn--fill mb-5" type="submit">Зарегистрироваться</button>
+        <div class="flex flex-direction-column align-items-center justify-content-center text text--16 bolt-4 text--center">
+          <span class="text text--12 fade-80 mb-6">
+            Нажимая на кнопку “Заказать обратный звонок”, <br class="display-md-none">
+            Вы соглашаетесь на обработку персональных данных
+          </span>
+          <span class="fade-80">Уже есть аккаунт?</span>
+          <span class="sending__link link bold-6 width-max">Войти</span>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <!-- Подвал -->
+  <%= _.template(require('./includes/footer.html').default)() %>

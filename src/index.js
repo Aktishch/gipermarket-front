@@ -1,4 +1,3 @@
-import showPass from "./js/show-pass";
 import fancybox from "./js/fancybox";
 import yandexMap from './js/yandex-map';
 import rangeSlider from './js/range-slider';
@@ -10,6 +9,7 @@ import toggle from 'npm-kit-toggle';
 import ripple from 'npm-kit-ripple';
 import scrollNav from './js/scroll-nav'
 import mobileMenu from './js/mobile-menu'
+import password from './js/password'
 import Swiper, { Navigation, Pagination, Scrollbar, Autoplay, Grid, Thumbs, EffectFade, Lazy } from 'swiper';
 
 
@@ -24,7 +24,6 @@ window.addEventListener('DOMContentLoaded', () => loadHandler())
 function loadHandler() {
 	fancybox.init()
 	yandexMap.init()
-	showPass.init()
 	scrollTo.init()
 	rangeSlider.init()
 	tab.init()
@@ -38,6 +37,7 @@ function loadHandler() {
 	ripple.deAttach('.btn--link')
 	scrollNav.init()
 	mobileMenu.init()
+	password.init()
 
 	window.addEventListener('toggleopen', toggleopenHaandler)
 	window.addEventListener('toggleclose', togglecloseHaandler)
