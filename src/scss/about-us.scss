@@ -1,0 +1,77 @@
+.about-us {
+    &__content {
+        padding       : 44px 56px;
+        padding-bottom: 77px;
+        position      : relative;
+        background    : linear-gradient(-270deg, rgba(0, 0, 0, 0.7) 21.58%, rgba(0, 0, 0, 0) 66.24%);
+    }
+
+    &__info {
+        max-width: 550px;
+    }
+
+    &__name {
+        border: 1px solid var(--color-white);
+    }
+
+    @media(max-width: $laptop) {
+        &__content {
+            padding       : 50px 30px;
+            padding-bottom: 50px;
+            background    : linear-gradient(-24deg, rgb(0, 0, 0) 15.58%, rgba(0, 0, 0, 0) 87.24%);
+        }
+    }
+
+    @media(max-width: $laptop) {
+        &__content {
+            padding: 30px 15px;
+        }
+    }
+}
+
+.questions {
+    &__item.toggle-active &__line--1 {
+        transform: rotate(0);
+    }
+
+    &__lines {
+        position: relative;
+        width   : 16px;
+        height  : 16px;
+    }
+
+    &__line {
+        width   : 16px;
+        height  : 3px;
+        position: absolute;
+        top     : 0;
+        left    : 0;
+        right   : 0;
+        bottom  : 0;
+        margin  : auto;
+
+        &--1 {
+            transform : rotate(90deg);
+            transition: 0.2s ease;
+        }
+    }
+}
+
+.reviews {
+    &__ava {
+        min-width: 52px;
+        height   : 52px;
+    }
+}
+
+.gallery {
+    &__item {
+        height: 300px;
+    }
+
+    @media(max-width: $laptop) {
+        &__item {
+            height: auto;
+        }
+    }
+}

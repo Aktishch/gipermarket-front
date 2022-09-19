@@ -390,28 +390,7 @@
         </div>
       </div>
 
-      <div class="feedback radius-4 overflow-hidden py-6 px-10 px-md-6 mb-10 mb-md-5">
-        <img class="feedback__bg height-100 display-lg-none" src="img/feedback.png" alt="">
-        <div class="feedback__content">
-          <div class="text text--24 color-white bold-8 mb-4">Бесплатная консультация</div>
-          <form class="flex align-items-end flex-wrap gap-6 mb-4">
-            <label class="form-field">
-              <div class="text text--16 bold-6 color-white mb-2">Ваше имя</div>
-              <div class="feedback__input form-input-cover">
-                <input type="text" class="form-input" placeholder="Напишите имя...">
-              </div>
-            </label>
-            <label class="form-field">
-              <div class="text text--16 bold-6 color-white mb-2">Ваш телефон</div>
-              <div class="feedback__input form-input-cover">
-                <input type="tel" class="form-input" placeholder="+7 ">
-              </div>
-            </label>
-            <button class="btn btn--primary btn--fill" type="submit">Отправить заявку</button>
-          </form>
-          <div class="text text--12 color-white fade-60">Отправляя форму Вы даете согласие на обработку Ваших персональных данных</div>
-        </div>
-      </div>
+      <%= _.template(require('./includes/feedback.html').default)() %>
 
       <div class="payment mb-10 mb-md-5">
         <div class="text text--38 text-md-28 bold-8 mb-10 mb-md-5">Оплата и доставка</div>
@@ -491,9 +470,6 @@
         <a class="product-detail__link link text text--16 bold-6 color-primary" href="">Читать подробнее</a>
       </div>
 
-      <!-- <div class="product-items">
-        <div class="grid"></div>
-      </div> -->
       <div class="product-items">
         <div class="text text--38 text-md-28 bold-8 mb-10 mb-md-5">С этим товаром смотрят</div>
         <div class="slider product-slider">
