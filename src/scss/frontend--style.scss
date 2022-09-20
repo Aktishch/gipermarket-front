@@ -304,6 +304,17 @@ body {
 	}
 }
 
+.quantity {
+	&__btn {
+		width: var(--size-5);
+		height: var(--size-10);
+	}
+
+    &__input {
+        max-width: var(--size-8);
+    }
+}
+
 .like {
 	position: absolute;
 	top     : var(--size-4);
