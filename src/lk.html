@@ -1,0 +1,91 @@
+  <% var data = {
+
+    title: 'Личный кабинет',
+
+  } %>
+
+  <%= _.template(require('./includes/header.html').default)({data}) %>
+
+  <%= _.template(require('./includes/navigation.html').default)({data}) %>
+
+  <main class="lk container pt-10 pt-md-5">
+    <div class="text text--38 text-md-28 bold-8 mb-10 mb-md-5"><%= data.title %></div>
+    <div class="lk__content flex justify-content-between gap-10 gap-lg-5 gap-md-0">
+      <div class="lk__sidebar width-100 mb-md-10">
+        <div class="lk__block bg-white radius-4 bs py-6 px-7 py-lg-4 px-lg-4">
+          <div class="flex align-items-center mb-6">
+            <div class="lk__ava pic pic--square bg-gray radius-max mr-4">
+              <div class="loader">
+                <svg class="icon">
+                    <use xlink:href="img/icons.svg#loader" />
+                </svg>
+              </div>
+              <picture>
+                <img class="pic__img" src="img/person.png" alt="" loading="lazy">
+              </picture>
+            </div>
+            <div class="text text--24 text-lg-20 bold-6">Нурсултан Хуйдайбердиев</div>
+          </div>
+          <nav class="flex flex-direction-column">
+            <a class="lk__btn btn btn--primary btn--fill justify-content-start mb-4" href="">
+              <img class="icon text text--28 mr-3" src="img/basket.svg" alt="">
+              <span class="text text--18 bold-6">Заказы</span>
+            </a>
+            <a class="lk__btn btn btn--sec btn--fill justify-content-start mb-4" href="">
+              <img class="icon text text--28 mr-3" src="img/user.svg" alt="">
+              <span class="text text--18 bold-6 color-black">Настройки профиля</span>
+            </a>
+            <a class="lk__btn btn btn--sec btn--fill justify-content-start mb-8" href="">
+              <img class="icon text text--28 mr-3" src="img/pen.svg" alt="">
+              <span class="text text--18 bold-6 color-black">Изменить пароль</span>
+            </a>
+            <a class="lk__link btn btn--link text text--18 bold-6 color-red width-max" href="">Выйти из личного кабинета</a>
+          </nav>
+        </div>
+      </div>
+      <div class="lk__info width-100">
+        <div class="text text--24 bold-6 mb-8 mb-md-5">История заказов</div>
+        <div class="orders flex flex-direction-column gap-4">
+          <% var status = [
+            {
+              img: 'Package',
+              text: 'Сборка'
+            },
+            {
+              img: 'car',
+              text: 'Заказ отправлен'
+            },
+            {
+              img: 'card',
+              text: 'Заказ оплачен'
+            },
+            {
+              img: 'thanks',
+              text: 'Выполнен'
+            }
+          ] %>
+          <% for (var i = 0; i < status.length; i++) { %>
+            <div class="orders__item bg-white border radius-4 overflow-hidden bs">
+              <div class="flex align-items-center justify-content-between border-bottom py-3 pl-2 pr-6">
+                <div class="flex align-items-center">
+                  <div class="orders__number flex align-items-center justify-content-center bg-brown text text--18 bold-6 radius-1 py-1 px-2 mr-5">5455</div>
+                  <div class="flex align-items-center mr-md-1">
+                    <img class="icon text text--24 display-md-none mr-3" src="img/<%= status[i].img %>.svg" alt="">
+                    <span class="text text--20 text-md-16 bold-4"><%= status[i].text %></span>
+                  </div>
+                </div>
+                <div class="text text--18 text-md-16 bold-4 fade-60">20.07.2022</div>
+              </div>
+              <div class="flex align-items-center p-5">
+                <span class="text text--18 text-md-14 bold-4 fade-60 mr-6">4 товара</span>
+                <span class="text text--20 text-md-16 bold-6">2300 ₽</span>
+              </div>
+            </div>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Подвал -->
+  <%= _.template(require('./includes/footer.html').default)() %>

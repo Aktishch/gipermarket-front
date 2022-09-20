@@ -1,0 +1,121 @@
+  <% var data = {
+
+    title: 'Статус заказа',
+
+  } %>
+
+  <%= _.template(require('./includes/header.html').default)({data}) %>
+
+  <%= _.template(require('./includes/navigation.html').default)({data}) %>
+
+  <main class="lk container pt-10 pt-md-5">
+    <div class="text text--38 text-md-28 bold-8 mb-10 mb-md-5"><%= data.title %></div>
+    <div class="lk__content flex justify-content-between gap-10 gap-lg-5 gap-md-0">
+      <div class="lk__sidebar width-100 mb-md-10">
+        <div class="lk__block bg-white radius-4 bs p-10 p-lg-3">
+          <div class="flex align-items-center border-bottom pb-5 mb-5">
+            <div class="lk__pic flex align-items-center justify-content-center bg-sec radius-2 mr-4">
+              <img class="icon text text--32" src="img/Package.svg" alt="">
+            </div>
+            <div class="flex flex-direction-column">
+              <span class="text text--18 bold-6 mb-2">Номер заказа</span>
+              <span class="text text--16 bold-4">123456789</span>
+            </div>
+          </div>
+          <div class="flex align-items-center border-bottom pb-5 mb-5">
+            <div class="lk__pic flex align-items-center justify-content-center bg-sec radius-2 mr-4">
+              <img class="icon text text--32" src="img/cal.svg" alt="">
+            </div>
+            <div class="flex flex-direction-column">
+              <span class="text text--18 bold-6 mb-2">Дата заказа</span>
+              <span class="text text--16 bold-4">02.03.2022</span>
+            </div>
+          </div>
+          <div class="flex align-items-center">
+            <div class="lk__pic flex align-items-center justify-content-center bg-sec radius-2 mr-4">
+              <img class="icon text text--32" src="img/check.svg" alt="">
+            </div>
+            <div class="flex flex-direction-column">
+              <span class="text text--18 bold-6 mb-2">Создание заказа</span>
+              <span class="text text--16 bold-4">02.03.2022</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lk__info width-100">
+        <div class="text text--24 bold-6 mb-8 mb-md-5">Сведения о заказе</div>
+        <div class="lk__detailed flex justify-content-between gap-2 gap-lg-5 mb-8 mb-md-5">
+          <div class="bg-white radius-4 bs overflow-hidden border width-lg-100">
+            <div class="flex align-items-center bg-sec py-4 pl-6 pr-10">
+              <img class="icon text text--22 mr-4" src="img/user.svg" alt="">
+              <span class="text text--20 bold-6">Получатель</span>
+            </div>
+            <div class="flex flex-direction-column py-5 pl-6 pr-10">
+              <span class="text text--14 bold-4 interva-5 mb-3">Марьяна Турчанова</span>
+              <span class="text text--14 bold-4 interva-5 mb-3">марьяна.ми@gmail.com</span>
+              <span class="text text--14 bold-4">+7 900 000 00 00</span>
+            </div>
+          </div>
+          <div class="bg-white radius-4 bs overflow-hidden border width-lg-100">
+            <div class="flex align-items-center bg-sec py-4 pl-6 pr-10">
+              <img class="icon text text--22 mr-4" src="img/car.svg" alt="">
+              <span class="text text--20 bold-6">Доставка</span>
+            </div>
+            <div class="flex flex-direction-column py-5 pl-6 pr-10">
+              <span class="text text--14 interva-5 bold-4 mb-3">Компания СДЭК</span>
+              <span class="text text--14 interva-5 bold-4">
+                г. Краснодар, ул. им <br>
+                Петра  Метальникова, <br>
+                д. 5 корп. 1
+              </span>
+            </div>
+          </div>
+          <div class="bg-white radius-4 bs overflow-hidden border width-lg-100">
+            <div class="flex align-items-center bg-sec py-4 pl-6 pr-10">
+              <img class="icon text text--22 mr-4" src="img/card.svg" alt="">
+              <span class="text text--20 bold-6">Оплачено</span>
+            </div>
+            <div class="flex flex-direction-column py-5 pl-6 pr-10">
+              <div class="text text--14 bold-4 interva-5 mb-5">Карта Сбербанка VISA**0000</div>
+              <div class="flex align-items-end justify-content-between text text--14 bold-4 interva-5 mb-3">
+                Товары, 3 шт. ......................<span class="bold-7">1558 ₽</span>
+              </div>
+              <div class="flex align-items-end justify-content-between text text--14 bold-4 interva-5 mb-3">
+                Скидка ................................. <span class="bold-7">- 256 ₽</span>
+              </div>
+              <div class="flex align-items-end justify-content-between text text--14 bold-6 interva-5 mb-3">
+                Итого ........................... <span class="bold-7">- 256 ₽</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-direction-column gap-4">
+          <% for (var i = 0; i < 4; i++) { %>
+            <div class="lk__order flex align-items-center justify-content-between bg-white bs radius-4 border gap-6 gap-md-3 p-2 pr-8 pr-lg-3">
+              <div class="flex align-items-center mr-2">
+                <div class="lk__product pic pic--rect-x bg-sec radius-4 mr-6 mr-lg-3">
+                  <div class="loader">
+                    <svg class="icon">
+                        <use xlink:href="img/icons.svg#loader" />
+                    </svg>
+                  </div>
+                  <picture>
+                    <img class="pic__img" src="img/banner.jpg" alt="" loading="lazy">
+                  </picture>
+                </div>
+                <div class="lk__specifications flex flex-direction-column">
+                  <span class="text text--18 text-lg-16 text-md-14 bold-6 mb-5">Лилия восточная махровая Дабл Фэнтези</span>
+                  <span class="text text--16 text-lg-14 bold-4">Кол-во: 1</span>
+                </div>
+              </div>
+              <div class="text text--24 text-lg-18 text-md-16 bold-6 ml-auto">1184 ₽</div>
+            </div>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Подвал -->
+  <%= _.template(require('./includes/footer.html').default)() %>
