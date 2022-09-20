@@ -1,14 +1,20 @@
-// out:false
 .dialog {
-  &-large {
-    max-width: 1120px;
+  &--small {
+    width: 340px;
   }
 
-  &-small {
-    max-width: 340px;
+  &--medium {
+    width: 500px;
   }
 
-  &-middle {
-    max-width: 620px;
+  &--large {
+      max-width: 1120px;
+  }
+
+  @media(max-width: $mobile) {
+    & {
+      width: 100%;
+      max-width: 100%;
+    }
   }
 }

@@ -398,3 +398,17 @@ body {
 		bottom  : -18px;
 	}
 }
+
+.rating {
+	&__val:checked~&__item {
+		color: var(--color-yellow);
+	}
+
+	@media(hover) {
+
+		&__item:hover,
+		&__item:hover~&__item {
+			color: var(--color-yellow);
+		}
+	}
+}
