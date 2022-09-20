@@ -98,6 +98,11 @@
         <symbol id="star" width="100%" height="100%" viewBox="0 0 48 46">
             <path d="M24.1605 37.812L9.54025 45.4999L12.3326 29.2194L0.5 17.6876L16.8468 15.3121L24.1605 0.5L31.4718 15.3121L47.8186 17.6876L35.9884 29.2194L38.7831 45.4999L24.1605 37.812Z" fill="currentColor"/>
         </symbol>
+
+        <symbol id="loop" width="100%" height="100%" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="7" fill="rgba(0, 0, 0, 0)" stroke="currentColor" stroke-width="2"/>
+            <path d="M19.8008 19.8L16.8008 16.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </symbol>
 		
 	</defs>
 </svg>

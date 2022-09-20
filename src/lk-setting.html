@@ -1,0 +1,257 @@
+  <% var data = {
+
+    title: 'Личный кабинет',
+
+  } %>
+
+  <%= _.template(require('./includes/header.html').default)({data}) %>
+
+  <%= _.template(require('./includes/navigation.html').default)({data}) %>
+
+  <main class="lk container pt-10 pt-md-5">
+    <div class="text text--38 text-md-28 bold-8 mb-10 mb-md-5"><%= data.title %></div>
+    <div class="lk__content flex justify-content-between gap-10 gap-lg-5 gap-md-0">
+      <div class="lk__sidebar width-100 mb-md-10">
+        <div class="lk__block bg-white radius-4 bs py-6 px-7 py-lg-4 px-lg-4">
+          <div class="flex align-items-center mb-6">
+            <div class="lk__ava pic pic--square bg-gray radius-max mr-4">
+              <picture>
+                <img class="pic__img -ava-" src="img/person.png" alt="" loading="lazy">
+              </picture>
+            </div>
+            <div class="text text--24 text-lg-20 bold-6">Нурсултан Хуйдайбердиев</div>
+          </div>
+          <nav class="flex flex-direction-column">
+            <a class="lk__btn btn btn--sec btn--fill justify-content-start mb-4" href="">
+              <img class="icon text text--28 mr-3" src="img/basket.svg" alt="">
+              <span class="text text--18 bold-6 color-black">Заказы</span>
+            </a>
+            <a class="lk__btn btn btn--primary btn--fill justify-content-start mb-4" href="">
+              <img class="icon text text--28 mr-3" src="img/user.svg" alt="">
+              <span class="text text--18 bold-6">Настройки профиля</span>
+            </a>
+            <a class="lk__btn btn btn--sec btn--fill justify-content-start mb-8" href="">
+              <img class="icon text text--28 mr-3" src="img/pen.svg" alt="">
+              <span class="text text--18 bold-6 color-black">Изменить пароль</span>
+            </a>
+            <a class="lk__link btn btn--link text text--18 bold-6 color-red width-max" href="">Выйти из личного кабинета</a>
+          </nav>
+        </div>
+      </div>
+      <div class="lk__info width-100">
+        <form class="display-block mb-10 mb-md-5 -form-">
+          <label class="profile display-block bg-sec radius-4 wigth-100 p-2">
+            <div class="profile__block radius-4 pic height-100">
+              <div class="flex flex-direction-column align-items-center justify-content-center height-100">
+                <img class="icon text text--42 mb-8" src="img/image.svg" alt="">
+                <span class="text text--16 text--center bold-4">
+                  Нажмите <br>
+                  или перетащите <br>
+                  изображение <br>
+                  для загрузки
+                </span>
+                <input class="display-none -file-" type="file">
+                <img class="pic__img -img-" src="" alt="">
+              </div>
+            </div>
+          </label>
+        </form>
+        
+        <form>
+          <div class="text text--24 bold-6 mb-8 mb-md-5">Личные данные</div>
+          <div class="bg-white radius-4 bs p-6 mb-10 mb-md-5">
+            <div class="grid grid-spacing-6">
+              <div class="grid-col-12 grid-col-md-4">
+                <label class="form-field">
+                  <div class="text text--16 bold-6 mb-3">
+                    <span class="color-red">*</span>Фамилия
+                  </div>
+                  <div class="form-input-cover">
+                      <input type="text" class="form-input" required>
+                  </div>
+                </label>
+              </div>
+              <div class="grid-col-12 grid-col-md-4">
+                <label class="form-field">
+                  <div class="text text--16 bold-6 mb-3">
+                    <span class="color-red">*</span>Имя
+                  </div>
+                  <div class="form-input-cover">
+                      <input type="text" class="form-input" required>
+                  </div>
+                </label>
+              </div>
+              <div class="grid-col-12 grid-col-md-4">
+                <label class="form-field">
+                  <div class="text text--16 bold-6 mb-3">
+                    <span class="color-red">*</span>Отчество
+                  </div>
+                  <div class="form-input-cover">
+                      <input type="text" class="form-input" required>
+                  </div>
+                </label>
+              </div>
+              <div class="grid-col-12 grid-col-md-6">
+                <label class="form-field">
+                  <div class="text text--16 bold-6 mb-3">
+                    <span class="color-red">*</span>Номер
+                  </div>
+                  <div class="form-input-cover">
+                      <input type="tel" class="form-input" required>
+                  </div>
+                </label>
+              </div>
+              <div class="grid-col-12 grid-col-md-6">
+                <label class="form-field">
+                  <div class="text text--16 bold-6 mb-3">Е-mali</div>
+                  <div class="form-input-cover">
+                      <input type="email" class="form-input">
+                  </div>
+                </label>
+              </div>
+              <div class="grid-col-12 grid-col-md-6">
+                <label class="form-field">
+                  <div class="text text--16 bold-6 mb-3">Дата рождения</div>
+                  <div class="form-input-cover">
+                      <input type="text" class="form-input">
+                  </div>
+                </label>
+              </div>
+              <div class="grid-col-12 grid-col-md-6">
+                <div class="text text--16 bold-6 mb-3">Пол</div>
+                <div class="flex align-items-center border radius-2 overflow-hidden">
+                  <label class="lk__label">
+                    <input type="radio" class="lk__checkbox display-none" name="sss" checked>
+                    <div class="lk__label-item flex align-items-center justify-content-center text text--16 bold-6 width-100 height-100">Мужской</div>
+                  </label>
+                  <label class="lk__label">
+                    <input type="radio" class="lk__checkbox display-none" name="sss">
+                    <div class="lk__label-item flex align-items-center justify-content-center text text--16 bold-6 width-100 height-100">Женский</div>
+                  </label>
+                </div>
+              </div>
+              <div class="grid-col-12 grid-col-md-6">
+                <label class="form-field">
+                  <div class="text text--16 bold-6 mb-3">Садоводческий стаж c</div>
+                  <div class="form-input-cover">
+                      <input type="text" class="form-input">
+                  </div>
+                </label>
+              </div>
+              <div class="grid-col-12 grid-col-md-6">
+                <label class="form-field">
+                  <div class="text text--16 bold-6 mb-3">Зона USDA</div>
+                  <div class="form-input-cover">
+                      <input type="text" class="form-input">
+                  </div>
+                </label>
+              </div>
+              <div class="grid-col-12">
+                <label class="form-field">
+                  <div class="text text--16 bold-6 mb-3">О себе</div>
+                  <div class="form-input-cover">
+                      <textarea type="text" class="form-input"></textarea>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="text text--24 bold-6 mb-8 mb-md-5">Адрес доставки</div>
+          <div class="bg-white radius-4 bs p-6 mb-10 mb-md-5">
+            <div class="grid grid-spacing-6">
+              <div class="grid-col-12">
+                <label class="form-field">
+                  <div class="text text--16 bold-6 mb-3">Местоположение</div>
+                  <div class="form-input-cover">
+                      <input type="search" class="form-input pl-10">
+                      <span class="lk__loop text text--24 color-grey">
+                        <svg class="icon">
+                          <use xlink:href="img/icons.svg#loop" />
+                      </svg>
+                      </span>
+                  </div>
+                </label>
+              </div>
+              <div class="grid-col-12 grid-col-md-6">
+                <label class="form-field">
+                  <div class="text text--16 bold-6 mb-3">Улица</div>
+                  <div class="form-input-cover">
+                      <input type="text" class="form-input">
+                  </div>
+                </label>
+              </div>
+              <div class="grid-col-12 grid-col-md-6 grid-col-lg-2">
+                <label class="form-field">
+                  <div class="text text--16 bold-6 mb-3">Дом</div>
+                  <div class="form-input-cover">
+                      <input type="text" class="form-input">
+                  </div>
+                </label>
+              </div>
+              <div class="grid-col-12 grid-col-md-6 grid-col-lg-2">
+                <label class="form-field">
+                  <div class="text text--16 bold-6 mb-3">Квартира</div>
+                  <div class="form-input-cover">
+                      <input type="text" class="form-input">
+                  </div>
+                </label>
+              </div>
+              <div class="grid-col-12 grid-col-md-6 grid-col-lg-2">
+                <label class="form-field">
+                  <div class="text text--16 bold-6 mb-3">Индекс</div>
+                  <div class="form-input-cover">
+                      <input type="text" class="form-input">
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn--primary btn--fill width-max" type="submit">Сохранить изменения</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    document.addEventListener('change', (event) => {
+  
+      if (event.target.classList.contains('-file-')) {
+  
+        let readFile = new FileReader();
+        let files = event.target.files[0];
+        readFile.readAsDataURL(files);
+  
+        readFile.addEventListener('loadend', () => {
+  
+          event.target.nextElementSibling.src = readFile.result;
+  
+        });
+  
+        const form = document.querySelector('.-form-')
+        const img = document.querySelector('.-img-')
+        const lkImg = document.querySelector('.-ava-')
+        let formData = new FormData(form)
+      
+        let promise = fetch('', {
+      
+          method: 'POST',
+          body: formData
+      
+        }).then((response) => {
+      
+          response.text()
+  
+        }).then((result) => {
+      
+          img.src = readFile.result;
+          lkImg.src = readFile.result;
+  
+        })
+  
+      }
+  
+    });
+  </script>
+
+  <!-- Подвал -->
+  <%= _.template(require('./includes/footer.html').default)() %>
