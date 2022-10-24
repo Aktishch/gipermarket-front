@@ -1,0 +1,52 @@
+  <% var data = {
+
+    title: 'Найдено 8 товаров',
+
+  } %>
+
+  <%= _.template(require('./includes/header.html').default)({data}) %>
+
+  <main class="result container pt-10 pt-md-5">
+    <div class="text text--24 bold-7 mb-10 mb-md-5"><%= data.title %></div>
+    <div class="grid grid-spacing-lg-7">
+      <% for (var i = 0; i < 8; i++) { %>
+        <div class="grid-col-6 grid-col-lg-3">
+          <div class="card card-action overflow-hidden height-100 waved">
+            <div class="card-pic width-100">
+              <div class="pic pic--rect-x">
+                <div class="loader">
+                  <svg class="icon">
+                      <use xlink:href="img/icons.svg#loader" />
+                  </svg>
+                </div>
+                <picture>
+                  <img class="pic__img" src="img/banner.jpg" alt="" loading="lazy">
+                </picture>
+                <label class="like">
+                  <input class="like__checkbox display-none" type="checkbox">
+                  <span class="like__heart flex align-items-center justify-content-center text text--18 link radius-2 visibility-hidden fade-0">
+                      <svg class="icon">
+                          <use xlink:href="img/icons.svg#like" />
+                      </svg>
+                  </span>
+              </label>
+              </div>
+            </div>
+            <div class="card-content p-4 p-md-2">
+              <div class="text text--16 text-md-14 bold-7 mb-3">Лилия ЛА-гибрид Роял Кисс</div>
+              <div class="text text--16 bold-4 text-md-12 fade-60 mb-5">Цветок, характеризующийся стойкостью и неприхотлив...</div>
+              <div class="card-bottom flex align-items-center justify-content-between mt-auto">
+                <div class="flex flex-direction-column mr-2">
+                  <span class="text text--24 text-md-18 bold-8">187 ₽</span>
+                </div>
+                <button class="btn btn--primary btn--fill width-md-100 mt-auto">В корзину</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% } %>
+    </div>
+  </main>
+
+  <!-- Подвал -->
+  <%= _.template(require('./includes/footer.html').default)() %>
