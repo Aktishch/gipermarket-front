@@ -9,13 +9,13 @@
 
             &__pic {
                 min-width : 95px;
-                height    : 80px;
+                height    : 74px;
                 background: #6F73EE;
             }
 
             &__img {
                 width     : 80px;
-                height    : 65px;
+                height    : 58px;
                 background: linear-gradient(203.84deg, #FFFFFF 0.47%, #D8D8D8 89.47%);
             }
         }
@@ -47,6 +47,21 @@
 
             &__pictures {
                 max-width: 350px;
+            }
+        }
+    }
+
+    @media(max-width: $mobile) {
+        &-detail {
+            &-slider {
+                height: 300px;
+            }
+
+            &-timer {
+                &__pic {
+                    min-width: 6px;
+                    height   : 84px;
+                }
             }
         }
     }

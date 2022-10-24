@@ -10,6 +10,7 @@ import ripple from 'npm-kit-ripple';
 import scrollNav from './js/scroll-nav'
 import mobileMenu from './js/mobile-menu'
 import password from './js/password'
+import dataHref from './js/data-href'
 import Swiper, { Navigation, Pagination, Scrollbar, Autoplay, Grid, Thumbs, EffectFade, Lazy } from 'swiper';
 
 
@@ -38,6 +39,7 @@ function loadHandler() {
 	scrollNav.init()
 	mobileMenu.init()
 	password.init()
+	dataHref.init()
 
 	window.addEventListener('toggleopen', toggleopenHaandler)
 	window.addEventListener('toggleclose', togglecloseHaandler)
