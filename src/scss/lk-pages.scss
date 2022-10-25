@@ -57,6 +57,10 @@
         left    : 14px;
         z-index : var(--zi-l1);
     }
+    
+    &__symbols {
+        background-color: var(--color-primary-20);
+    }
 
     @media(max-width: $laptop) {
         &__sidebar {

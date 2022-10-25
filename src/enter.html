@@ -12,21 +12,29 @@
       <div class="flex align-items-center justify-content-center text text--24 text-md-18 text--center bold-8 bg-sec py-5 px-8 px-md-4"><%= data.title %></div>
       <form class="flex flex-direction-column py-7 px-8 px-md-4">
         <label class="form-field mb-4">
-          <div class="text text--16 bold-6 mb-2">Логин</div>
-          <div class="form-input-cover">
-              <input type="text" class="form-input" required>
-          </div>
-        </label>
-        <label class="form-field mb-6">
           <div class="text text--16 bold-6 mb-2">Телефон</div>
           <div class="form-input-cover">
               <input type="tel" class="form-input" placeholder="+7 " required>
           </div>
         </label>
+        <label class="form-field mb-6">
+          <div class="text text--16 bold-6 mb-2">Пароль</div>
+          <div class="form-input-cover">
+            <input type="password" class="form-input -password-" required>
+            <span class="sending__eye flex align-items-center justify-content-center text text--24 link color-black fade-40 -eye-">
+              <svg class="icon">
+                  <use xlink:href="img/icons.svg#eye-visible" />
+              </svg>
+            </span>
+          </div>
+        </label>
+        <div class="flex flex-direction-column align-items-center justify-content-center text text--16 bolt-4 text--center mb-6">
+          <a class="sending__link link bold-4 width-max" href="">Забыли пароль? Нажмите сюда</a>
+        </div>
         <button class="btn btn--primary btn--fill mb-6" type="submit">Войти</button>
         <div class="flex flex-direction-column align-items-center justify-content-center text text--16 bolt-4 text--center">
           <span class="fade-80">Я ещё не зарегистрировался</span>
-          <span class="sending__link link bold-6 width-max">Зарегистрироваться</span>
+          <a class="sending__link link bold-6 width-max" href="">Зарегистрироваться</a>
         </div>
       </form>
     </div>
