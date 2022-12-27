@@ -306,13 +306,13 @@ body {
 
 .quantity {
 	&__btn {
-		width: var(--size-5);
+		width : var(--size-5);
 		height: var(--size-10);
 	}
 
-    &__input {
-        max-width: var(--size-8);
-    }
+	&__input {
+		max-width: var(--size-8);
+	}
 }
 
 .like {
@@ -420,6 +420,30 @@ body {
 		&__item:hover,
 		&__item:hover~&__item {
 			color: var(--color-yellow);
+		}
+	}
+}
+
+.documentation {
+	&__pic {
+		min-width : 84px;
+		width     : 84px;
+		height    : 84px;
+		font-size : 52px;
+		background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 95.83%), #F3BB4B;
+	}
+
+	@media(max-width: $md) {
+		&__item {
+			flex-direction: column;
+		}
+
+		&__pic {
+			order: 1;
+		}
+
+		&__content {
+			order: 2;
 		}
 	}
 }

@@ -1,0 +1,49 @@
+<div class="dialog dialog--medium card color-black overflow-hidden">
+  <div class="flex align-items-center justify-content-center text text--24 text--center bold-8 bg-sec width-100 py-5 px-8 px-md-4">
+    Оставить отзыв
+  </div>
+  <form class="flex flex-direction-column width-100 py-7 px-8 px-md-4">
+    <label class="form-field mb-8 mb-md-4">
+      <div class="text text--16 bold-6 mb-5">Оцените наш сервис</div>
+      <div class="rating flex align-items-center flex-direction-row-reverse justify-content-between">
+        <input class="rating__val display-none" type="radio" value="5" name="rating" id="rating-5">
+        <label class="rating__item flex align-items-center justify-content-center text text--48 text-md-30 link color-grey" for="rating-5">
+            <svg class="icon">
+                <use xlink:href="img/icons.svg#star" />
+            </svg>
+        </label>
+        <input class="rating__val display-none" type="radio" value="4" name="rating" id="rating-4">
+        <label class="rating__item flex align-items-center justify-content-center text text--48 text-md-30  link color-grey pr-10 pr-md-5" for="rating-4">
+            <svg class="icon">
+                <use xlink:href="img/icons.svg#star" />
+            </svg>
+        </label>
+        <input class="rating__val display-none" type="radio" value="3" name="rating" id="rating-3">
+        <label class="rating__item flex align-items-center justify-content-center text text--48 text-md-30  link color-grey pr-10 pr-md-5" for="rating-3">
+            <svg class="icon">
+                <use xlink:href="img/icons.svg#star" />
+            </svg>
+        </label>
+        <input class="rating__val display-none" type="radio" value="2" name="rating" id="rating-2">
+        <label class="rating__item flex align-items-center justify-content-center text text--48 text-md-30  link color-grey pr-10 pr-md-5" for="rating-2">
+            <svg class="icon">
+                <use xlink:href="img/icons.svg#star" />
+            </svg>
+        </label>
+        <input class="rating__val display-none" type="radio" value="1" name="rating" id="rating-1">
+        <label class="rating__item flex align-items-center justify-content-center text text--48 text-md-30  link color-grey pr-10 pr-md-5" for="rating-1">
+            <svg class="icon">
+                <use xlink:href="img/icons.svg#star" />
+            </svg>
+        </label>
+      </div>
+    </label>
+    <label class="form-field mb-8">
+      <div class="text text--16 bold-6 mb-2">Ваш вопрос</div>
+      <div class="form-input-cover">
+          <textarea type="text" class="form-input" placeholder="Напишите здесь... " required></textarea>
+      </div>
+    </label>
+    <button class="btn btn--primary btn--fill width-max px-10">Отправить</button>
+  </form>
+</div>
