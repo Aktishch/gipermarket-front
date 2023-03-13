@@ -447,3 +447,68 @@ body {
 		}
 	}
 }
+
+.product-in-basket {
+	position  : fixed;
+	top       : 40%;
+	right     : 18px;
+	max-width : 340px;
+	z-index   : var(--zi-l3);
+	opacity   : 0;
+	visibility: hidden;
+	transform : translateY(50px);
+	transition: 0.3s;
+
+	&--open {
+		opacity   : 1;
+		visibility: visible;
+		transform : translateY(0);
+	}
+
+	&__close {
+		position: absolute;
+		top     : 20px;
+		right   : 20px;
+		cursor  : pointer;
+	}
+
+	&__pic {
+		min-width    : 80px;
+		height       : 72px;
+		border-radius: 10px;
+		position     : relative;
+		overflow     : hidden;
+	}
+
+	&__img {
+		position  : absolute;
+		top       : 0;
+		left      : 0;
+		right     : 0;
+		bottom    : 0;
+		width     : 100%;
+		height    : 100%;
+		object-fit: cover;
+	}
+
+	&__content {
+		flex-direction: column;
+	}
+
+	&__old-price {
+		text-decoration: line-through;
+	}
+
+	&__btns {
+		flex-direction: column;
+	}
+
+	@media(max-width: $md) {
+		& {
+			max-width: 320px;
+			right    : 0;
+			left     : 0;
+			margin   : 0 auto;
+		}
+	}
+}
