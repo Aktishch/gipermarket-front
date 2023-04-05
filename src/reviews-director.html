@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="autor" content="Студия КИТ"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Отзывы</title>
+</head>
+<body>
+
+  <section class="reviews reviews--bg container flex flex-direction-column align-items-center justify-content-center overflow-hidden width-100">
+    <img class="reviews__bg fade-60 width-100 height-100" src="img/reviews-bg.png" alt="">
+    <div class="reviews__content flex flex-direction-column align-items-center justify-content-center width-100">
+      <div class="reviews__block reviews__block--lg bs radius-8 width-100 px-10 py-10 px-md-4">
+        <div class="text text--32 text-md-28 bold-8 mb-5">Написать директору</div>
+        <p class="tex text-16 text-md-14 bold-4 mb-5">
+          Рады, что вам все понравилось! Мы ценим ваше мнение и будем благодарны, если вы поделитесь им
+        </p>
+        <p class="tex text-16 text-md-14 bold-4 mb-10">
+          Расскажите, что вам не понравилось и что мы можем делать лучше. Директор накажет виновных, свяжется с вами и предложит решение проблемы.
+        </p>
+        <form class="flex flex-direction-column width-100">
+          <label class="form-field mb-7 mb-md-5">
+            <div class="text text--16 bold-6 mb-3">Оставьте ваш контакт для связи</div>
+            <div class="form-input-cover">
+                <input type="tel" class="form-input" placeholder="+7" required>
+            </div>
+          </label>
+          <label class="form-field mb-7 mb-md-5">
+            <div class="text text--16 bold-6 mb-3">Расскажите, что вам не понравилось</div>
+            <div class="form-input-cover">
+              <textarea type="text" class="form-input" required></textarea>
+            </div>
+          </label>
+          <button class="btn btn--primary btn--fill width-100 mb-8 mb-md-5" type="submit">Отправить</button>
+          <div class="text text--center text--12 bold-4 fade-50 link link--underline" data-fancybox-modal data-src="dialog-politics.html" data-type="ajax">
+            Нажимая на кнопку “Заказать обратный звонок”, <br class="d-md-none">
+            Вы соглашаетесь на обработку персональных данных
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

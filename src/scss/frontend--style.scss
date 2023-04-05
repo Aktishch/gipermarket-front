@@ -512,3 +512,46 @@ body {
 		}
 	}
 }
+
+.reviews {
+	position  : relative;
+	min-height: 100vh;
+
+	&--bg {
+		background: radial-gradient(74.38% 244.23% at 75.04% 76.25%, #FEFC4A 0%, #F3A712 82.99%);
+	}
+
+	&__bg {
+		position      : absolute;
+		inset         : 0;
+		object-fit    : cover;
+		pointer-events: none;
+	}
+
+	&__content {
+		position: relative;
+	}
+
+	&__block {
+		backdrop-filter: blur(20px);
+		background     : radial-gradient(98.48% 326.98% at 0% 3.35%, #FFFFFF 0%, rgba(255, 255, 255, 0.8) 100%);
+
+		&--sm {
+			max-width: 370px;
+		}
+
+		&--lg {
+			max-width: 535px;
+		}
+	}
+
+	&__logo {
+		width: 170px;
+	}
+
+	@media(min-width: $laptop) {
+		&__block--lg {
+			padding: 48px 52px;
+		}
+	}
+}

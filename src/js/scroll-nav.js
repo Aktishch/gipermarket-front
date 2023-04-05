@@ -1,9 +1,12 @@
 const init = () => {
 
+	const navTop = document.querySelector('.-nav-top-')
+
+	if (!navTop) return
+
 	const headerTop = document.querySelector('.-header-top-')
 	const header = document.querySelector('.-header-')
 	const nav = document.querySelector('.-nav-')
-	const navTop = document.querySelector('.-nav-top-')
 	
 	const scrollHeader = () => {
 		

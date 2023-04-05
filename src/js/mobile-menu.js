@@ -1,9 +1,12 @@
 const init = () => {
 
+    const mobile = document.querySelector('.-mobile-')
+
+    if (!mobile) return
+
     const html = document.querySelector('html')
     const burger = document.querySelector('.-burger-')
     const close = document.querySelector('.-close-')
-    const mobile = document.querySelector('.-mobile-')
 
     const documentWidth = document.documentElement.clientWidth
     const windowWidth = window.innerWidth
