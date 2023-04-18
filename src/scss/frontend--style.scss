@@ -543,15 +543,38 @@ body {
 		&--lg {
 			max-width: 535px;
 		}
+
+		&--success {
+			min-height: 470px;
+		}
 	}
 
 	&__logo {
 		width: 170px;
 	}
 
+
+	&__icon {
+		font-size: 162px;
+
+		&--green {
+			color: #09A98C;
+		}
+
+		&--red {
+			color: #E15050;
+		}
+	}
+
 	@media(min-width: $laptop) {
 		&__block--lg {
 			padding: 48px 52px;
+		}
+	}
+
+	@media(max-width: $mobile) {
+		&__block--success {
+			min-height: 370px;
 		}
 	}
 }
