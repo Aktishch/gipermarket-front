@@ -21,6 +21,14 @@
         top     : 80px;
     }
 
+    &__text {
+        min-width: max-content;
+    }
+
+    &__border {
+        border-bottom: 2px dotted var(--color-black-30);
+    }
+
     &__die {
         background-color: var(--color-red-20);
     }

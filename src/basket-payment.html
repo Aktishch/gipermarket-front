@@ -12,46 +12,51 @@
     <div class="basket__content flex justify-content-between gap-10 gap-md-5">
       <div class="basket__info width-100">
         <div class="text text--38 text-md-28 bold-8 mb-10 mb-md-5"><%= data.title %></div>
-        <div class="flex flex-direction-column gap-4 mb-10 mb-md-5">
-          <% for (var i = 0; i < 4; i++) { %>
-            <div class="flex align-items-center justify-content-between flex-wrap bg-white border radius-4 bs gap-5 p-2 pr-6 pr-md-2">
-              <div class="flex align-items-center width-md-100">
-                <div class="basket__pic pic pic--rect-x bg-sec radius-4 mr-6 mr-lg-3">
-                  <div class="loader">
-                    <svg class="icon">
-                        <use xlink:href="img/icons.svg#loader" />
-                    </svg>
+        <table class="display-block width-100 mb-10 mb-md-5">
+          <tbody class="flex flex-direction-column gap-4">
+            <% for (var i = 0; i < 4; i++) { %>
+              <tr class="flex align-items-center justify-content-between flex-wrap bg-white border radius-4 bs gap-5 p-2 pr-6 pr-md-2">
+                <td class="flex align-items-center width-md-100">
+                  <div class="basket__pic pic pic--rect-x bg-sec radius-4 mr-6 mr-lg-3">
+                    <div class="loader">
+                      <svg class="icon">
+                          <use xlink:href="img/icons.svg#loader" />
+                      </svg>
+                    </div>
+                    <picture>
+                      <img class="pic__img" src="img/banner.jpg" alt="" loading="lazy">
+                    </picture>
                   </div>
-                  <picture>
-                    <img class="pic__img" src="img/banner.jpg" alt="" loading="lazy">
-                  </picture>
-                </div>
-                <div class="flex flex-direction-column">
-                  <div class="text text--18 text-md-16 bold-6 mb-7 mb-md-3">Лилия Дивайн 1 шт.</div>
                   <div class="flex flex-direction-column">
-                    <div class="text text--12 bold-4">
-                      Скидка <span class="bold-7">35%</span>
-                    </div>
-                    <div class="text text--12 bold-4">
-                      Тип цены <span class="bold-7">Розничная цена</span>
+                    <div class="text text--18 text-md-16 bold-6 mb-7 mb-md-3">Лилия Дивайн 1 шт.</div>
+                    <div class="flex flex-direction-column">
+                      <div class="text text--12 bold-4">
+                        Скидка <span class="bold-7">35%</span>
+                      </div>
+                      <div class="text text--12 bold-4">
+                        Тип цены <span class="bold-7">Розничная цена</span>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div class="quantity flex align-items-center justify-content-between bg-white border radius-2">
-                <button class="quantity__btn btn btn--gray color-black ">-</button>
-                <input class="quantity__input text text--20 text--center color-black bold-6 border-none" type="text" value="1" name="quantity">
-                <button class="quantity__btn btn btn--gray color-black ">+</button>
-              </div>
-              <div class="text text--24 bold-6">150 ₽</div>
-              <div class="basket__del btn btn--red btn--light link text text--22">
-                <svg class="icon">
-                  <use xlink:href="img/icons.svg#x" />
-              </svg>
-              </div>
-            </div>
-          <% } %>
-        </div>
+                </td>
+                <td class="quantity flex align-items-center justify-content-between bg-white border radius-2">
+                  <button class="quantity__btn btn btn--gray color-black ">-</button>
+                  <input class="quantity__input text text--20 text--center color-black bold-6 border-none" type="text" value="1" name="quantity">
+                  <button class="quantity__btn btn btn--gray color-black ">+</button>
+                </td>
+                <td class="flex flex-direction-column">
+                  <div class="text text--16 bold-4 fade-60 text--line">250 ₽</div>
+                  <div class="text text--24 bold-6">150 ₽</div>
+                </td>
+                <td class="basket__del btn btn--red btn--light link text text--22">
+                  <svg class="icon">
+                    <use xlink:href="img/icons.svg#x" />
+                  </svg>
+                </td>
+              </tr>
+            <% } %>
+          </tbody>
+        </table>
         <form class="basket__promo radius-4 py-5 px-4">
           <div class="text text--20 bold-6 color-white mb-5">Введите код купона для скидки</div>
           <div class="grid">
@@ -71,10 +76,10 @@
           <div class="bg-sec radius-4 p-2 mb-5">
             <div class="bg-white radius-4 py-6 px-5 mb-4">
               <div class="flex align-items-end justify-content-between text text--20 text-md-16 bold-6 interva-5 mb-3">
-                К оплате ........................ <span class="bold-7">2100 ₽</span>
+                <span class="basket__text">К оплате</span><span class="basket__border width-100"></span><span class="basket__text bold-7">2100 ₽</span>
               </div>
               <div class="flex align-items-end justify-content-between text text--12 text-md-14 bold-4 interva-5 mb-4">
-                Товары, 3 шт. ............................... <span class="bold-7">2100 ₽</span>
+                <span class="basket__text">Товары, 3 шт</span><span class="basket__border width-100"></span><span class="basket__text bold-7">2100 ₽</span>
               </div>
               <div class="text text--16 bold-4 fade-60">Без учета стоимости доставки</div>
             </div>
