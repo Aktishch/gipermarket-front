@@ -1,6 +1,11 @@
 .basket {
     &-item {
-        position: relative;
+        position : relative;
+        flex-wrap: nowrap;
+
+        @media(max-width: $tablet) {
+            flex-wrap: wrap;
+        }
     }
 
     &__pic {
@@ -14,6 +19,10 @@
         position: absolute;
         right   : 6px;
         top     : 6px;
+    }
+
+    &__cost {
+        white-space: nowrap;
     }
 
     &__promo {
