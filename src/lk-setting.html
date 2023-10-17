@@ -16,7 +16,7 @@
           <div class="flex align-items-center mb-6">
             <div class="lk__ava pic pic--square bg-gray radius-max mr-4">
               <picture>
-                <img class="pic__img -ava-" src="img/person.png" alt="" loading="lazy">
+                <img class="pic__img" src="img/person.png" alt="" loading="lazy">
               </picture>
             </div>
             <div class="text text--24 text-lg-20 bold-6">Нурсултан Хуйдайбердиев</div>
@@ -39,25 +39,34 @@
         </div>
       </div>
       <div class="lk__info width-100">
-        <form class="display-block mb-10 mb-md-5 -form-">
-          <label class="profile display-block bg-sec radius-4 width-100 p-2">
-            <div class="profile__block radius-4 pic height-100">
-              <div class="flex flex-direction-column align-items-center justify-content-center height-100">
-                <img class="icon text text--42 mb-8" src="img/image.svg" alt="">
-                <span class="text text--16 text--center bold-4">
-                  Нажмите <br>
-                  или перетащите <br>
-                  изображение <br>
-                  для загрузки
-                </span>
-                <input class="display-none -file-" type="file">
-                <img class="pic__img -img-" src="" alt="">
+        <form>
+          <div class="mb-10 mb-md-5">
+            <div class="display-flex align-items-center gap-5 gap-md-2">
+              <label class="profile display-block bg-sec radius-4 width-100 p-2" data-input-dropable>
+                <div class="profile__block radius-4 pic height-100">
+                  <div class="flex flex-direction-column align-items-center justify-content-center height-100">
+                    <img class="icon text text--42 text-md-24 mb-8 mb-md-4" src="img/image.svg" alt="">
+                    <span class="text text--16 text-md-12 text--center bold-4">
+                      Нажмите <br>
+                      или перетащите <br>
+                      изображение <br>
+                      для загрузки
+                    </span>
+                    <input class="display-none" type="file" accept="image/*" data-input-file data-preview="profile-photo" data-error="profile-error" data-accept="image" data-max="8192">
+                  </div>
+                </div>
+              </label>
+              <div class="profile pic bg-sec radius-4 width-100">
+                <img class="pic__img" id="profile-photo" src="img/banner-mob.jpg" alt="">
+                <button class="profile__btn btn btn--gray btn--light p-0" type="button" data-remove-src="profile-photo">
+                  <svg class="icon">
+                    <use xlink:href="img/icons.svg#x" />
+                  </svg>
+                </button>
               </div>
             </div>
-          </label>
-        </form>
-        
-        <form>
+            <div class="text-body-2 mt-1 color-red" id="profile-error"></div>
+          </div>
           <div class="text text--24 bold-6 mb-8 mb-md-5">Личные данные</div>
           <div class="bg-white radius-4 bs p-6 mb-10 mb-md-5">
             <div class="grid grid-spacing-6">
@@ -113,7 +122,7 @@
                 <label class="form-field">
                   <div class="text text--16 bold-6 mb-3">Дата рождения</div>
                   <div class="form-input-cover">
-                      <input type="text" class="form-input">
+                      <input type="date" class="form-input">
                   </div>
                 </label>
               </div>
@@ -139,12 +148,56 @@
                 </label>
               </div>
               <div class="grid-col-12 grid-col-md-6">
-                <label class="form-field">
+                <div class="form-field">
                   <div class="text text--16 bold-6 mb-3">Зона USDA</div>
                   <div class="form-input-cover">
-                      <input type="text" class="form-input">
+                    <div class="select lk-form__input form-input bd-all" data-toggle-cover data-content="select-area-content">
+                      <select class="select-target">
+                        <option value="0"></option>
+                        <option value="1"></option>
+                        <option value="2"></option>
+                        <option value="3"></option>
+                      </select>
+                      <div class="select-toggler ui-form-input" data-toggle-link>
+                        <div class="select-item-inner color-light">
+                          <span class="color-text">Первая</span>, Центральная Сибирь
+                        </div>
+                      </div>
+                      <div class="select-list" data-toggle-content>
+                        <div class="select-item" data-toggle-link data-value="0">
+                          <div class="select-item-inner color-light">
+                            <span class="color-text">Первая</span>, Центральная Сибирь
+                          </div>
+                          <div class="select-item-content">
+                            Морозостойкость от −45.6 °C до −51.1 °C (Центральная Сибирь)
+                          </div>
+                        </div>
+                        <div class="select-item" data-toggle-link data-value="1">
+                          <div class="select-item-inner color-light">
+                            <span class="color-text">Вторая</span>, Южная Сибирь
+                          </div>
+                          <div class="select-item-content">Морозостойкость от −40 °C до −45.6 °C (Южная Сибирь)</div>
+                        </div>
+                        <div class="select-item" data-toggle-link data-value="2">
+                          <div class="select-item-inner color-light">
+                            <span class="color-text">Третья</span>, Урал, Восточная Сибирь
+                          </div>
+                          <div class="select-item-content">
+                            Морозостойкость от −34.4 °C до −40 °C (Урал, Восточная Сибирь)
+                          </div>
+                        </div>
+                        <div class="select-item" data-toggle-link data-value="3">
+                          <div class="select-item-inner color-light">
+                            <span class="color-text">Четвертая</span>, Московская область и большая большая
+                          </div>
+                          <div class="select-item-content">
+                            Морозостойкость от −28.9 °C до −34.4 °C (Московская область и большая часть Центральной России)
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </label>
+                </div>
               </div>
               <div class="grid-col-12">
                 <label class="form-field">
@@ -211,47 +264,6 @@
       </div>
     </div>
   </main>
-
-  <script>
-    document.addEventListener('change', (event) => {
-  
-      if (event.target.classList.contains('-file-')) {
-  
-        let readFile = new FileReader();
-        let files = event.target.files[0];
-        readFile.readAsDataURL(files);
-  
-        readFile.addEventListener('loadend', () => {
-  
-          event.target.nextElementSibling.src = readFile.result;
-  
-        });
-  
-        const form = document.querySelector('.-form-')
-        const img = document.querySelector('.-img-')
-        const lkImg = document.querySelector('.-ava-')
-        let formData = new FormData(form)
-      
-        let promise = fetch('', {
-      
-          method: 'POST',
-          body: formData
-      
-        }).then((response) => {
-      
-          response.text()
-  
-        }).then((result) => {
-      
-          img.src = readFile.result;
-          lkImg.src = readFile.result;
-  
-        })
-  
-      }
-  
-    });
-  </script>
 
   <!-- Подвал -->
   <%= _.template(require('./includes/footer.html').default)() %>
