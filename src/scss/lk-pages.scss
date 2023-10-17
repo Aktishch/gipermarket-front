@@ -102,6 +102,10 @@
     &__number {
         min-width: 60px;
     }
+
+    &__info {
+        background: linear-gradient(270deg, rgba(255, 19, 19, 0.40) 0%, rgba(255, 19, 19, 0.00) 50.35%), #FFCA8C;
+    }
 }
 
 .profile {

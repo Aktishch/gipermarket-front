@@ -61,7 +61,7 @@
           ] %>
           <% for (var i = 0; i < status.length; i++) { %>
             <div class="orders__item bg-white border radius-4 overflow-hidden bs">
-              <div class="flex align-items-center justify-content-between border-bottom py-3 pl-2 pr-6">
+              <div class="flex align-items-center justify-content-between border-bottom py-3 pl-2 pr-6 pr-md-2">
                 <div class="flex align-items-center">
                   <div class="orders__number flex align-items-center justify-content-center bg-brown text text--18 bold-6 radius-1 py-1 px-2 mr-5">5455</div>
                   <div class="flex align-items-center mr-md-1">
@@ -71,9 +71,17 @@
                 </div>
                 <div class="text text--18 text-md-16 bold-4 fade-60">20.07.2022</div>
               </div>
-              <div class="flex align-items-center p-5">
-                <span class="text text--18 text-md-14 bold-4 fade-60 mr-6">4 товара</span>
-                <span class="text text--20 text-md-16 bold-6">2300 ₽</span>
+              <div class="py-5 py-md-3 px-5 px-md-2">
+                <div class="flex align-items-center">
+                  <span class="text text--18 text-md-14 bold-4 fade-60 mr-6">4 товара</span>
+                  <span class="text text--20 text-md-16 bold-6">2300 ₽</span>
+                </div>
+                <% if (i === 0) { %>
+                <div class="orders__info flex align-items-center radius-2 mt-6 py-2 px-3 px-md-2">
+                  <img class="icon text text--24 text-md-16 mr-2" src="img/Warning.svg" alt="">
+                  <span class="text text--20 text-md-14 bold-6">Ваш заказ перенесен на весну</span>
+                </div>
+                <% } %>
               </div>
             </div>
           <% } %>
