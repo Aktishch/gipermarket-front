@@ -62,6 +62,14 @@
         background-color: var(--color-primary-20);
     }
 
+    &__text {
+        min-width: max-content;
+    }
+
+    &__dotted {
+        border-bottom:  2px dotted var(--color-black);
+    }
+
     @media(max-width: $laptop) {
         &__sidebar {
             max-width: 100%;
@@ -125,10 +133,18 @@
         right: 5px;
     }
 
+    &__save {
+        max-width: 250px;
+    }
+
     @media(max-width: $mobile) {
         & {
             max-width: 100%;
             height   : 180px;
+        }
+
+        &__save {
+            max-width: 100%;
         }
     }
 }

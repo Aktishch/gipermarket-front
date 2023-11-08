@@ -90,14 +90,16 @@
                 </span>
                 <span class="bold-5">Каталог</span>
             </a>
-            <label class="form-input-cover">
-                <input type="search" class="header-bottom__search form-input pr-10" placeholder="Что в ищете?">
-                <span class="header-bottom__loop bg-primary flex align-items-center justify-content-center text text--24 color-white">
-                    <svg class="icon">
-                        <use xlink:href="./img/icons.svg#search" />
-                    </svg>
-                </span>
-            </label>
+            <form action="">
+                <label class="form-input-cover">
+                    <input type="search" class="header-bottom__search form-input pr-10" placeholder="Что в ищете?" required>
+                    <button class="header-bottom__loop bg-primary flex align-items-center justify-content-center text text--24 color-white" type="submit">
+                        <svg class="icon">
+                            <use xlink:href="./img/icons.svg#search" />
+                        </svg>
+                    </button>
+                </label>
+            </form>
         </div>
         <div class="flex align-items-center">
             <a class="menu-btn btn btn--link border radius-2 mr-4" href="">

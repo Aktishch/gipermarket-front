@@ -65,12 +65,31 @@
 }
 
 .gallery {
+    &__items {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(16, 1fr);
+    }
     &__item {
-        height: 300px;
+        height: 340px;
+
+        &--small {
+            grid-column: span 5;
+        }
+
+        &--big {
+            grid-column: span 6;
+        }
     }
 
     @media(max-width: $laptop) {
+        &__items {
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 12px;
+        }
+
         &__item {
+            grid-column: auto;
             height: auto;
         }
     }
