@@ -182,7 +182,7 @@
         </div>
 
         <div class="grid mb-10">
-          <% for (var i = 0; i < 9; i++) { %>
+          <% for (var i = 0; i < 3; i++) { %>
             <div class="grid-col-6 grid-col-lg-4">
               <a class="card card-action overflow-hidden height-100 waved -product-card-" href="javascript:;">
                 <div class="card-pic width-100">
@@ -212,7 +212,13 @@
                     <div class="flex flex-direction-column mr-2">
                       <span class="text text--24 text-md-18 bold-8 -product-card-price-">187 ₽</span>
                     </div>
-                    <button class="btn btn--primary btn--fill width-md-100 mt-auto -product-card-btn-">В корзину</button>
+                    <% if (i === 0) { %>
+                      <button class="btn btn--primary btn--fill width-md-100 mt-auto -product-card-btn-">В корзину</button>
+                    <% } else if (i === 1) { %>
+                      <button class="btn btn--primary btn--light btn--contur width-md-100 mt-auto -product-card-btn-" disabled>Добавлено</button>
+                    <% } else { %>
+                      <button class="btn btn--gray btn--light btn--contur width-md-100 mt-auto" disabled>Отсутствует</button>
+                    <% } %>
                   </div>
                 </div>
               </a>
@@ -285,50 +291,52 @@
               priceText = price.textContent
             }
     
-            btn.addEventListener('click', () => {
-    
-              if (modal.classList.contains('product-in-basket--open')) {
-    
-                modal.classList.remove('product-in-basket--open')
-    
-              }
-    
-              setTimeout(() => {
-                
-                modal.classList.add('product-in-basket--open')
-    
-                if (quantity) {
-    
-                  val = quantity.value
-    
-                } else {
-    
-                  val = 1
-    
-                }
-    
-                if (modalImg) modalImg.src = imgSrc
-                if (modalName) modalName.innerHTML = nameText
-                if (modalOldPrice) modalOldPrice.innerHTML = oldPriceText
-                if (modalPrice) modalPrice.innerHTML = priceText
-                if (modalQuantity) modalQuantity.innerHTML = val
-    
-                if (modalRemoveTimeout) {
-    
-                  clearTimeout(modalRemoveTimeout)
-    
-                }
-    
-                modalRemoveTimeout = setTimeout(() => {
-    
+            if (btn) {
+              btn.addEventListener('click', () => {
+      
+                if (modal.classList.contains('product-in-basket--open')) {
+      
                   modal.classList.remove('product-in-basket--open')
-    
-                }, 12000)
+      
+                }
+      
+                setTimeout(() => {
+                  
+                  modal.classList.add('product-in-basket--open')
+      
+                  if (quantity) {
+      
+                    val = quantity.value
+      
+                  } else {
+      
+                    val = 1
+      
+                  }
+      
+                  if (modalImg) modalImg.src = imgSrc
+                  if (modalName) modalName.innerHTML = nameText
+                  if (modalOldPrice) modalOldPrice.innerHTML = oldPriceText
+                  if (modalPrice) modalPrice.innerHTML = priceText
+                  if (modalQuantity) modalQuantity.innerHTML = val
+      
+                  if (modalRemoveTimeout) {
+      
+                    clearTimeout(modalRemoveTimeout)
+      
+                  }
+      
+                  modalRemoveTimeout = setTimeout(() => {
+      
+                    modal.classList.remove('product-in-basket--open')
+      
+                  }, 12000)
+                  
+                }, 300)
                 
-              }, 300)
-              
-    
-            })
+      
+              })
+            }
     
             modalClose.addEventListener('click', () => {
                 
