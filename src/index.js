@@ -11,6 +11,7 @@ import scrollNav from './js/scroll-nav'
 import mobileMenu from './js/mobile-menu'
 import password from './js/password'
 import dataHref from './js/data-href'
+import search from './js/search'
 import profileLoadPhoto from './js/profile-load-photo'
 import Swiper, { Navigation, Pagination, Scrollbar, Autoplay, Grid, Thumbs, EffectFade, Lazy } from 'swiper';
 
@@ -41,6 +42,7 @@ function loadHandler() {
 	mobileMenu.init()
 	password.init()
 	dataHref.init()
+	search.init()
 	profileLoadPhoto.init()
 
 	window.addEventListener('toggleopen', toggleopenHaandler)

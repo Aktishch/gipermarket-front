@@ -90,15 +90,24 @@
                 </span>
                 <span class="bold-5">Каталог</span>
             </a>
-            <form action="">
+            <form class="header-bottom__form -form-search-" action="">
                 <label class="form-input-cover">
-                    <input type="search" class="header-bottom__search form-input pr-10" placeholder="Что в ищете?" required>
+                    <input type="search" class="header-bottom__search form-input pr-10 -form-search-input-" placeholder="Что в ищете?" required>
                     <button class="header-bottom__loop bg-primary flex align-items-center justify-content-center text text--24 color-white" type="submit">
                         <svg class="icon">
                             <use xlink:href="./img/icons.svg#search" />
                         </svg>
                     </button>
                 </label>
+                <div class="header-bottom__result bg-white radius-4 visibility-hidden fade-0 py-5 px-2 -form-search-result-">
+                    <div class="color-primary text text--16 bold-5 px-5 mb-2">Товары</div>
+                    <div class="flex flex-direction-column">
+                        <a class="header-bottom__link display-block text text--14 bold-4 radius-2 py-3 px-5" href="">Лилия азиатская махровая Строберри Ванилла <b>270</b> <s>320</s></a>
+                        <a class="header-bottom__link display-block text text--14 bold-4 radius-2 py-3 px-5" href="">Лилия азиатская махровая Дабл Ориндж <b>270</b> <s>320</s></a>
+                        <a class="header-bottom__link display-block text text--14 bold-4 radius-2 py-3 px-5" href="">Лилия азиатская Изи Ванилла <b>270</b> <s>320</s></a>
+                    </div>
+                    <a class="display-block color-primary text text--underline text--14 bold-4 px-5 mt-2 width-max" href="">Смотреть все результаты</a>
+                </div>
             </form>
         </div>
         <div class="flex align-items-center">
