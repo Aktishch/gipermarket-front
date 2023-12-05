@@ -72,6 +72,12 @@ body {
 	}
 }
 
+.new-year-theme {
+	.header-bottom {
+		padding-block: 12px;
+		background-image: url('../img/new-year.png');
+	}
+}
 
 .header {
 	&-top {
@@ -85,6 +91,12 @@ body {
 	}
 
 	&-bottom {
+		& {
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+
 		&__search {
 			border   : 1.5px solid var(--color-primary);
 			min-width: 510px;
