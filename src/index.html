@@ -42,11 +42,26 @@
             </div>
           <% } %>
         </div>
+        <button class="banners__btn banners__btn--prev btn btn-large btn-fab btn--white-bg slider-nav slider-prev display-lg-none">
+          <svg class="icon">
+            <use xlink:href="img/icons.svg#arrow-left" />
+          </svg>
+        </button>
+        <button class="banners__btn banners__btn--next btn btn-large btn-fab btn--white-bg slider-nav slider-next display-lg-none">
+          <svg class="icon">
+            <use xlink:href="img/icons.svg#arrow-right" />
+          </svg>
+        </button>
       </div>
+    </div>
   </section>
 
   <script>
     new Swiper('.banners-slider .swiper', {
+      navigation: {
+				nextEl: '.banners-slider .slider-next',
+				prevEl: '.banners-slider .slider-prev'
+			},
       slidesPerView: 'auto',
       slidesPerGroup: 1,
       watchSlidesProgress: true,
