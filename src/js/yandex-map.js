@@ -30,9 +30,9 @@ const init = () => {
         const placemark = new maps.Placemark(mark, {}, {
 
             iconLayout: 'default#image',
-            iconImageHref: '../img/geo.png',
+            iconImageHref: '/local/templates/gipermarket_sada/img/geo.png',
             iconImageSize: [90, 90],
-            iconImageOffset: [-20, -50]
+            iconImageOffset: [-45, -45]
 
         })
 
@@ -41,7 +41,6 @@ const init = () => {
         map.controls.remove('trafficControl')
         map.controls.remove('typeSelector')
         map.controls.remove('fullscreenControl')
-        map.controls.remove('zoomControl')
         map.controls.remove('rulerControl')
         map.behaviors.disable(['scrollZoom'])
         map.geoObjects.add(placemark)

@@ -101,6 +101,10 @@
     &-slider {
         &__slide {
             height: 106px;
+
+            img {
+                object-fit: contain;
+            }
         }
     }
 
