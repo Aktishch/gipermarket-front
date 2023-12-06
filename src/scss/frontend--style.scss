@@ -73,9 +73,31 @@ body {
 }
 
 .new-year-theme {
-	.header-bottom {
-		padding-block: 12px;
-		background-image: url('../img/new-year.png');
+	.header {
+		&-bottom {
+			padding-block: 12px;
+			background-image: url('../img/new-year.png');
+		}
+
+		&-mobile {
+			padding-block: 4px;
+
+			.logo__img {
+				min-width: auto;
+				width: 40px;
+			}
+		}
+	}
+
+	.mobile {
+		&__head {
+			padding-block: 4px;
+		}
+
+		.logo__img {
+			min-width: auto;
+			width: 40px;
+		}
 	}
 }
 
