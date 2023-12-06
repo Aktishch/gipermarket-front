@@ -6,12 +6,12 @@ const showPassword = (event) => {
 
     if (input.type === 'password') {
 
-        eye.setAttribute('xlink:href', 'img/icons.svg#eye-hidden')
+        eye.setAttribute('xlink:href', '/local/templates/gipermarket_sada/img/icons.svg#eye-hidden')
         input.type = 'text'
 
     } else {
 
-        eye.setAttribute('xlink:href', 'img/icons.svg#eye-visible')
+        eye.setAttribute('xlink:href', '/local/templates/gipermarket_sada/img/icons.svg#eye-visible')
         input.type = 'password'
 
     }

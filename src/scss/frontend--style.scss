@@ -394,8 +394,8 @@ body {
 }
 
 .info-banner {
-	background: radial-gradient(74.38% 244.23% at 75.04% 76.25%, #FDBE60 0%, #F36312 82.99%);
-
+	background: var(--bg-image) no-repeat center / cover;
+	
 	&__btn {
 		min-width: max-content;
 	}

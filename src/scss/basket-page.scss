@@ -67,4 +67,11 @@
             position: static;
         }
     }
+
+    @media(max-width: $tablet) {
+        &__del {
+            top: auto;
+            bottom: 6px;
+        }
+    }
 }

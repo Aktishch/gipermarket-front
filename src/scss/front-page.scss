@@ -56,12 +56,6 @@
             padding-top   : 50px;
             padding-bottom: 50px;
         }
-
-        &__title,
-        &__text {
-            text-shadow: 4px 4px 4px var(--color-black-40);
-            max-width  : 350px;
-        }
     }
 
     @media(max-width: $mobile) {
@@ -83,12 +77,11 @@
     @media(max-width: $mobile) {
         & {
             flex-direction: column;
-            text-align    : center;
+            align-items: flex-start;
         }
 
         &__item--main {
-            max-width: max-content;
-            border   : none;
+            max-width: 100%;
         }
     }
 }
@@ -111,6 +104,12 @@
     @media(max-width: $mobile) {
         &-sliders {
             margin: 0 -15px;
+        }
+
+        &-slider {
+            &__slide {
+                height: 70px;
+            }
         }
     }
 }
