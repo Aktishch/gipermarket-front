@@ -407,10 +407,30 @@ body {
 }
 
 .pagination {
+	&__btn {
+		width: 42px;
+		height: 42px;
+
+		&--fade {
+			opacity: 0.6;
+			pointer-events: none;
+		}
+
+		&--active {
+			pointer-events: none;
+		}
+	}
 
 	@media(max-width: $laptop) {
 		& {
 			justify-content: center;
+		}
+	}
+
+	@media(max-width: $mobile) {
+		&__btn {
+			width: 30px;
+			height: 30px;
 		}
 	}
 }
