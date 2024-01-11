@@ -482,9 +482,9 @@
           <div class="swiper-wrapper">
             <% for (var i = 0; i < 5; i++) { %>
               <div class="swiper-slide grid-col-10 grid-col-md-7 grid-col-lg-3">
-                <a class="card card-action overflow-hidden height-100 waved" href="javascript:;">
+                <div class="card card-action overflow-hidden height-100 waved">
                   <div class="card-pic width-100">
-                    <div class="pic pic--rect-x">
+                    <a class="pic pic--rect-x" href="">
                       <div class="loader">
                         <svg class="icon">
                             <use xlink:href="img/icons.svg#loader" />
@@ -505,10 +505,10 @@
                             </svg>
                         </span>
                     </label>
-                    </div>
+                    </a>
                   </div>
                   <div class="card-content p-4">
-                    <div class="text text--16 bold-7 mb-3">Тюльпан бахромчатый Блэк Джевел 5 шт.</div>
+                    <a class="text text--16 bold-7 link--underline mb-3" href="">Тюльпан бахромчатый Блэк Джевел 5 шт.</a>
                     <div class="text text--16 bold-4 fade-60 mb-5">Кустарник сильнорослый, в высоту достигает 2 ме...</div>
                     <div class="flex align-items-center justify-content-between mt-auto">
                       <div class="flex flex-direction-column mr-2">
@@ -517,7 +517,7 @@
                       <button class="btn btn--primary btn--fill mt-auto">В корзину</button>
                     </div>
                   </div>
-                </a>
+                </div>
               </div>
             <% } %>
           </div>

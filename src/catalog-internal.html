@@ -184,9 +184,9 @@
         <div class="grid mb-10">
           <% for (var i = 0; i < 3; i++) { %>
             <div class="grid-col-6 grid-col-lg-4">
-              <a class="card card-action overflow-hidden height-100 waved -product-card-" href="javascript:;">
+              <div class="card card-action overflow-hidden height-100 waved -product-card-" href="javascript:;">
                 <div class="card-pic width-100">
-                  <div class="pic pic--rect-x">
+                  <a class="pic pic--rect-x" href="">
                     <div class="loader">
                       <svg class="icon">
                           <use xlink:href="img/icons.svg#loader" />
@@ -203,10 +203,10 @@
                           </svg>
                       </span>
                   </label>
-                  </div>
+                  </a>
                 </div>
                 <div class="card-content p-4 p-md-2">
-                  <div class="text text--16 text-md-14 bold-7 mb-3 -product-card-name-">Лилия ЛА-гибрид Роял Кисс</div>
+                  <a class="text text--16 text-md-14 bold-7 link--underline mb-3 -product-card-name-" href="">Лилия ЛА-гибрид Роял Кисс</a>
                   <div class="text text--16 bold-4 text-md-12 fade-60 mb-5">Цветок, характеризующийся стойкостью и неприхотлив...</div>
                   <div class="card-bottom flex align-items-center justify-content-between mt-auto">
                     <div class="flex flex-direction-column mr-2">
@@ -221,7 +221,7 @@
                     <% } %>
                   </div>
                 </div>
-              </a>
+              </div>
             </div>
           <% } %>
         </div>
