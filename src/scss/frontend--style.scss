@@ -664,3 +664,28 @@ body {
 .submit-icon {
 	font-size: 100px;
 }
+
+.dialog {
+	&-promocode {
+		&__discount {
+			position: absolute;
+			inset: 0;
+			text-align: center;
+			font-size: 102px;
+		}
+
+		&__block {
+			max-width: 350px;
+			border: 1px solid var(--color-sec);
+		}
+
+		&__cover {
+			position: relative;
+		}
+
+		&__input {
+			position: absolute;
+			inset: 0;
+		}
+	}
+}

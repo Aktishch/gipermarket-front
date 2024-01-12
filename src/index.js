@@ -13,6 +13,7 @@ import password from './js/password'
 import dataHref from './js/data-href'
 // import search from './js/search'
 import profileLoadPhoto from './js/profile-load-photo'
+import copyLink from './js/copy-link'
 import Swiper, { Navigation, Pagination, Scrollbar, Autoplay, Grid, Thumbs, EffectFade, Lazy } from 'swiper';
 
 
@@ -24,8 +25,9 @@ window.Swiper = Swiper
 window.ripple = ripple
 window.addEventListener('DOMContentLoaded', () => loadHandler())
 
+fancybox.init()
+
 function loadHandler() {
-	fancybox.init()
 	yandexMap.init()
 	scrollTo.init()
 	rangeSlider.init()
@@ -44,6 +46,7 @@ function loadHandler() {
 	dataHref.init()
 	// search.init()
 	profileLoadPhoto.init()
+	copyLink.init()
 
 	window.addEventListener('toggleopen', toggleopenHaandler)
 	window.addEventListener('toggleclose', togglecloseHaandler)
