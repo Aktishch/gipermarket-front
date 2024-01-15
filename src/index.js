@@ -14,6 +14,7 @@ import dataHref from './js/data-href'
 // import search from './js/search'
 import profileLoadPhoto from './js/profile-load-photo'
 import copyLink from './js/copy-link'
+import inputNumber from './js/input-number'
 import Swiper, { Navigation, Pagination, Scrollbar, Autoplay, Grid, Thumbs, EffectFade, Lazy } from 'swiper';
 
 
@@ -47,6 +48,7 @@ function loadHandler() {
 	// search.init()
 	profileLoadPhoto.init()
 	copyLink.init()
+	inputNumber.init()
 
 	window.addEventListener('toggleopen', toggleopenHaandler)
 	window.addEventListener('toggleclose', togglecloseHaandler)
