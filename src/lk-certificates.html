@@ -1,0 +1,97 @@
+  <% var data = {
+
+    title: 'Личный кабинет',
+
+  } %>
+
+  <%= _.template(require('./includes/header.html').default)({data}) %>
+
+  <%= _.template(require('./includes/navigation.html').default)({data}) %>
+
+  <main class="lk container pt-10 pt-md-5">
+    <div class="text text--38 text-md-28 bold-8 mb-10 mb-md-5"><%= data.title %></div>
+    <div class="lk__content flex justify-content-between gap-10 gap-lg-5 gap-md-0">
+      <div class="lk__sidebar width-100 mb-md-10">
+        <div class="lk__block bg-white radius-4 bs py-6 px-7 py-lg-4 px-lg-4">
+          <div class="flex align-items-center mb-6">
+            <div class="lk__ava pic pic--square bg-gray radius-max mr-4">
+              <picture>
+                <img class="pic__img -ava-" src="img/person.png" alt="" loading="lazy">
+              </picture>
+            </div>
+            <div class="text text--24 text-lg-20 bold-6">Нурсултан Хуйдайбердиев</div>
+          </div>
+          <nav class="flex flex-direction-column">
+            <a class="lk__btn btn btn--sec btn--fill justify-content-start mb-4" href="">
+              <img class="icon text text--28 mr-3" src="img/basket.svg" alt="">
+              <span class="text text--18 bold-6 color-black">Заказы</span>
+            </a>
+            <a class="lk__btn btn btn--primary btn--fill justify-content-start mb-4" href="">
+              <img class="icon text text--28 mr-3" src="img/list.svg" alt="">
+              <span class="text text--18 bold-6">Мои сертификаты</span>
+            </a>
+            <a class="lk__btn btn btn--sec btn--fill justify-content-start mb-4" href="">
+              <img class="icon text text--28 mr-3" src="img/user.svg" alt="">
+              <span class="text text--18 bold-6 color-black">Настройки профиля</span>
+            </a>
+            <a class="lk__btn btn btn--sec btn--fill justify-content-start mb-8" href="">
+              <img class="icon text text--28 mr-3" src="img/pen.svg" alt="">
+              <span class="text text--18 bold-6 color-black">Изменить пароль</span>
+            </a>
+            <a class="lk__link btn btn--link text text--18 bold-6 color-red width-max" href="">Выйти из личного кабинета</a>
+          </nav>
+        </div>
+      </div>
+      <div class="lk__info width-100">
+        <div class="text text--24 bold-6 mb-8 mb-md-5">Сертификаты</div>
+        <div class="lk-certificates flex flex-direction-column gap-4">
+          <div class="lk-certificates__item flex align-items-center gap-6 bg-white radius-4 border p-4" data-certificate="SL-QGLZC-KHQDJ2H">
+            <div class="lk-certificates__pic pic pic--square">
+              <img class="pic__img" src="img/certificate.png" alt="">
+              <canvas class="display-none" data-certificate-canvas="img/certificate-big.jpg" id="certificate-canvas-1" width="540px" height="750px"></canvas>
+            </div>
+            <div class="lk-certificates__content flex flex-direction-column width-100">
+              <div class="text text--18 bold-4">Сертификат 500</div>
+              <div class="text text--24 bold-6 mt-2">500 руб</div>
+              <div class="lk-certificates__promo flex align-items-center justify-content-between gap-2 radius-2 my-5 py-3 px-4">
+                <div class="text text--16">
+                  <span class="bold-4 fade-60">Промокод:</span> <span class="bold-6">SL-QGLZC-KHQDJ2H</span>
+                </div>
+                <div class="lk-certificates__cover" data-copy>
+                  <input class="lk-certificates__input fade-0" data-copy-input type="text" value="SL-QGLZC-KHQDJ2H">
+                  <button class="lk-certificates__copy btn btn--primary btn--link gap-1" data-copy-button>Скопировать код</button>
+                </div>
+              </div>
+              <div class="lk-certificates__btns flex align-items-center gap-4">
+                <a class="btn btn--primary btn--fill" data-certificate-download href="" download>
+                  <img class="icon text text--26 mr-2" src="img/down-arrow.svg" alt="">
+                  Скачать
+                </a>
+                <button class="btn btn--primary btn--light" data-fancybox-modal data-src="dialog-certificate.html" data-type="ajax">
+                  <img class="icon text text--26 mr-2" src="img/email.svg" alt="">
+                  Отправить
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="lk-certificates__item flex align-items-center gap-6 bg-white radius-4 border p-4">
+            <div class="lk-certificates__pic pic pic--square">
+              <img class="pic__img" src="img/certificate-plug.png" alt="">
+            </div>
+            <div class="lk-certificates__content flex flex-direction-column width-100">
+              <div class="text text--24 bold-6">Нет сертификатов</div>
+              <div class="text text--18 fade-60 mt-4">
+                На данный момент вы не приобрели <br class="display-lg-none"> ни одного сертификата
+              </div>
+              <div class="lk-certificates__btns flex mt-10">
+                <a class="btn btn--primary btn--fill" href="">Выбрать сертификат</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Подвал -->
+  <%= _.template(require('./includes/footer.html').default)() %>

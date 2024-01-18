@@ -1,0 +1,42 @@
+<div class="dialog dialog--medium card color-black overflow-hidden">
+  <div class="flex align-items-center justify-content-center flex-direction-column bg-sec width-100 py-5 px-8 px-md-4">
+    <div class="text text--24 text--center bold-8">Отправить сертификат</div>
+  </div>
+  <form class="flex flex-direction-column width-100 py-7 px-8 px-md-4" data-form>
+    <label class="form-field mb-6">
+      <div class="text text--16 bold-6 mb-2">Ваша почта</div>
+      <div class="form-input-cover">
+          <input type="email" class="form-input" required>
+      </div>
+    </label>
+    <button class="btn btn--primary btn--fill width-max width-md-100 px-10" type="submit">Отправить сертификат</button>
+  </form>
+</div>
+
+<script>
+	document.addEventListener('submit', (event) => {
+    	if (event.target.hasAttribute('data-form')) {
+			event.preventDefault()
+			
+			const form = event.target
+			const formData = new FormData(form)
+			const canvas = document.querySelector('#certificate-canvas-1')
+			const url = canvas.toDataURL()
+		
+			formData.append('certificate', url)
+
+			fetch('путь', {
+        		method: 'POST',
+        		body: formData,
+      		})
+        	.then((response) => {
+          		response.text()
+        	})
+        	.then(() => {
+				$.fancybox.close()
+		  		$.fancybox.openModal('модалка что отправлено')
+        	})
+        	.catch((error) => console.log('The form has not been sent', error))
+		}
+  	})
+</script>

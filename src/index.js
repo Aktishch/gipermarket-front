@@ -15,6 +15,7 @@ import dataHref from './js/data-href'
 import profileLoadPhoto from './js/profile-load-photo'
 import copyLink from './js/copy-link'
 import inputNumber from './js/input-number'
+import canvasImage from './js/canvas-image'
 import Swiper, { Navigation, Pagination, Scrollbar, Autoplay, Grid, Thumbs, EffectFade, Lazy } from 'swiper';
 
 
@@ -49,6 +50,7 @@ function loadHandler() {
 	profileLoadPhoto.init()
 	copyLink.init()
 	inputNumber.init()
+	canvasImage.init()
 
 	window.addEventListener('toggleopen', toggleopenHaandler)
 	window.addEventListener('toggleclose', togglecloseHaandler)
