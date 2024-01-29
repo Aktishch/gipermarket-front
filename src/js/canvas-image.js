@@ -14,7 +14,7 @@ const init = () => {
 			context.font = '24px Inter'
 			context.fillStyle = 'var(--color-black-60)'
 			context.textAlign = 'center'
-			context.fillText(certificate.dataset.certificate, canvas.width/2, canvas.height/1.7)
+			context.fillText(certificate.dataset.certificate, canvas.width/2, canvas.height/1.5)
 
 			if (download) download.href = canvas.toDataURL()
 		})
