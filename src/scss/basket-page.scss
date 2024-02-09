@@ -29,6 +29,10 @@
         background: radial-gradient(81.43% 266.13% at 82.08% 89.23%, #FEFC4A 0%, #F3A712 60.81%);
     }
 
+    &__description {
+        max-width: 450px;
+    }
+
     &__sidebar {
         max-width: 360px;
     }
