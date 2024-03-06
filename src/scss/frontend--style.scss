@@ -689,3 +689,17 @@ body {
 		}
 	}
 }
+
+.banner-top {
+	&__content {
+		position: relative;
+		height: 56px;
+	}
+
+	@media (max-width: $md) {
+		&__content {
+			min-height: 56px;
+			height: auto;
+		}
+	}
+}
