@@ -703,3 +703,12 @@ body {
 		}
 	}
 }
+
+.payment {
+	@media (max-width: $mobile) {
+		&__item {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+}
