@@ -712,3 +712,63 @@ body {
 		}
 	}
 }
+
+.stock {
+	&__timer {
+		background-color: #E0E5F4;
+	}
+
+	&__pic {
+		min-width : 114px;
+		width : 114px;
+		height    : 100px;
+		background: #6F73EE;
+	}
+
+	&__img {
+		width     : 98px;
+		height    : 84px;
+		background: linear-gradient(203.84deg, #FFFFFF 0.47%, #D8D8D8 89.47%);
+	}
+
+	&__item {
+		width: 120px;
+		min-width: 120px;
+		height: 84px;
+		border: 1px solid var(--color-white);
+		background: radial-gradient(98.48% 326.98% at 0% 3.35%, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.63) 100%);
+	}
+
+	&__banner {
+		min-height: 480px;
+	}
+
+	&__content {
+		position: relative;
+		max-width: 400px;
+	}
+
+	@media (max-width: $laptop) {
+		&__timer {
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: flex-start;
+		}
+	}
+
+	@media (max-width: $tablet) {
+		&__banner {
+			align-items: flex-start;
+			min-height: 380px;
+		}
+	}
+
+	@media (max-width: $mobile) {
+		&__item {
+			width: auto;
+			min-width: auto;
+			height: 60px;
+			flex-grow: 1;
+		}
+	}
+}

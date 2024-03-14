@@ -16,6 +16,7 @@ import profileLoadPhoto from './js/profile-load-photo'
 import copyLink from './js/copy-link'
 import inputNumber from './js/input-number'
 import canvasImage from './js/canvas-image'
+import timeCounter from './js/time-counter'
 import Swiper, { Navigation, Pagination, Scrollbar, Autoplay, Grid, Thumbs, EffectFade, Lazy } from 'swiper';
 
 
@@ -51,6 +52,7 @@ function loadHandler() {
 	copyLink.init()
 	inputNumber.init()
 	canvasImage.init()
+	timeCounter.init()
 
 	window.addEventListener('toggleopen', toggleopenHaandler)
 	window.addEventListener('toggleclose', togglecloseHaandler)

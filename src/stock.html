@@ -1,0 +1,162 @@
+  <% var data = {
+
+    title: 'Суперскидки для вас!',
+
+  } %>
+
+  <%= _.template(require('./includes/header.html').default)({data}) %>
+
+  <%= _.template(require('./includes/navigation.html').default)({data}) %>
+
+  <%= _.template(require('./includes/back.html').default)() %>
+
+  <main class="stock container pt-10 pt-md-5">
+    <div class="text text--38 text-md-28 bold-8 mb-10 mb-md-5"><%= data.title %></div>
+    <div class="stock__timer flex align-items-center justify-content-between gap-5 overflow-hidden radius-4 pr-2 pr-lg-4 pr-md-2 py-lg-4 pl-lg-4 pl-md-2 mb-4" data-counter data-counter-year="2024" data-counter-month="3" data-counter-day="20" data-counter-hour="0" data-counter-minute="0">
+      <div class="flex align-items-center">
+        <div class="stock__pic flex display-lg-none align-items-center justify-content-center radius-4 mr-8">
+          <div class="stock__img flex align-items-center justify-content-center display-md-none radius-4">
+            <img class="icon text text--50" src="img/oclock.svg" alt="">
+          </div>
+        </div>
+        <div class="text text--24 text-md-20 bold-6">До конца акции осталось</div>
+      </div>
+      <div class="flex align-items-center justify-content-center width-md-100">
+        <div class="display-none color-red text text--24 bold-6 px-10 px-lg-0" data-counter-subtitle>Акция закончилась!</div>
+        <div class="stock__items flex align-items-center justify-content-center gap-2 width-md-100" data-counter-timer>
+          <div class="stock__item flex flex-direction-column align-items-center justify-content-center text text--center radius-4">
+            <span class="text text--32 text-lg-26 text-md-22 bold-8" data-counter-unit></span>
+            <span class="text text--18 text-md-14 bold-4 fade-60">дней</span>
+          </div>
+          <div class="stock__item flex flex-direction-column align-items-center justify-content-center text text--center radius-4">
+            <span class="text text--32 text-lg-26 text-md-22 bold-8" data-counter-unit></span>
+            <span class="text text--18 text-md-14 bold-4 fade-60">часов</span>
+          </div>
+          <div class="stock__item flex flex-direction-column align-items-center justify-content-center text text--center radius-4">
+            <span class="text text--32 text-lg-26 text-md-22 bold-8" data-counter-unit></span>
+            <span class="text text--18 text-md-14 bold-4 fade-60">минут</span>
+          </div>
+          <div class="stock__item flex flex-direction-column align-items-center justify-content-center text text--center radius-4">
+            <span class="text text--32 text-lg-26 text-md-22 bold-8" data-counter-unit></span>
+            <span class="text text--18 text-md-14 bold-4 fade-60">секунд</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="stock__banner flex align-items-center pic bg-white color-white radius-4 py-10 px-10 px-md-4 mb-8">
+      <div class="loader">
+        <svg class="icon">
+            <use xlink:href="img/icons.svg#loader" />
+        </svg>
+      </div>
+      <picture>
+        <source srcset="img/banner-mob.jpg" media="(max-width: 767px)">
+        <img class="pic__img" src="img/banner.jpg" alt="" loading="lazy">
+      </picture>
+      <div class="stock__content width-100 pl-10 pl-lg-0">
+        <div class="text text--uppercase text--38 text-lg-30 text-md-24 bold-8 mb-6 mb-md-4">
+          СУПЕР СКИДКИ! <br>
+          -40% НА СЕМЕНА <br>
+          ПОДСОЛНЕЧНИКА
+        </div>
+        <div class="text text--16 text-md-14 bold-4 fade-90">
+          Семена подсолнуха дешевле на 30%! <br>
+          Успейте купить до 24 августа!
+        </div>
+      </div>
+    </div>
+    <div class="mb-10">
+      <div class="text text--24 text-lg-20 text-md-18 bold-8 mb-5">Раскройте все возможности своей грядки!</div>
+      <div class="text text--16 text-md-14 bold-4 mb-5">Дорогие садоводы-профессионалы!</div>
+      <div class="text text--16 text-md-14 bold-4 mb-5">Встречайте Черную Пятницу в Семенах и саженцах! Только неделю! Пионы (Нидерланды)-34% от 2х Позиций</div>
+      <div class="text text--16 text-md-14 bold-4 mb-5">Зацветайте в этот сезон с нами:</div>
+      <div class="pl-2 pl-md-0 mb-5">
+        <ul class="listing flex flex-direction-column gap-1 pl-5">
+          <li class="text text--16 text-md-14 bold-4">Семена от лучших производителей</li>
+          <li class="text text--16 text-md-14 bold-4">Современные инструменты для садоводства</li>
+          <li class="text text--16 text-md-14 bold-4">Удобрения и защита растений высочайшего качества</li>
+        </ul>
+      </div>
+      <div class="text text--16 text-md-14 bold-4 mb-5">Сделайте ваш сад оазисом красоты! Акция действует лишь неделю, как что не упустите свой шанс обновить свою зеленую красоту!</div>
+    </div>
+    <div class="text text--38 text-md-28 bold-8 mb-10 mb-md-5">Товары по акции</div>
+    <div class="grid grid-spacing-lg-8 mb-10">
+      <% for (var i = 0; i < 8; i++) { %>
+        <div class="grid-col-6 grid-col-lg-3">
+          <div class="card card-action overflow-hidden height-100 waved -product-card-" href="javascript:;">
+            <div class="card-pic width-100">
+              <a class="pic pic--rect-x" href="">
+                <div class="loader">
+                  <svg class="icon">
+                      <use xlink:href="img/icons.svg#loader" />
+                  </svg>
+                </div>
+                <picture>
+                  <img class="pic__img -product-card-img-" data-src="img/banner.jpg" src="img/banner.jpg" alt="" loading="lazy">
+                </picture>
+                <label class="like">
+                  <input class="like__checkbox display-none" type="checkbox">
+                  <span class="like__heart flex align-items-center justify-content-center text text--18 link radius-2 visibility-hidden fade-0">
+                      <svg class="icon">
+                          <use xlink:href="img/icons.svg#like" />
+                      </svg>
+                  </span>
+              </label>
+              </a>
+            </div>
+            <div class="card-content p-4 p-md-2">
+              <a class="text text--16 text-md-14 bold-7 link--underline mb-3 -product-card-name-" href="">Лилия ЛА-гибрид Роял Кисс</a>
+              <div class="text text--16 bold-4 text-md-12 fade-60 mb-5">Цветок, характеризующийся стойкостью и неприхотлив...</div>
+              <div class="card-bottom flex align-items-center justify-content-between mt-auto">
+                <div class="flex flex-direction-column mr-2">
+                  <span class="text text--24 text-md-18 bold-8 -product-card-price-">187 ₽</span>
+                </div>
+                <button class="btn btn--primary btn--fill width-md-100 mt-auto -product-card-btn-">В корзину</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% } %>
+    </div>
+    <div class="flex align-items-center flex-wrap gap-4 mb-10">
+      <button class="btn btn--primary btn--fill width-md-100">Все товары акции</button>
+      <button class="btn btn--primary btn--light width-md-100">Перейти в каталог</button>
+    </div>
+    <div class="text text--38 text-md-28 bold-8 mb-10 mb-md-5">Покупайте выгодно!</div>
+    <div class="grid grid-spacing-10">
+      <% for (var i = 0; i < 8; i++) { %>
+        <div class="grid-col-12 grid-col-lg-6">
+          <a class="card card-action flex-direction-row align-items-center link height-100 waved pl-2 pr-10 pr-lg-2" href="javascript:;">
+            <div class="card-info width-100 height-100 mr-8">
+              <div class="card-image pic pic--square radius-4 height-100">
+                <div class="loader">
+                  <svg class="icon">
+                      <use xlink:href="img/icons.svg#loader" />
+                  </svg>
+                </div>
+                <picture>
+                  <img class="pic__img" src="img/banner.jpg" alt="" loading="lazy">
+                </picture>
+              </div>
+              <div class="card-discount flex align-items-center justify-content-center text text--18 bold-7 color-white bg-red radius-2 p-1">-30%</div>
+              <div class="card-days flex align-items-center justify-content-center flex-direction-column color-white bg-primary p-1">
+                <span class="text text--14 text--center bold-5 mb-2">До конца</span>
+                <span class="card-number text text--26 text--center bold-9 py-1 radius-3 mb-2">12</span>
+                <span class="text text--14 text--center bold-5">дней</span>
+              </div>
+            </div>
+            <div class="card-content py-7">
+              <div class="text text--24 text--uppercase bold-7 mb-2">ммм, голубика</div>
+              <div class="text text--16 bold-4 mb-6">
+                Семена томатов дешевле на 30%! Успейте купить!
+              </div>
+              <button class="btn btn--sec btn--fill color-black width-max">Подробнее</button>
+            </div>
+          </a>
+        </div>
+      <% } %>
+    </div>
+  </main>
+
+  <!-- Подвал -->
+  <%= _.template(require('./includes/footer.html').default)() %>
