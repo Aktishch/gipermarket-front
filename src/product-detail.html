@@ -18,16 +18,16 @@
           <div class="swiper grid-wrap">
             <div class="swiper-wrapper">
               <% for(let i=0; i < 5; i++){ %>
-                <a class="swiper-slide grid-col-12 pic pic--square waved" href="img/banner.jpg" data-fancybox="detail">
-                  <div class="loader">
-                    <svg class="icon">
-                        <use xlink:href="img/icons.svg#loader" />
-                    </svg>
-                  </div>
-                  <picture>
-                    <img class="pic__img pic__img--rise" src="img/banner.jpg" alt="" loading="lazy">
-                  </picture>
-                </a>
+              <a class="swiper-slide grid-col-12 pic pic--square waved" href="img/banner.jpg" data-fancybox="detail">
+                <div class="loader">
+                  <svg class="icon">
+                    <use xlink:href="img/icons.svg#loader" />
+                  </svg>
+                </div>
+                <picture>
+                  <img class="pic__img pic__img--rise" src="img/banner.jpg" alt="" loading="lazy">
+                </picture>
+              </a>
               <% } %>
             </div>
           </div>
@@ -40,11 +40,11 @@
           <div class="swiper grid-wrap grid-spacing-2">
             <div class="swiper-wrapper">
               <% for(let i=0; i < 5; i++){ %>
-                <div class="swiper-slide grid-col-4 grid-col-md-3 link">
-                  <div class="pic pic--rect-x radius-4 overflow-hidden waved">
-                    <img class="pic__img" src="img/banner.jpg" alt="">
-                  </div>
+              <div class="swiper-slide grid-col-4 grid-col-md-3 link">
+                <div class="pic pic--rect-x radius-4 overflow-hidden waved">
+                  <img class="pic__img" src="img/banner.jpg" alt="">
                 </div>
+              </div>
               <% } %>
             </div>
           </div>
@@ -138,9 +138,9 @@
             <label class="product-detail__like like">
               <input class="like__checkbox display-none" type="checkbox">
               <span class="like__heart btn btn--sec btn--contur text text--18 link radius-2">
-                  <svg class="icon">
-                      <use xlink:href="img/icons.svg#like" />
-                  </svg>
+                <svg class="icon">
+                  <use xlink:href="img/icons.svg#like" />
+                </svg>
               </span>
             </label>
           </div>
@@ -149,7 +149,7 @@
             <a class="flex align-items-center link link--underline width-max" href="tel: 8 (800) 000-00-00">
               <span class="text text--16 color-dark mr-3">
                 <svg class="icon">
-                    <use xlink:href="./img/icons.svg#phone" />
+                  <use xlink:href="./img/icons.svg#phone" />
                 </svg>
               </span>
               <span class="text text--20 bold-8">8 (800) 000-00-00</span>
@@ -158,23 +158,6 @@
         </div>
       </div>
     </div>
-
-    <script>
-          const cardDetailBullets = new Swiper('.product-detail-bullets .swiper', {
-              slidesPerView: 'auto',
-              watchSlidesProgress: true,
-              freeMode: true,
-          })
-        
-          const cardDetailSlider = new Swiper('.product-detail-slider .swiper', {
-              slidesPerView: 'auto',
-              watchSlidesProgress: true,
-              spaceBetween:20,
-              thumbs: {
-                  swiper: cardDetailBullets,
-              }
-          })
-    </script>
 
     <div class="grid mb-10 mb-md-5" id="product-info">
       <div class="text text--38 text-md-28 bold-8 mb-9 mb-md-5">Характеристики</div>
@@ -365,13 +348,13 @@
       <div class="text text--38 text-md-28 bold-8 mb-9 mb-md-5">Описание</div>
       <div class="text text--24 text-md-18 bold-6 mb-5">Внешний вид</div>
       <div class="tex text--14 bold-4 interval-5 mb-8 mb-md-5">
-        Мускатный сорт винограда привлекает садоводов своим неповторимым вкусом и ароматом. Куст среднерослый, с крепкой лозой, раскидистыми побегами. Лист гладкий, глубоко рассеченный, пятилопастной, с зазубренным краем. Гроздь небольшая, цилиндрическая, с плотно прилегающими круглыми ягодами. Вес одной грозди около 100 г. Виноградины диаметром 14-15 мм, желто-зеленого цвета с черными крапинками. Кожица тонкая, непрозрачная, с мускатным вкусом и запахом. Мякоть ягод плотная, сочная, сладкая, с еле заметной кислинкой. 
+        Мускатный сорт винограда привлекает садоводов своим неповторимым вкусом и ароматом. Куст среднерослый, с крепкой лозой, раскидистыми побегами. Лист гладкий, глубоко рассеченный, пятилопастной, с зазубренным краем. Гроздь небольшая, цилиндрическая, с плотно прилегающими круглыми ягодами. Вес одной грозди около 100 г. Виноградины диаметром 14-15 мм, желто-зеленого цвета с черными крапинками. Кожица тонкая, непрозрачная, с мускатным вкусом и запахом. Мякоть ягод плотная, сочная, сладкая, с еле заметной кислинкой.
       </div>
       <div class="text text--24 text-md-18 bold-6 mb-5">Посадочный материал</div>
       <div class="tex text--14 bold-4 mb-8 mb-md-5">Саженец</div>
       <div class="flex align-items-center mb-5">
         <img class="icon text text--24 mr-2" src="img/Seedling.svg" alt="">
-        <span class="text text--24 text-md-18 bold-6">Посадочный материал</span> 
+        <span class="text text--24 text-md-18 bold-6">Посадочный материал</span>
       </div>
       <div class="tex text--14 bold-4 interval-5 mb-8 mb-md-5">
         Родина происхождения винограда Мускат Оттонель – на западе Франции, город Анже. Вывел гибрид местный селекционер Жан Моро в 1852 году путем скрещивания сортов Шасла Гутедель и Мускат де Сомюр. Место районирования – винодельческая область Нойзидлерзее в Бургенланде (Австрия). Так же распространен в Румынии и Эльзасе (Франция). В России Мускат Оттонель прижился на Тамани и в Крыму.
@@ -388,7 +371,7 @@
           <span class="product-info__arrow text text--10">
             <svg class="icon">
               <use xlink:href="img/icons.svg#arrow-right" />
-          </svg>
+            </svg>
           </span>
         </div>
         <div data-toggle-content data-toggle-height="true" data-toggle-static="true">
@@ -481,61 +464,65 @@
       <a class="product-detail__link link text text--16 bold-6 color-primary" href="">Читать подробнее</a>
     </div>
 
-    <div class="product-items">
+    <div class="products">
       <div class="text text--38 text-md-28 bold-8 mb-10 mb-md-5">С этим товаром смотрят</div>
-      <div class="slider product-slider">
+      <div class="slider products-slider">
         <div class="swiper grid-wrap grid-spacing-8">
           <div class="swiper-wrapper">
             <% for (var i = 0; i < 5; i++) { %>
-              <div class="swiper-slide grid-col-10 grid-col-md-7 grid-col-lg-3">
-                <div class="card card-action overflow-hidden height-100 waved">
-                  <div class="card-pic width-100">
-                    <a class="pic pic--rect-x" href="">
-                      <div class="loader">
-                        <svg class="icon">
-                            <use xlink:href="img/icons.svg#loader" />
-                        </svg>
-                      </div>
-                      <picture>
-                        <img class="pic__img" src="img/banner.jpg" alt="" loading="lazy">
-                      </picture>
-                      <div class="card-nameplate flex align-items-center justify-content-center radius-2 py-1 px-3" style="background-color: #25B9E8;">
-                        <img class="icon text text--24 mr-2" src="img/nameplate-1.svg" alt="">
-                        <span class="text text--16 color-white bold-7">Новинка</span>
-                      </div>
-                      <label class="like">
-                        <input class="like__checkbox display-none" type="checkbox">
-                        <span class="like__heart flex align-items-center justify-content-center text text--18 link radius-2 visibility-hidden fade-0">
-                            <svg class="icon">
-                                <use xlink:href="img/icons.svg#like" />
-                            </svg>
-                        </span>
-                    </label>
-                    </a>
-                  </div>
-                  <div class="card-content p-4">
-                    <a class="text text--16 bold-7 link--underline mb-3" href="">Тюльпан бахромчатый Блэк Джевел 5 шт.</a>
-                    <div class="text text--16 bold-4 fade-60 mb-5">Кустарник сильнорослый, в высоту достигает 2 ме...</div>
-                    <div class="flex align-items-center justify-content-between mt-auto">
-                      <div class="flex flex-direction-column mr-2">
-                        <span class="text text--24 bold-8">187 ₽</span>
-                      </div>
-                      <button class="btn btn--primary btn--fill mt-auto">В корзину</button>
+            <div class="swiper-slide grid-col-10 grid-col-md-7 grid-col-lg-3">
+              <div class="card card-action overflow-hidden height-100 waved">
+                <div class="card-pic width-100">
+                  <a class="pic pic--rect-x" href="">
+                    <div class="loader">
+                      <svg class="icon">
+                        <use xlink:href="img/icons.svg#loader" />
+                      </svg>
                     </div>
+                    <picture>
+                      <img class="pic__img" src="img/banner.jpg" alt="" loading="lazy">
+                    </picture>
+                    <div class="card-nameplate flex align-items-center justify-content-center radius-2 py-1 px-3" style="background-color: #25B9E8;">
+                      <img class="icon text text--24 mr-2" src="img/nameplate-1.svg" alt="">
+                      <span class="text text--16 color-white bold-7">Новинка</span>
+                    </div>
+                    <label class="like">
+                      <input class="like__checkbox display-none" type="checkbox">
+                      <span class="like__heart flex align-items-center justify-content-center text text--18 link radius-2 visibility-hidden fade-0">
+                        <svg class="icon">
+                          <use xlink:href="img/icons.svg#like" />
+                        </svg>
+                      </span>
+                    </label>
+                  </a>
+                </div>
+                <div class="card-content p-4">
+                  <a class="text text--16 bold-7 link--underline mb-3" href="">Тюльпан бахромчатый Блэк Джевел 5 шт.</a>
+                  <div class="text text--16 bold-4 fade-60 mb-5">Кустарник сильнорослый, в высоту достигает 2 ме...</div>
+                  <div class="flex align-items-center justify-content-between mt-auto">
+                    <div class="flex flex-direction-column mr-2">
+                      <span class="text text--24 bold-8">187 ₽</span>
+                    </div>
+                    <button class="btn btn--primary btn--fill mt-auto">В корзину</button>
                   </div>
                 </div>
               </div>
+            </div>
             <% } %>
           </div>
         </div>
+        <button class="btn btn-large btn-fab btn--white-bg slider-nav slider-prev display-md-none">
+          <svg class="icon">
+            <use xlink:href="img/icons.svg#arrow-left" />
+          </svg>
+        </button>
+        <button class="btn btn-large btn-fab btn--white-bg slider-nav slider-next display-md-none">
+          <svg class="icon">
+            <use xlink:href="img/icons.svg#arrow-right" />
+          </svg>
+        </button>
       </div>
-    <script>
-      new Swiper('.product-slider .swiper', {
-        slidesPerView: 'auto',
-        slidesPerGroup: 1,
-        watchSlidesProgress: true,
-      })
-    </script>
+    </div>
   </main>
 
   <!-- Подвал -->

@@ -21,7 +21,6 @@
     <%= _.template(require('./includes/banner.html').default)({}) %>
 
     <div class="flex justify-content-between mb-10 mb-lg-5">
-
       <div class="catalog-sidebar width-100 mr-8 -filter-" id="filter">
         <div class="flex align-items-center justify-content-between display-none display-lg-flex pt-5 mb-5">
           <span class="text text--30 bold-7">Фильтр</span>
@@ -44,15 +43,15 @@
             <div class="toggle-active" data-toggle-content data-toggle-static="true" data-toggle-height="true">
               <div class="flex flex-direction-column gap-4 mt-5">
                 <% for(let i=0; i < 15; i++){ %>
-                  <label class="catalog__item form-field form-checkbox">
-                    <input type="checkbox" class="form-input-checkbox">
-                    <div class="form-checkbox-target form-toggle-target">
-                      <svg class="icon">
-                        <use xlink:href="img/icons.svg#gal-ochka" />
-                      </svg>
-                    </div>
-                    <div class="catalog__text text-body-1 fade-70 ml-2">Саженцы</div>
-                  </label>
+                <label class="catalog__item form-field form-checkbox">
+                  <input type="checkbox" class="form-input-checkbox">
+                  <div class="form-checkbox-target form-toggle-target">
+                    <svg class="icon">
+                      <use xlink:href="img/icons.svg#gal-ochka" />
+                    </svg>
+                  </div>
+                  <div class="catalog__text text-body-1 fade-70 ml-2">Саженцы</div>
+                </label>
                 <% } %>
               </div>
             </div>
@@ -71,15 +70,15 @@
             <div class="toggle-active" data-toggle-content data-toggle-static="true" data-toggle-height="true">
               <div class="flex flex-direction-column gap-4 mt-5">
                 <% for(let i=0; i < 2; i++){ %>
-                  <label class="catalog__item form-field form-checkbox">
-                    <input type="checkbox" class="form-input-checkbox">
-                    <div class="form-checkbox-target form-toggle-target">
-                      <svg class="icon">
-                        <use xlink:href="img/icons.svg#gal-ochka" />
-                      </svg>
-                    </div>
-                    <div class="catalog__text text-body-1 fade-70 ml-2">Саженцы</div>
-                  </label>
+                <label class="catalog__item form-field form-checkbox">
+                  <input type="checkbox" class="form-input-checkbox">
+                  <div class="form-checkbox-target form-toggle-target">
+                    <svg class="icon">
+                      <use xlink:href="img/icons.svg#gal-ochka" />
+                    </svg>
+                  </div>
+                  <div class="catalog__text text-body-1 fade-70 ml-2">Саженцы</div>
+                </label>
                 <% } %>
               </div>
             </div>
@@ -98,15 +97,15 @@
             <div data-toggle-content data-toggle-static="true" data-toggle-height="true">
               <div class="flex flex-direction-column gap-4 mt-5">
                 <% for(let i=0; i < 2; i++){ %>
-                  <label class="catalog__item form-field form-checkbox">
-                    <input type="checkbox" class="form-input-checkbox">
-                    <div class="form-checkbox-target form-toggle-target">
-                      <svg class="icon">
-                        <use xlink:href="img/icons.svg#gal-ochka" />
-                      </svg>
-                    </div>
-                    <div class="catalog__text text-body-1 fade-70 ml-2">Саженцы</div>
-                  </label>
+                <label class="catalog__item form-field form-checkbox">
+                  <input type="checkbox" class="form-input-checkbox">
+                  <div class="form-checkbox-target form-toggle-target">
+                    <svg class="icon">
+                      <use xlink:href="img/icons.svg#gal-ochka" />
+                    </svg>
+                  </div>
+                  <div class="catalog__text text-body-1 fade-70 ml-2">Саженцы</div>
+                </label>
                 <% } %>
               </div>
             </div>
@@ -125,15 +124,15 @@
             <div data-toggle-content data-toggle-static="true" data-toggle-height="true">
               <div class="flex flex-direction-column gap-4 mt-5">
                 <% for(let i=0; i < 2; i++){ %>
-                  <label class="catalog__item form-field form-checkbox">
-                    <input type="checkbox" class="form-input-checkbox">
-                    <div class="form-checkbox-target form-toggle-target">
-                      <svg class="icon">
-                        <use xlink:href="img/icons.svg#gal-ochka" />
-                      </svg>
-                    </div>
-                    <div class="catalog__text text-body-1 fade-70 ml-2">Саженцы</div>
-                  </label>
+                <label class="catalog__item form-field form-checkbox">
+                  <input type="checkbox" class="form-input-checkbox">
+                  <div class="form-checkbox-target form-toggle-target">
+                    <svg class="icon">
+                      <use xlink:href="img/icons.svg#gal-ochka" />
+                    </svg>
+                  </div>
+                  <div class="catalog__text text-body-1 fade-70 ml-2">Саженцы</div>
+                </label>
                 <% } %>
               </div>
             </div>
@@ -190,46 +189,46 @@
 
         <div class="grid mb-10">
           <% for (var i = 0; i < 3; i++) { %>
-            <div class="grid-col-6 grid-col-lg-4">
-              <div class="card card-action overflow-hidden height-100 waved -product-card-" href="javascript:;">
-                <div class="card-pic width-100">
-                  <a class="pic pic--rect-x" href="">
-                    <div class="loader">
-                      <svg class="icon">
-                          <use xlink:href="img/icons.svg#loader" />
-                      </svg>
-                    </div>
-                    <picture>
-                      <img class="pic__img -product-card-img-" data-src="img/banner.jpg" src="img/banner.jpg" alt="" loading="lazy">
-                    </picture>
-                    <label class="like">
-                      <input class="like__checkbox display-none" type="checkbox">
-                      <span class="like__heart flex align-items-center justify-content-center text text--18 link radius-2 visibility-hidden fade-0">
-                          <svg class="icon">
-                              <use xlink:href="img/icons.svg#like" />
-                          </svg>
-                      </span>
-                  </label>
-                  </a>
-                </div>
-                <div class="card-content p-4 p-md-2">
-                  <a class="text text--16 text-md-14 bold-7 link--underline mb-3 -product-card-name-" href="">Лилия ЛА-гибрид Роял Кисс</a>
-                  <div class="text text--16 bold-4 text-md-12 fade-60 mb-5">Цветок, характеризующийся стойкостью и неприхотлив...</div>
-                  <div class="card-bottom flex align-items-center justify-content-between mt-auto">
-                    <div class="flex flex-direction-column mr-2">
-                      <span class="text text--24 text-md-18 bold-8 -product-card-price-">187 ₽</span>
-                    </div>
-                    <% if (i === 0) { %>
-                      <button class="btn btn--primary btn--fill width-md-100 mt-auto -product-card-btn-">В корзину</button>
-                    <% } else if (i === 1) { %>
-                      <button class="btn btn--primary btn--light btn--contur width-md-100 mt-auto -product-card-btn-" disabled>Добавлено</button>
-                    <% } else { %>
-                      <button class="btn btn--gray btn--light btn--contur width-md-100 mt-auto" disabled>Отсутствует</button>
-                    <% } %>
+          <div class="grid-col-6 grid-col-lg-4">
+            <div class="card card-action overflow-hidden height-100 waved -product-card-" href="javascript:;">
+              <div class="card-pic width-100">
+                <a class="pic pic--rect-x" href="">
+                  <div class="loader">
+                    <svg class="icon">
+                      <use xlink:href="img/icons.svg#loader" />
+                    </svg>
                   </div>
+                  <picture>
+                    <img class="pic__img -product-card-img-" data-src="img/banner.jpg" src="img/banner.jpg" alt="" loading="lazy">
+                  </picture>
+                  <label class="like">
+                    <input class="like__checkbox display-none" type="checkbox">
+                    <span class="like__heart flex align-items-center justify-content-center text text--18 link radius-2 visibility-hidden fade-0">
+                      <svg class="icon">
+                        <use xlink:href="img/icons.svg#like" />
+                      </svg>
+                    </span>
+                  </label>
+                </a>
+              </div>
+              <div class="card-content p-4 p-md-2">
+                <a class="text text--16 text-md-14 bold-7 link--underline mb-3 -product-card-name-" href="">Лилия ЛА-гибрид Роял Кисс</a>
+                <div class="text text--16 bold-4 text-md-12 fade-60 mb-5">Цветок, характеризующийся стойкостью и неприхотлив...</div>
+                <div class="card-bottom flex align-items-center justify-content-between mt-auto">
+                  <div class="flex flex-direction-column mr-2">
+                    <span class="text text--24 text-md-18 bold-8 -product-card-price-">187 ₽</span>
+                  </div>
+                  <% if (i === 0) { %>
+                  <button class="btn btn--primary btn--fill width-md-100 mt-auto -product-card-btn-">В корзину</button>
+                  <% } else if (i === 1) { %>
+                  <button class="btn btn--primary btn--light btn--contur width-md-100 mt-auto -product-card-btn-" disabled>Добавлено</button>
+                  <% } else { %>
+                  <button class="btn btn--gray btn--light btn--contur width-md-100 mt-auto" disabled>Отсутствует</button>
+                  <% } %>
                 </div>
               </div>
             </div>
+          </div>
           <% } %>
         </div>
 
@@ -257,103 +256,6 @@
             <button class="btn btn--primary btn--fill">Перейти в корзину</button>
           </div>
         </div>
-    
-        <script>
-    
-          const cards = document.querySelectorAll('.-product-card-')
-    
-          const modal = document.querySelector('.-basket-modal-')
-          const modalClose = modal.querySelector('.-modal-close-')
-          const modalImg = modal.querySelector('.-basket-modal-img-')
-          const modalName = modal.querySelector('.-basket-modal-name-')
-          const modalOldPrice = modal.querySelector('.-basket-modal-old-price-')
-          const modalPrice = modal.querySelector('.-basket-modal-price-')
-          const modalQuantity = modal.querySelector('.-basket-modal-quantity-')
-    
-          let modalRemoveTimeout
-    
-          cards.forEach(card => {
-    
-            const img = card.querySelector('.-product-card-img-')
-            const imgSrc = img.dataset.src
-            const name = card.querySelector('.-product-card-name-')
-            const oldPrice = card.querySelector('.-product-card-old-price-')
-            const price = card.querySelector('.-product-card-price-')
-            const quantity = card.querySelector('.-product-card-quantity-')
-            const btn = card.querySelector('.-product-card-btn-')
-            let nameText
-            let oldPriceText
-            let priceText
-            let val
-    
-            if (name) {
-              nameText = name.textContent
-            }
-    
-            if (oldPrice) {
-              oldPriceText = oldPrice.textContent
-            }
-    
-            if (price) {
-              priceText = price.textContent
-            }
-    
-            if (btn) {
-              btn.addEventListener('click', () => {
-      
-                if (modal.classList.contains('product-in-basket--open')) {
-      
-                  modal.classList.remove('product-in-basket--open')
-      
-                }
-      
-                setTimeout(() => {
-                  
-                  modal.classList.add('product-in-basket--open')
-      
-                  if (quantity) {
-      
-                    val = quantity.value
-      
-                  } else {
-      
-                    val = 1
-      
-                  }
-      
-                  if (modalImg) modalImg.src = imgSrc
-                  if (modalName) modalName.innerHTML = nameText
-                  if (modalOldPrice) modalOldPrice.innerHTML = oldPriceText
-                  if (modalPrice) modalPrice.innerHTML = priceText
-                  if (modalQuantity) modalQuantity.innerHTML = val
-      
-                  if (modalRemoveTimeout) {
-      
-                    clearTimeout(modalRemoveTimeout)
-      
-                  }
-      
-                  modalRemoveTimeout = setTimeout(() => {
-      
-                    modal.classList.remove('product-in-basket--open')
-      
-                  }, 12000)
-                  
-                }, 300)
-                
-      
-              })
-            }
-    
-            modalClose.addEventListener('click', () => {
-                
-                modal.classList.remove('product-in-basket--open')
-        
-            })
-    
-          })
-    
-        </script>
 
         <div class="pagination flex align-items-center gap-4 gap-md-2">
           <a class="pagination__btn pagination__btn--fade btn btn--white btn--fill px-0" href="">
@@ -375,7 +277,6 @@
           </a>
         </div>
 
-        </div>
       </div>
     </div>
   </main>

@@ -1,4 +1,5 @@
 import fancybox from "./js/fancybox";
+import swiper from "./js/swiper";
 import yandexMap from './js/yandex-map';
 import rangeSlider from './js/range-slider';
 import theme from './js/theme';
@@ -11,26 +12,23 @@ import scrollNav from './js/scroll-nav'
 import mobileMenu from './js/mobile-menu'
 import password from './js/password'
 import dataHref from './js/data-href'
-// import search from './js/search'
 import profileLoadPhoto from './js/profile-load-photo'
 import copyLink from './js/copy-link'
 import inputNumber from './js/input-number'
 import canvasImage from './js/canvas-image'
 import timeCounter from './js/time-counter'
-import Swiper, { Navigation, Pagination, Scrollbar, Autoplay, Grid, Thumbs, EffectFade, Lazy } from 'swiper';
+import basket from './js/basket'
 
 
 import './scss/index.scss';
 
-Swiper.use([Navigation, Pagination, Scrollbar, Autoplay, Grid, Thumbs, EffectFade, Lazy]);
-Swiper.defaults.touchStartPreventDefault = false
-window.Swiper = Swiper
 window.ripple = ripple
 window.addEventListener('DOMContentLoaded', () => loadHandler())
 
 fancybox.init()
 
 function loadHandler() {
+	swiper.init()
 	yandexMap.init()
 	scrollTo.init()
 	rangeSlider.init()
@@ -47,12 +45,12 @@ function loadHandler() {
 	mobileMenu.init()
 	password.init()
 	dataHref.init()
-	// search.init()
 	profileLoadPhoto.init()
 	copyLink.init()
 	inputNumber.init()
 	canvasImage.init()
 	timeCounter.init()
+	basket.init()
 
 	window.addEventListener('toggleopen', toggleopenHaandler)
 	window.addEventListener('toggleclose', togglecloseHaandler)

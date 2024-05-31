@@ -11,35 +11,35 @@
       <div class="swiper grid-wrap">
         <div class="swiper-wrapper">
           <% for (var i = 0; i < 3; i++) { %>
-            <div class="swiper-slide grid-col-12">
-              <div class="banner container flex flex-direction-column justify-content-center bg-sec height-100">
-                <div class="banner__bg pic width-100 height-100">
-                  <div class="loader">
-                    <svg class="icon">
-                        <use xlink:href="img/icons.svg#loader" />
-                    </svg>
-                  </div>
-                  <picture>
-                    <source srcset="img/banner-mob.jpg" media="(max-width: 568px)">
-                    <img class="pic__img" src="img/banner.jpg" alt="" loading="lazy">
-                  </picture>
+          <div class="swiper-slide grid-col-12">
+            <div class="banner container flex flex-direction-column justify-content-center bg-sec height-100">
+              <div class="banner__bg pic width-100 height-100">
+                <div class="loader">
+                  <svg class="icon">
+                    <use xlink:href="img/icons.svg#loader" />
+                  </svg>
                 </div>
-                <div class="banner__content flex flex-direction-column">
-                  <div class="banner__bullets flex flex-wrap align-items-center gap-2 mb-8">
-                    <span class="banner__bullet flex align-items-center justify-content-center text text--16 color-white bg-red bold-8 radius-2 px-5 px-md-2">-40%</span>
-                    <span class="banner__bullet banner__bullet--contur flex align-items-center justify-content-center text text--14 color-white bg-none bold-6 radius-2 px-5 px-md-2">Чумачечная скиждка</span>
-                    <span class="banner__bullet banner__bullet--contur flex align-items-center justify-content-center text text--14 color-white bg-none bold-6 radius-2 px-5 px-md-2">Подсолнухи бомба честно говоря</span>
-                  </div>
-                  <div class="banner__title text text--48 text-lg-38 text-md-28 bold-8 color-white mb-5">
-                    СУПЕР СКИДКИ! -40% НА СЕМЕНА ПОДСОЛНЕЧНИКА
-                  </div>
-                  <div class="banner__text text text--16 color-white mb-10">
-                    Семена подсолнуха дешевле на 30%! Успейте купить до 24 августа!
-                  </div>
-                  <a class="banner__btn btn btn--white btn--fill width-max" href="#">Подробнее</a>
+                <picture>
+                  <source srcset="img/banner-mob.jpg" media="(max-width: 568px)">
+                  <img class="pic__img" src="img/banner.jpg" alt="" loading="lazy">
+                </picture>
+              </div>
+              <div class="banner__content flex flex-direction-column">
+                <div class="banner__bullets flex flex-wrap align-items-center gap-2 mb-8">
+                  <span class="banner__bullet flex align-items-center justify-content-center text text--16 color-white bg-red bold-8 radius-2 px-5 px-md-2">-40%</span>
+                  <span class="banner__bullet banner__bullet--contur flex align-items-center justify-content-center text text--14 color-white bg-none bold-6 radius-2 px-5 px-md-2">Чумачечная скиждка</span>
+                  <span class="banner__bullet banner__bullet--contur flex align-items-center justify-content-center text text--14 color-white bg-none bold-6 radius-2 px-5 px-md-2">Подсолнухи бомба честно говоря</span>
                 </div>
+                <div class="banner__title text text--48 text-lg-38 text-md-28 bold-8 color-white mb-5">
+                  СУПЕР СКИДКИ! -40% НА СЕМЕНА ПОДСОЛНЕЧНИКА
+                </div>
+                <div class="banner__text text text--16 color-white mb-10">
+                  Семена подсолнуха дешевле на 30%! Успейте купить до 24 августа!
+                </div>
+                <a class="banner__btn btn btn--white btn--fill width-max" href="#">Подробнее</a>
               </div>
             </div>
+          </div>
           <% } %>
         </div>
         <button class="banners__btn banners__btn--prev btn btn-large btn-fab btn--white-bg slider-nav slider-prev display-lg-none">
@@ -55,26 +55,6 @@
       </div>
     </div>
   </section>
-
-  <script>
-    new Swiper('.banners-slider .swiper', {
-      navigation: {
-				nextEl: '.banners-slider .slider-next',
-				prevEl: '.banners-slider .slider-prev'
-			},
-      slidesPerView: 'auto',
-      slidesPerGroup: 1,
-      watchSlidesProgress: true,
-      loop: true,
-      grabCursor: true,
-      speed: 1000,
-      autoplay: {
-        delay: 4000,
-        stopOnLastSlide: false,
-        disableOnInteraction: false
-      }
-    })
-  </script>
 
   <section class="info-bullets container flex align-items-center justify-content-between flex-wrap bg-white bs py-5 py-md-7 gap-5 gap-md-8">
     <div class="info-bullets__item flex flex-direction-column pl-0 pl-md-5">
@@ -171,36 +151,36 @@
   <section class="categories container overflow-hidden">
     <div class="text text--38 text-md-28 bold-8 mb-10 mb-md-5">Популярные категории</div>
     <div class="categories-sliders">
-      <div class="slider categories-slider-first mb-5 mb-md-2">
+      <div class="slider categories-slider mb-5 mb-md-2">
         <div class="swiper">
           <div class="swiper-wrapper">
             <% for (var i = 0; i < categoriesSlidesFirst.length; i++) { %>
-              <div class="swiper-slide width-max">
-                <a class="categories-slider__slide flex align-items-center justify-content-between link radius-4 overflow-hidden width-max pr-9 pr-md-4" style="background-color: <%= categoriesSlidesFirst[i].bg %>;" href="">
-                  <img class="height-100 mr-7 mr-md-3" src="img/<%= categoriesSlidesFirst[i].img %>.png" alt="">
-                  <div class="flex flex-direction-column">
-                    <span class="text text--24 text-md-20 color-white bold-6 mb-1"><%= categoriesSlidesFirst[i].name %></span>
-                    <span class="text text--16 text-md-14 color-white fade-80"><%= categoriesSlidesFirst[i].text %></span>
-                  </div>
-                </a>
-              </div>
+            <div class="swiper-slide width-max">
+              <a class="categories-slider__slide flex align-items-center justify-content-between link radius-4 overflow-hidden width-max pr-9 pr-md-4" style="background-color: <%= categoriesSlidesFirst[i].bg %>;" href="">
+                <img class="height-100 mr-7 mr-md-3" src="img/<%= categoriesSlidesFirst[i].img %>.png" alt="">
+                <div class="flex flex-direction-column">
+                  <span class="text text--24 text-md-20 color-white bold-6 mb-1"><%= categoriesSlidesFirst[i].name %></span>
+                  <span class="text text--16 text-md-14 color-white fade-80"><%= categoriesSlidesFirst[i].text %></span>
+                </div>
+              </a>
+            </div>
             <% } %>
           </div>
         </div>
       </div>
-      <div class="slider categories-slider-last">
+      <div class="slider categories-slider">
         <div class="swiper">
           <div class="swiper-wrapper">
             <% for (var i = 0; i < categoriesSlidesLast.length; i++) { %>
-              <div class="swiper-slide width-max">
-                <a class="categories-slider__slide flex align-items-center justify-content-between link radius-4 overflow-hidden width-max pr-9 pr-md-4" style="background-color: <%= categoriesSlidesLast[i].bg %>;" href="">
-                  <img class="height-100 mr-7 mr-md-3" src="img/<%= categoriesSlidesLast[i].img %>.png" alt="">
-                  <div class="flex flex-direction-column">
-                    <span class="text text--24 text-md-20 color-white bold-6 mb-1"><%= categoriesSlidesLast[i].name %></span>
-                    <span class="text text--16 text-md-14 color-white fade-80"><%= categoriesSlidesLast[i].text %></span>
-                  </div>
-                </a>
-              </div>
+            <div class="swiper-slide width-max">
+              <a class="categories-slider__slide flex align-items-center justify-content-between link radius-4 overflow-hidden width-max pr-9 pr-md-4" style="background-color: <%= categoriesSlidesLast[i].bg %>;" href="">
+                <img class="height-100 mr-7 mr-md-3" src="img/<%= categoriesSlidesLast[i].img %>.png" alt="">
+                <div class="flex flex-direction-column">
+                  <span class="text text--24 text-md-20 color-white bold-6 mb-1"><%= categoriesSlidesLast[i].name %></span>
+                  <span class="text text--16 text-md-14 color-white fade-80"><%= categoriesSlidesLast[i].text %></span>
+                </div>
+              </a>
+            </div>
             <% } %>
           </div>
         </div>
@@ -218,75 +198,39 @@
     </div>
   </section>
 
-  <script>
-    new Swiper('.categories-slider-first .swiper', {
-      slidesPerView: 'auto',
-      slidesPerGroup: 1,
-      watchSlidesProgress: true,
-      spaceBetween: 8,
-      loop: true,
-      navigation: {
-				nextEl: '.categories-sliders .slider-next',
-				prevEl: '.categories-sliders .slider-prev'
-			},
-      breakpoints: {
-        576: {
-          spaceBetween: 20
-        }
-      }
-    })
-
-    new Swiper('.categories-slider-last .swiper', {
-      slidesPerView: 'auto',
-      slidesPerGroup: 1,
-      watchSlidesProgress: true,
-      spaceBetween: 8,
-      loop: true,
-      navigation: {
-				nextEl: '.categories-sliders .slider-next',
-				prevEl: '.categories-sliders .slider-prev'
-			},
-      breakpoints: {
-        576: {
-          spaceBetween: 20
-        }
-      }
-    })
-  </script>
-
   <section class="benefit container overflow-hidden pt-5">
     <div class="text text--38 text-md-28 bold-8 mb-10">Покупайте выгодно!</div>
     <div class="grid grid-spacing-10">
       <% for (var i = 0; i < 8; i++) { %>
-        <div class="grid-col-12 grid-col-lg-6">
-          <a class="card card-action flex-direction-row align-items-center link height-100 waved pl-2 pr-10 pr-lg-2" href="javascript:;">
-            <div class="card-info width-100 height-100 mr-8">
-              <div class="card-image pic pic--square radius-4 height-100">
-                <div class="loader">
-                  <svg class="icon">
-                      <use xlink:href="img/icons.svg#loader" />
-                  </svg>
-                </div>
-                <picture>
-                  <img class="pic__img" src="img/banner.jpg" alt="" loading="lazy">
-                </picture>
+      <div class="grid-col-12 grid-col-lg-6">
+        <a class="card card-action flex-direction-row align-items-center link height-100 waved pl-2 pr-10 pr-lg-2" href="javascript:;">
+          <div class="card-info width-100 height-100 mr-8">
+            <div class="card-image pic pic--square radius-4 height-100">
+              <div class="loader">
+                <svg class="icon">
+                  <use xlink:href="img/icons.svg#loader" />
+                </svg>
               </div>
-              <div class="card-discount flex align-items-center justify-content-center text text--18 bold-7 color-white bg-red radius-2 p-1">-30%</div>
-              <div class="card-days flex align-items-center justify-content-center flex-direction-column color-white bg-primary p-1">
-                <span class="text text--14 text--center bold-5 mb-2">До конца</span>
-                <span class="card-number text text--26 text--center bold-9 py-1 radius-3 mb-2">12</span>
-                <span class="text text--14 text--center bold-5">дней</span>
-              </div>
+              <picture>
+                <img class="pic__img" src="img/banner.jpg" alt="" loading="lazy">
+              </picture>
             </div>
-            <div class="card-content py-7">
-              <div class="text text--24 text--uppercase bold-7 mb-2">ммм, голубика</div>
-              <div class="text text--16 bold-4 mb-6">
-                Семена томатов дешевле на 30%! Успейте купить!
-              </div>
-              <button class="btn btn--sec btn--fill color-black width-max">Подробнее</button>
+            <div class="card-discount flex align-items-center justify-content-center text text--18 bold-7 color-white bg-red radius-2 p-1">-30%</div>
+            <div class="card-days flex align-items-center justify-content-center flex-direction-column color-white bg-primary p-1">
+              <span class="text text--14 text--center bold-5 mb-2">До конца</span>
+              <span class="card-number text text--26 text--center bold-9 py-1 radius-3 mb-2">12</span>
+              <span class="text text--14 text--center bold-5">дней</span>
             </div>
-          </a>
-        </div>
+          </div>
+          <div class="card-content py-7">
+            <div class="text text--24 text--uppercase bold-7 mb-2">ммм, голубика</div>
+            <div class="text text--16 bold-4 mb-6">
+              Семена томатов дешевле на 30%! Успейте купить!
+            </div>
+            <button class="btn btn--sec btn--fill color-black width-max">Подробнее</button>
+          </div>
+        </a>
+      </div>
       <% } %>
     </div>
   </section>
@@ -335,42 +279,42 @@
       <div class="swiper grid-wrap grid-spacing-8">
         <div class="swiper-wrapper">
           <% for (var i = 0; i < products.length; i++) { %>
-            <div class="swiper-slide grid-col-10 grid-col-md-7 grid-col-lg-3">
-              <div class="card card-action overflow-hidden height-100 waved">
-                <div class="card-pic width-100">
-                  <a class="pic pic--rect-x" href="">
-                    <div class="loader">
-                      <svg class="icon">
-                          <use xlink:href="img/icons.svg#loader" />
-                      </svg>
-                    </div>
-                    <picture>
-                      <img class="pic__img" src="img/banner.jpg" alt="" loading="lazy">
-                    </picture>
-                    <%= products[i].nameplate %>
-                    <label class="like">
-                      <input class="like__checkbox display-none" type="checkbox">
-                      <span class="like__heart flex align-items-center justify-content-center text text--18 link radius-2 visibility-hidden fade-0">
-                          <svg class="icon">
-                              <use xlink:href="img/icons.svg#like" />
-                          </svg>
-                      </span>
-                  </label>
-                  </a>
-                </div>
-                <div class="card-content p-4">
-                  <a class="text text--16 bold-7 link--underline mb-3" href=""><%= products[i].name %></a>
-                  <div class="text text--16 bold-4 fade-60 mb-5"><%= products[i].text %></div>
-                  <div class="flex align-items-center justify-content-between mt-auto">
-                    <div class="flex flex-direction-column mr-2">
-                      <%= products[i].price %>
-                      <span class="text text--24 bold-8">187 ₽</span>
-                    </div>
-                    <%= products[i].btn %>
+          <div class="swiper-slide grid-col-10 grid-col-md-7 grid-col-lg-3">
+            <div class="card card-action overflow-hidden height-100 waved">
+              <div class="card-pic width-100">
+                <a class="pic pic--rect-x" href="">
+                  <div class="loader">
+                    <svg class="icon">
+                      <use xlink:href="img/icons.svg#loader" />
+                    </svg>
                   </div>
+                  <picture>
+                    <img class="pic__img" src="img/banner.jpg" alt="" loading="lazy">
+                  </picture>
+                  <%= products[i].nameplate %>
+                  <label class="like">
+                    <input class="like__checkbox display-none" type="checkbox">
+                    <span class="like__heart flex align-items-center justify-content-center text text--18 link radius-2 visibility-hidden fade-0">
+                      <svg class="icon">
+                        <use xlink:href="img/icons.svg#like" />
+                      </svg>
+                    </span>
+                  </label>
+                </a>
+              </div>
+              <div class="card-content p-4">
+                <a class="text text--16 bold-7 link--underline mb-3" href=""><%= products[i].name %></a>
+                <div class="text text--16 bold-4 fade-60 mb-5"><%= products[i].text %></div>
+                <div class="flex align-items-center justify-content-between mt-auto">
+                  <div class="flex flex-direction-column mr-2">
+                    <%= products[i].price %>
+                    <span class="text text--24 bold-8">187 ₽</span>
+                  </div>
+                  <%= products[i].btn %>
                 </div>
               </div>
             </div>
+          </div>
           <% } %>
         </div>
       </div>
@@ -387,60 +331,48 @@
     </div>
   </section>
 
-  <script>
-    new Swiper('.products-slider .swiper', {
-      slidesPerView: 'auto',
-      slidesPerGroup: 1,
-      watchSlidesProgress: true,
-      navigation: {
-				nextEl: '.products-slider .slider-next',
-				prevEl: '.products-slider .slider-prev'
-			}
-    })
-  </script>
-
-  <section class="beginner container pt-5 overflow-hidden">
+  <section class="products container pt-5 overflow-hidden">
     <div class="text text--38 text-md-28 bold-8 mb-10 mb-md-5">Для садоводов-новичков</div>
-    <div class="slider beginner-slider">
+    <div class="slider products-slider">
       <div class="swiper grid-wrap grid-spacing-8">
         <div class="swiper-wrapper">
           <% for (var i = 0; i < products.length; i++) { %>
-            <div class="swiper-slide grid-col-10 grid-col-md-7 grid-col-lg-3">
-              <div class="card card-action overflow-hidden height-100 waved">
-                <div class="card-pic width-100">
-                  <a class="pic pic--rect-x" href="">
-                    <div class="loader">
-                      <svg class="icon">
-                          <use xlink:href="img/icons.svg#loader" />
-                      </svg>
-                    </div>
-                    <picture>
-                      <img class="pic__img" src="img/banner.jpg" alt="" loading="lazy">
-                    </picture>
-                    <%= products[i].nameplate %>
-                    <label class="like">
-                      <input class="like__checkbox display-none" type="checkbox">
-                      <span class="like__heart flex align-items-center justify-content-center text text--18 link radius-2 visibility-hidden fade-0">
-                          <svg class="icon">
-                              <use xlink:href="img/icons.svg#like" />
-                          </svg>
-                      </span>
-                  </label>
-                  </a>
-                </div>
-                <div class="card-content p-4">
-                  <a class="text text--16 bold-7 link--underline mb-3" href=""><%= products[i].name %></a>
-                  <div class="text text--16 bold-4 fade-60 mb-5"><%= products[i].text %></div>
-                  <div class="flex align-items-center justify-content-between mt-auto">
-                    <div class="flex flex-direction-column mr-2">
-                      <%= products[i].price %>
-                      <span class="text text--24 bold-8">187 ₽</span>
-                    </div>
-                    <%= products[i].btn %>
+          <div class="swiper-slide grid-col-10 grid-col-md-7 grid-col-lg-3">
+            <div class="card card-action overflow-hidden height-100 waved">
+              <div class="card-pic width-100">
+                <a class="pic pic--rect-x" href="">
+                  <div class="loader">
+                    <svg class="icon">
+                      <use xlink:href="img/icons.svg#loader" />
+                    </svg>
                   </div>
+                  <picture>
+                    <img class="pic__img" src="img/banner.jpg" alt="" loading="lazy">
+                  </picture>
+                  <%= products[i].nameplate %>
+                  <label class="like">
+                    <input class="like__checkbox display-none" type="checkbox">
+                    <span class="like__heart flex align-items-center justify-content-center text text--18 link radius-2 visibility-hidden fade-0">
+                      <svg class="icon">
+                        <use xlink:href="img/icons.svg#like" />
+                      </svg>
+                    </span>
+                  </label>
+                </a>
+              </div>
+              <div class="card-content p-4">
+                <a class="text text--16 bold-7 link--underline mb-3" href=""><%= products[i].name %></a>
+                <div class="text text--16 bold-4 fade-60 mb-5"><%= products[i].text %></div>
+                <div class="flex align-items-center justify-content-between mt-auto">
+                  <div class="flex flex-direction-column mr-2">
+                    <%= products[i].price %>
+                    <span class="text text--24 bold-8">187 ₽</span>
+                  </div>
+                  <%= products[i].btn %>
                 </div>
               </div>
             </div>
+          </div>
           <% } %>
         </div>
       </div>
@@ -456,18 +388,6 @@
       </button>
     </div>
   </section>
-
-  <script>
-    new Swiper('.beginner-slider .swiper', {
-      slidesPerView: 'auto',
-      slidesPerGroup: 1,
-      watchSlidesProgress: true,
-      navigation: {
-				nextEl: '.beginner-slider .slider-next',
-				prevEl: '.beginner-slider .slider-prev'
-			}
-    })
-  </script>
 
   <section class="information container">
     <div class="information__bg pic width-100 height-100 overflow-visible">
@@ -511,67 +431,67 @@
     <div class="text text--38 text-md-28 bold-8 mb-10 mb-md-7">Наши категории</div>
     <div class="grid grid-spacing-lg-7">
       <% for (var i = 0; i < 12; i++) { %>
-        <div class="grid-col-6 grid-col-md-4 grid-col-lg-3">
-          <a class="card overflow-hidden" href="javascript:;">
-            <div class="pic pic--square width-100">
-              <div class="loader">
-                <svg class="icon">
-                    <use xlink:href="img/icons.svg#loader" />
-                </svg>
-              </div>
-              <picture>
-                <img class="pic__img pic__img--rise" src="img/flowers.jpg" alt="" loading="lazy">
-              </picture>
+      <div class="grid-col-6 grid-col-md-4 grid-col-lg-3">
+        <a class="card overflow-hidden" href="javascript:;">
+          <div class="pic pic--square width-100">
+            <div class="loader">
+              <svg class="icon">
+                <use xlink:href="img/icons.svg#loader" />
+              </svg>
             </div>
-            <div class="catalog__name flex align-items-center justify-content-center color-white text text--24 text-lg-18 text-md-14 text--center bold-6 interva-5 radius-4 p-2">Лилии</div>
-          </a>
-        </div>
+            <picture>
+              <img class="pic__img pic__img--rise" src="img/flowers.jpg" alt="" loading="lazy">
+            </picture>
+          </div>
+          <div class="catalog__name flex align-items-center justify-content-center color-white text text--24 text-lg-18 text-md-14 text--center bold-6 interva-5 radius-4 p-2">Лилии</div>
+        </a>
+      </div>
       <% } %>
     </div>
   </section>
 
-  <section class="new container pt-5 overflow-hidden">
+  <section class="products container pt-5 overflow-hidden">
     <div class="text text--38 text-md-28 bold-8 mb-10 mb-md-5">Новинки</div>
-    <div class="slider new-slider">
+    <div class="slider products-slider">
       <div class="swiper grid-wrap grid-spacing-8">
         <div class="swiper-wrapper">
           <% for (var i = 0; i < products.length; i++) { %>
-            <div class="swiper-slide grid-col-10 grid-col-md-7 grid-col-lg-3">
-              <div class="card card-action overflow-hidden height-100 waved">
-                <div class="card-pic width-100">
-                  <a class="pic pic--rect-x" href="">
-                    <div class="loader">
-                      <svg class="icon">
-                          <use xlink:href="img/icons.svg#loader" />
-                      </svg>
-                    </div>
-                    <picture>
-                      <img class="pic__img" src="img/banner.jpg" alt="" loading="lazy">
-                    </picture>
-                    <%= products[i].nameplate %>
-                    <label class="like">
-                      <input class="like__checkbox display-none" type="checkbox">
-                      <span class="like__heart flex align-items-center justify-content-center text text--18 link radius-2 visibility-hidden fade-0">
-                          <svg class="icon">
-                              <use xlink:href="img/icons.svg#like" />
-                          </svg>
-                      </span>
-                  </label>
-                  </a>
-                </div>
-                <div class="card-content p-4">
-                  <a class="text text--16 bold-7 link--underline mb-3" href=""><%= products[i].name %></a>
-                  <div class="text text--16 bold-4 fade-60 mb-5"><%= products[i].text %></div>
-                  <div class="flex align-items-center justify-content-between mt-auto">
-                    <div class="flex flex-direction-column mr-2">
-                      <%= products[i].price %>
-                      <span class="text text--24 bold-8">187 ₽</span>
-                    </div>
-                    <%= products[i].btn %>
+          <div class="swiper-slide grid-col-10 grid-col-md-7 grid-col-lg-3">
+            <div class="card card-action overflow-hidden height-100 waved">
+              <div class="card-pic width-100">
+                <a class="pic pic--rect-x" href="">
+                  <div class="loader">
+                    <svg class="icon">
+                      <use xlink:href="img/icons.svg#loader" />
+                    </svg>
                   </div>
+                  <picture>
+                    <img class="pic__img" src="img/banner.jpg" alt="" loading="lazy">
+                  </picture>
+                  <%= products[i].nameplate %>
+                  <label class="like">
+                    <input class="like__checkbox display-none" type="checkbox">
+                    <span class="like__heart flex align-items-center justify-content-center text text--18 link radius-2 visibility-hidden fade-0">
+                      <svg class="icon">
+                        <use xlink:href="img/icons.svg#like" />
+                      </svg>
+                    </span>
+                  </label>
+                </a>
+              </div>
+              <div class="card-content p-4">
+                <a class="text text--16 bold-7 link--underline mb-3" href=""><%= products[i].name %></a>
+                <div class="text text--16 bold-4 fade-60 mb-5"><%= products[i].text %></div>
+                <div class="flex align-items-center justify-content-between mt-auto">
+                  <div class="flex flex-direction-column mr-2">
+                    <%= products[i].price %>
+                    <span class="text text--24 bold-8">187 ₽</span>
+                  </div>
+                  <%= products[i].btn %>
                 </div>
               </div>
             </div>
+          </div>
           <% } %>
         </div>
       </div>
@@ -587,18 +507,6 @@
       </button>
     </div>
   </section>
-
-  <script>
-    new Swiper('.new-slider .swiper', {
-      slidesPerView: 'auto',
-      slidesPerGroup: 1,
-      watchSlidesProgress: true,
-      navigation: {
-				nextEl: '.new-slider .slider-next',
-				prevEl: '.new-slider .slider-prev'
-			}
-    })
-  </script>
 
   <!-- Подвал -->
   <%= _.template(require('./includes/footer.html').default)() %>
