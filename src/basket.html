@@ -15,45 +15,45 @@
         <table class="display-block width-100 mb-10 mb-md-5">
           <tbody class="flex flex-direction-column gap-4">
             <% for (var i = 0; i < 4; i++) { %>
-              <tr class="basket-item flex align-items-center justify-content-between flex-wrap bg-white border radius-4 bs gap-5 p-2 pr-6 pr-md-2">
-                <td class="basket__description flex align-items-center width-100">
-                  <div class="basket__pic pic pic--rect-x bg-sec radius-4 mr-6 mr-lg-3">
-                    <div class="loader">
-                      <svg class="icon">
-                          <use xlink:href="img/icons.svg#loader" />
-                      </svg>
-                    </div>
-                    <picture>
-                      <img class="pic__img" src="img/banner.jpg" alt="" loading="lazy">
-                    </picture>
+            <tr class="basket-item flex align-items-center justify-content-between flex-wrap bg-white border radius-4 bs gap-5 p-2 pr-6 pr-md-2">
+              <td class="basket__description flex align-items-center width-100">
+                <div class="basket__pic pic pic--rect-x bg-sec radius-4 mr-6 mr-lg-3">
+                  <div class="loader">
+                    <svg class="icon">
+                      <use xlink:href="img/icons.svg#loader" />
+                    </svg>
                   </div>
+                  <picture>
+                    <img class="pic__img" src="img/banner.jpg" alt="" loading="lazy">
+                  </picture>
+                </div>
+                <div class="flex flex-direction-column">
+                  <div class="text text--18 text-md-16 bold-6 mb-7 mb-md-3">Лилия Дивайн Лилия </div>
                   <div class="flex flex-direction-column">
-                    <div class="text text--18 text-md-16 bold-6 mb-7 mb-md-3">Лилия Дивайн Лилия </div>
-                    <div class="flex flex-direction-column">
-                      <div class="text text--12 bold-4">
-                        Скидка <span class="bold-7">35%</span>
-                      </div>
-                      <div class="text text--12 bold-4">
-                        Тип цены <span class="bold-7">Розничная цена</span>
-                      </div>
+                    <div class="text text--12 bold-4">
+                      Скидка <span class="bold-7">35%</span>
+                    </div>
+                    <div class="text text--12 bold-4">
+                      Тип цены <span class="bold-7">Розничная цена</span>
                     </div>
                   </div>
-                </td>
-                <td class="quantity flex align-items-center justify-content-between bg-white border radius-2">
-                  <button class="quantity__btn btn btn--gray color-black ">-</button>
-                  <input class="quantity__input text text--20 text--center color-black bold-6 border-none" type="text" value="1" name="quantity">
-                  <button class="quantity__btn btn btn--gray color-black ">+</button>
-                </td>
-                <td class="basket__cost flex flex-direction-column flex-grow">
-                  <div class="basket__text text text--16 bold-4 fade-60 text--line">250 ₽</div>
-                  <div class="basket__text text text--24 bold-6">150 ₽</div>
-                </td>
-                <td class="basket__del btn btn--red btn--light link text text--22">
-                  <svg class="icon">
-                    <use xlink:href="img/icons.svg#x" />
-                  </svg>
-                </td>
-              </tr>
+                </div>
+              </td>
+              <td class="quantity flex align-items-center justify-content-between bg-white border radius-2">
+                <button class="quantity__btn btn btn--gray color-black ">-</button>
+                <input class="quantity__input text text--20 text--center color-black bold-6 border-none" type="text" value="1" name="quantity">
+                <button class="quantity__btn btn btn--gray color-black ">+</button>
+              </td>
+              <td class="basket__cost flex flex-direction-column flex-grow">
+                <div class="basket__text text text--16 bold-4 fade-60 text--line">250 ₽</div>
+                <div class="basket__text text text--24 bold-6">150 ₽</div>
+              </td>
+              <td class="basket__del btn btn--red btn--light link text text--22">
+                <svg class="icon">
+                  <use xlink:href="img/icons.svg#x" />
+                </svg>
+              </td>
+            </tr>
             <% } %>
           </tbody>
         </table>
@@ -98,6 +98,45 @@
           <a class="basket__link link display-block text text--16 text--center fade-70 width-max mx-auto" href="">Читать условия доставки и оплаты</a>
         </div>
       </div>
+    </div>
+    <div class="text text--38 text-md-28 bold-8 mb-10 mb-md-5 mt-10">Блок для подарков</div>
+    <div class="grid grid-spacing-lg-7">
+      <% for (var i = 0; i < 4; i++) { %>
+      <div class="grid-col-6 grid-col-lg-3">
+        <div class="card card-action overflow-hidden height-100 waved">
+          <div class="card-pic width-100">
+            <a class="pic pic--rect-x" href="">
+              <div class="loader">
+                <svg class="icon">
+                  <use xlink:href="img/icons.svg#loader" />
+                </svg>
+              </div>
+              <picture>
+                <img class="pic__img" src="img/banner.jpg" alt="" loading="lazy">
+              </picture>
+              <label class="like">
+                <input class="like__checkbox display-none" type="checkbox">
+                <span class="like__heart flex align-items-center justify-content-center text text--18 link radius-2 visibility-hidden fade-0">
+                  <svg class="icon">
+                    <use xlink:href="img/icons.svg#like" />
+                  </svg>
+                </span>
+              </label>
+            </a>
+          </div>
+          <div class="card-content p-4 p-md-2">
+            <a class="text text--16 text-md-14 bold-7 link--underline mb-3" href="">Лилия ЛА-гибрид Роял Кисс</a>
+            <div class="text text--16 bold-4 text-md-12 fade-60 mb-5">Цветок, характеризующийся стойкостью и неприхотлив...</div>
+            <div class="card-bottom flex align-items-center justify-content-between mt-auto">
+              <div class="flex flex-direction-column mr-2">
+                <span class="text text--24 text-md-18 bold-8">187 ₽</span>
+              </div>
+              <button class="btn btn--primary btn--fill width-md-100 mt-auto">В корзину</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% } %>
     </div>
   </main>
 
