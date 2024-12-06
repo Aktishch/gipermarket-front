@@ -51,8 +51,8 @@
 }
 
 body {
-	color           : var(--color-black);
-	font-family     : var(--font-base);
+	color: var(--color-black);
+	font-family: var(--font-base);
 	background-color: var(--color-gray);
 }
 
@@ -120,7 +120,7 @@ body {
 		}
 
 		&__search {
-			border   : 1.5px solid var(--color-primary);
+			border: 1.5px solid var(--color-primary);
 			min-width: 510px;
 
 			&:focus {
@@ -133,13 +133,13 @@ body {
 		}
 
 		&__loop {
-			width        : 48px;
-			height       : 48px;
-			position     : absolute;
-			top          : 0;
-			right        : 0;
+			width: 48px;
+			height: 48px;
+			position: absolute;
+			top: 0;
+			right: 0;
 			border-radius: 0 var(--size-2) var(--size-2) 0;
-			z-index      : var(--zi-l1);
+			z-index: var(--zi-l1);
 		}
 
 		&__form {
@@ -169,10 +169,10 @@ body {
 
 	&-mobile {
 		position: sticky;
-		top     : 0;
-		left    : 0;
-		right   : 0;
-		z-index : var(--zi-l3);
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: var(--zi-l3);
 	}
 }
 
@@ -185,16 +185,16 @@ body {
 .menu {
 	&-btn {
 		position: relative;
-		width   : 48px;
-		height  : 48px;
+		width: 48px;
+		height: 48px;
 	}
 
 	&-count {
-		position  : absolute;
-		top       : -5px;
-		right     : -5px;
-		width     : var(--size-5);
-		height    : var(--size-5);
+		position: absolute;
+		top: -5px;
+		right: -5px;
+		width: var(--size-5);
+		height: var(--size-5);
 		background: radial-gradient(75.89% 75.89% at 79.21% 24.11%, #F24756 23.23%, #B22945 100%);
 	}
 }
@@ -202,28 +202,28 @@ body {
 .nav {
 	&__main {
 		max-width: 420px;
-		position : relative;
+		position: relative;
 
 		&::after {
-			content         : '';
-			position        : absolute;
-			top             : 0;
-			right           : 0;
-			bottom          : 0;
-			width           : 2px;
-			height          : 24px;
-			margin          : auto 0;
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			width: 2px;
+			height: 24px;
+			margin: auto 0;
 			background-color: var(--color-grey);
 		}
 	}
 
 	&-top {
-		position  : fixed;
-		right     : 0;
-		left      : 0;
-		top       : -57px;
+		position: fixed;
+		right: 0;
+		left: 0;
+		top: -57px;
 		transition: 0.2s;
-		z-index   : var(--zi-l4);
+		z-index: var(--zi-l4);
 
 		&__links {
 			max-width: 980px;
@@ -236,34 +236,34 @@ body {
 }
 
 .heart {
-	fill  : var(--color-none);
+	fill: var(--color-none);
 	stroke: var(--color-dark);
 
 	&--active {
-		fill  : var(--color-red);
+		fill: var(--color-red);
 		stroke: var(--color-red);
 	}
 }
 
 .mobile {
-	position  : fixed;
-	top       : 0;
-	left      : 0;
-	bottom    : 0;
-	right     : 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
 	transition: 0.2s ease;
-	z-index   : var(--zi-l4);
+	z-index: var(--zi-l4);
 
 	&__head {
 		transition: 0.3s ease 0.2s;
-		position  : relative;
-		top       : -80px;
+		position: relative;
+		top: -80px;
 	}
 
 	&__nav {
 		transition: 0.5s ease 0.5s;
-		position  : relative;
-		left      : -220px;
+		position: relative;
+		left: -220px;
 	}
 
 	&__accordion:is([data-accordion="active"]) &__arrow {
@@ -272,16 +272,16 @@ body {
 
 	&__footer {
 		transition: 0.5s ease 0.7s;
-		position  : relative;
-		bottom    : -30px;
+		position: relative;
+		bottom: -30px;
 	}
 }
 
 .-mobile- {
 	&:is(&open-) {
-		width     : 100%;
+		width: 100%;
 		visibility: visible;
-		opacity   : 1;
+		opacity: 1;
 	}
 
 	&:is(&open-) &head- {
@@ -289,21 +289,21 @@ body {
 	}
 
 	&:is(&open-) &nav- {
-		left   : 0;
+		left: 0;
 		opacity: 1;
 	}
 
 	&:is(&open-) &footer- {
 		opacity: 1;
-		bottom : 0;
+		bottom: 0;
 	}
 }
 
 .footer {
 	@media(max-width: $mobile) {
 		&__block {
-			flex-direction : column;
-			align-items    : center;
+			flex-direction: column;
+			align-items: center;
 			justify-content: center;
 		}
 	}
@@ -334,33 +334,33 @@ body {
 	}
 
 	&-next {
-		left : auto;
+		left: auto;
 		right: -30px;
 	}
 }
 
 .swiper {
-	margin-bottom : -15px;
+	margin-bottom: -15px;
 	padding-bottom: 15px;
 }
 
 .catalog {
 	&__name {
-		max-width       : 100%;
-		backdrop-filter : blur(8px);
-		position        : absolute;
-		bottom          : var(--size-4);
-		right           : var(--size-4);
-		left            : var(--size-4);
-		height          : 80px;
+		max-width: 100%;
+		backdrop-filter: blur(8px);
+		position: absolute;
+		bottom: var(--size-4);
+		right: var(--size-4);
+		left: var(--size-4);
+		height: 80px;
 		background-color: var(--color-black-20);
 	}
 
 	@media(max-width: $tablet) {
 		&__name {
 			bottom: var(--size-2);
-			right : var(--size-2);
-			left  : var(--size-2);
+			right: var(--size-2);
+			left: var(--size-2);
 			height: 60px;
 		}
 	}
@@ -368,7 +368,7 @@ body {
 
 .quantity {
 	&__btn {
-		width : var(--size-5);
+		width: var(--size-5);
 		height: var(--size-10);
 	}
 
@@ -379,29 +379,29 @@ body {
 
 .like {
 	position: absolute;
-	top     : var(--size-4);
-	right   : var(--size-4);
+	top: var(--size-4);
+	right: var(--size-4);
 
 	&__heart {
-		width           : 48px;
-		height          : 48px;
-		fill            : var(--color-none);
-		stroke          : var(--color-dark);
+		width: 48px;
+		height: 48px;
+		fill: var(--color-none);
+		stroke: var(--color-dark);
 		background-color: var(--color-white-80);
-		transition      : 0.2s linear;
+		transition: 0.2s linear;
 	}
 
 	&__checkbox:checked+:is(&__heart) {
-		fill      : var(--color-red);
-		stroke    : var(--color-red);
+		fill: var(--color-red);
+		stroke: var(--color-red);
 		visibility: visible;
-		opacity   : 1;
+		opacity: 1;
 	}
 
 	@media(max-width: $tablet) {
 		&__heart {
 			visibility: visible;
-			opacity   : 1;
+			opacity: 1;
 		}
 	}
 }
@@ -437,14 +437,14 @@ body {
 
 .info-banner {
 	background: var(--bg-image) no-repeat center / cover;
-	
+
 	&__btn {
 		min-width: max-content;
 	}
 
 	@media(max-width: $tablet) {
 		& {
-			text-align    : center;
+			text-align: center;
 			flex-direction: column;
 		}
 	}
@@ -452,13 +452,13 @@ body {
 
 .feedback {
 	background: radial-gradient(74.38% 244.23% at 75.04% 76.25%, #FEFC4A 0%, #E2AD45 55.35%);
-	position  : relative;
+	position: relative;
 
 	&__bg {
 		position: absolute;
-		right   : 0;
-		bottom  : 0;
-		top     : 0;
+		right: 0;
+		bottom: 0;
+		top: 0;
 	}
 
 	&__content {
@@ -487,8 +487,8 @@ body {
 
 	&__text {
 		position: absolute;
-		right   : 0;
-		bottom  : -18px;
+		right: 0;
+		bottom: -18px;
 	}
 }
 
@@ -508,10 +508,10 @@ body {
 
 .documentation {
 	&__pic {
-		min-width : 84px;
-		width     : 84px;
-		height    : 84px;
-		font-size : 52px;
+		min-width: 84px;
+		width: 84px;
+		height: 84px;
+		font-size: 52px;
 		background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 95.83%), #F3BB4B;
 	}
 
@@ -531,45 +531,45 @@ body {
 }
 
 .product-in-basket {
-	position  : fixed;
-	top       : 40%;
-	right     : 18px;
-	max-width : 340px;
-	z-index   : var(--zi-l3);
-	opacity   : 0;
+	position: fixed;
+	top: 40%;
+	right: 18px;
+	max-width: 340px;
+	z-index: var(--zi-l3);
+	opacity: 0;
 	visibility: hidden;
-	transform : translateY(50px);
+	transform: translateY(50px);
 	transition: 0.3s;
 
 	&--open {
-		opacity   : 1;
+		opacity: 1;
 		visibility: visible;
-		transform : translateY(0);
+		transform: translateY(0);
 	}
 
 	&__close {
 		position: absolute;
-		top     : 20px;
-		right   : 20px;
-		cursor  : pointer;
+		top: 20px;
+		right: 20px;
+		cursor: pointer;
 	}
 
 	&__pic {
-		min-width    : 80px;
-		height       : 72px;
+		min-width: 80px;
+		height: 72px;
 		border-radius: 10px;
-		position     : relative;
-		overflow     : hidden;
+		position: relative;
+		overflow: hidden;
 	}
 
 	&__img {
-		position  : absolute;
-		top       : 0;
-		left      : 0;
-		right     : 0;
-		bottom    : 0;
-		width     : 100%;
-		height    : 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
 		object-fit: cover;
 	}
 
@@ -588,15 +588,15 @@ body {
 	@media(max-width: $md) {
 		& {
 			max-width: 320px;
-			right    : 0;
-			left     : 0;
-			margin   : 0 auto;
+			right: 0;
+			left: 0;
+			margin: 0 auto;
 		}
 	}
 }
 
 .reviews {
-	position  : relative;
+	position: relative;
 	min-height: 100vh;
 
 	&--bg {
@@ -604,9 +604,9 @@ body {
 	}
 
 	&__bg {
-		position      : absolute;
-		inset         : 0;
-		object-fit    : cover;
+		position: absolute;
+		inset: 0;
+		object-fit: cover;
 		pointer-events: none;
 	}
 
@@ -616,7 +616,7 @@ body {
 
 	&__block {
 		backdrop-filter: blur(20px);
-		background     : radial-gradient(98.48% 326.98% at 0% 3.35%, #FFFFFF 0%, rgba(255, 255, 255, 0.8) 100%);
+		background: radial-gradient(98.48% 326.98% at 0% 3.35%, #FFFFFF 0%, rgba(255, 255, 255, 0.8) 100%);
 
 		&--sm {
 			max-width: 370px;
@@ -719,15 +719,15 @@ body {
 	}
 
 	&__pic {
-		min-width : 114px;
-		width : 114px;
-		height    : 100px;
+		min-width: 114px;
+		width: 114px;
+		height: 100px;
 		background: #6F73EE;
 	}
 
 	&__img {
-		width     : 98px;
-		height    : 84px;
+		width: 98px;
+		height: 84px;
 		background: linear-gradient(203.84deg, #FFFFFF 0.47%, #D8D8D8 89.47%);
 	}
 
@@ -769,6 +769,24 @@ body {
 			min-width: auto;
 			height: 60px;
 			flex-grow: 1;
+		}
+	}
+}
+
+.cookie {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 100;
+
+	&__block {
+		box-shadow: 0px 4px 12px 0px #0000001A;
+
+		@media (max-width: $mobile) {
+			flex-direction: column;
+			align-items: stretch;
+			justify-content: stretch;
 		}
 	}
 }

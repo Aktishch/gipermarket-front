@@ -18,7 +18,7 @@ import inputNumber from './js/input-number'
 import canvasImage from './js/canvas-image'
 import timeCounter from './js/time-counter'
 import basket from './js/basket'
-
+import cookie from './js/cookie'
 
 import './scss/index.scss';
 
@@ -51,6 +51,7 @@ function loadHandler() {
 	canvasImage.init()
 	timeCounter.init()
 	basket.init()
+	cookie()
 
 	window.addEventListener('toggleopen', toggleopenHaandler)
 	window.addEventListener('toggleclose', togglecloseHaandler)
